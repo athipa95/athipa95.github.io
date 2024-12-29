@@ -392,7 +392,8 @@ a {
 #introText {
 	position: fixed;
 	margin: 110px 0 0 -187px;
-	padding: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
 	top: 50%;
 	left: 50%;
 	font-size: 50px;
