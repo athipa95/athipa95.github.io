@@ -392,8 +392,10 @@ a {
 #introText {
 	position: fixed;
 	margin: 110px 0 0 -187px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	top: 50%;
 	left: 50%;
 	font-size: 50px;
@@ -421,6 +423,7 @@ a {
 	left: 5px;
 	font-size: 25px;
 	color: rgba(0, 26, 255, 0.938);
+	background-color: rgba(0, 0, 0, 0.45);
 }
 
 #lastModified {
