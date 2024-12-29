@@ -379,7 +379,7 @@ a {
 	height: 100%;
 	background: url("img/Background_1.png") no-repeat center center;
 	background-size: cover;
-	filter: blur(8px);
+	filter: blur(2px);
 	/* Apply blur only to the background */
 	z-index: -1;
 	/* Place it behind the content */
