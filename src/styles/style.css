@@ -394,9 +394,10 @@ a {
 	margin: 110px 0 0 -187px;
 	top: 50%;
 	left: 50%;
-	font-size: 60px;
+	font-size: 50px;
 	color: rgba(0, 38, 255, 0.95);
 	font-weight: bolder;
+	background-color: rgba(0, 0, 0, 0.40);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 }
