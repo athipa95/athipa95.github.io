@@ -422,8 +422,8 @@ a {
 	top: -15px;
 	left: 5px;
 	font-size: 25px;
-	color: rgba(0, 26, 255, 0.938);
-	background-color: rgba(0, 0, 0, 0.45);
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 #lastModified {
@@ -431,7 +431,8 @@ a {
 	top: 5px;
 	right: 5px;
 	font-size: 15px;
-	color: rgba(0, 26, 255, 0.938);
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 .footerButton {
