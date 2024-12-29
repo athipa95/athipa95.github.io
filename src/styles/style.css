@@ -367,6 +367,8 @@ a {
 	position: fixed;
 	background: #0A0A0A url("img/Background_1.png") no-repeat center center;
 	background-size: cover;
+	opacity: 0.8;
+	z-index: -1;
 }
 
 #logo {
