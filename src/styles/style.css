@@ -927,7 +927,7 @@ input,
 textarea {
 	float: none;
 	margin: 5px;
-	auto;
+
 	padding: 4px;
 	width: 100%;
 	max-width: 300px;
@@ -965,3 +965,4 @@ input:focus {
 	-moz-box-shadow: inset 0px 0px 5px #0A0A0A;
 	-o-box-shadow: inset 0px 0px 5px #0A0A0A;
 	box-shadow: inset 0px 0px 5px #0A0A0A;
+}
