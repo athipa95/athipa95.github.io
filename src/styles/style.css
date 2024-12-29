@@ -375,7 +375,7 @@ a {
 	margin: -73.5px 0 0 -125px;
 	top: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, 0.014);
+	background-color: rgba(0, 0, 0, 0.123);
 	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
 	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
 	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
@@ -396,7 +396,7 @@ a {
 	top: 50%;
 	left: 50%;
 	font-size: 60px;
-	color: rgb(0, 38, 255);
+	color: rgba(0, 38, 255, 0.959);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 }
