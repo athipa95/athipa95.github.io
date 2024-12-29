@@ -337,7 +337,6 @@ a {
 	-o-box-shadow: 0px 0px 40px 25px rgba(0, 0, 0, 0.85);
 	box-shadow: 0px 0px 40px 25px rgba(0, 0, 0, 0.85);
 	background-color: rgba(0, 0, 0, 0.85);
-	;
 }
 
 /* -------------------- --------------- -------------------- */
@@ -497,7 +496,7 @@ a {
 }
 
 #tint1,
-#tine2,
+#tint2,
 #tint3,
 #tint4 {
 	position: absolute;
