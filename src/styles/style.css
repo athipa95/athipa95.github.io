@@ -347,7 +347,7 @@ a {
 	position: fixed;
 	top: 200px;
 	right: 0;
-	height: 240px;
+	height: 250px;
 	width: 64px;
 	border-radius: 5px 0px 0px 5px;
 	background-color: black;
@@ -375,7 +375,7 @@ a {
 	margin: -73.5px 0 0 -125px;
 	top: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, 0.911);
+	background-color: rgba(0, 0, 0, 0.014);
 	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.88);
 	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.88);
 	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.88);
@@ -395,8 +395,8 @@ a {
 	margin: 110px 0 0 -187px;
 	top: 50%;
 	left: 50%;
-	font-size: 50px;
-	color: rgba(0, 0, 0, 0.938);
+	font-size: 60px;
+	color: rgba(0, 26, 255, 0.938);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 }
@@ -417,7 +417,7 @@ a {
 	top: -15px;
 	left: 5px;
 	font-size: 25px;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 26, 255, 0.938);
 }
 
 #lastModified {
@@ -425,7 +425,7 @@ a {
 	top: 5px;
 	right: 5px;
 	font-size: 15px;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 26, 255, 0.938);
 }
 
 .footerButton {
