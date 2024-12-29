@@ -346,7 +346,7 @@ a {
 	position: fixed;
 	top: 200px;
 	right: 0;
-	height: 250px;
+	height: 245px;
 	width: 64px;
 	border-radius: 5px 0px 0px 5px;
 	background-color: black;
@@ -374,11 +374,11 @@ a {
 	margin: -73.5px 0 0 -125px;
 	top: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, 0.12);
-	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
-	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
-	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
-	box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.014);
+	background-color: rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
+	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
+	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
+	box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
 	-webkit-transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 	transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 }
@@ -396,6 +396,7 @@ a {
 	left: 50%;
 	font-size: 60px;
 	color: rgba(0, 38, 255, 0.95);
+	font-weight: bolder;
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 }
