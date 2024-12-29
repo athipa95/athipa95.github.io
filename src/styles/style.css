@@ -397,7 +397,6 @@ a {
 	left: 50%;
 	font-size: 60px;
 	color: rgb(0, 38, 255);
-	background-color: rgba(0, 0, 0, 0.014);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 }
