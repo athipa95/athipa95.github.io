@@ -375,10 +375,10 @@ a {
 	top: 0px;
 	left: 0px;
 	background-color: rgba(0, 0, 0, 0.35);
-	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
-	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
-	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
-	box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.02);
+	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.2);
 	-webkit-transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 	transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 }
@@ -397,7 +397,7 @@ a {
 	font-size: 50px;
 	color: rgba(0, 38, 255, 0.95);
 	font-weight: bolder;
-	background-color: rgba(0, 0, 0, 0.40);
+	background-color: rgba(0, 0, 0, 0.15);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 }
