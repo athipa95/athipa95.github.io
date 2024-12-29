@@ -393,7 +393,7 @@ a {
 }
 
 #introText {
-	position: fixed;
+	position: absolute;
 	margin: 110px 0 0 -187px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -407,7 +407,7 @@ a {
 	background-color: rgba(0, 0, 0, 0.85);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
-	z-index: 5;
+	z-index: 3;
 }
 
 /* -------------------- -------------- -------------------- */
