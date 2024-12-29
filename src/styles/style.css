@@ -367,8 +367,8 @@ a {
 	position: fixed;
 	background: #0A0A0A url("img/Background_1.png") no-repeat center center;
 	background-size: cover;
-	filter: blur(2px);
-	opacity: 0.8;
+	filter: blur(1px);
+	opacity: 0.75;
 	z-index: -1;
 }
 
