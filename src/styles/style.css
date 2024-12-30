@@ -492,42 +492,32 @@ a {
 /* -------------------- -------------------- -------------------- */
 #page1 {
 	background: #0A0A0A url(img/Background_2.png) no-repeat center center;
+}
+
+#page1::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("img/Background_2.png") no-repeat center center;
+	background-size: cover;
 	filter: blur(1.5px);
-	/* Apply blur only to the background */
 	z-index: -1;
-	/* Place it behind the content */
 	opacity: 0.75;
-	/* Optional: Add transparency */
 }
 
 #page2 {
 	background: #0A0A0A url(img/Background_3.jpg) no-repeat center center;
-	filter: blur(1.5px);
-	/* Apply blur only to the background */
-	z-index: -1;
-	/* Place it behind the content */
-	opacity: 0.75;
-	/* Optional: Add transparency */
 }
 
 #page3 {
 	background: #0A0A0A url(img/DrexelHyperloop_Tint.png) no-repeat center center;
-	filter: blur(1.5px);
-	/* Apply blur only to the background */
-	z-index: -1;
-	/* Place it behind the content */
-	opacity: 0.75;
-	/* Optional: Add transparency */
 }
 
 #page4 {
 	background: #0A0A0A url(img/Background_5.png) no-repeat center center;
-	filter: blur(1.5px);
-	/* Apply blur only to the background */
-	z-index: -1;
-	/* Place it behind the content */
-	opacity: 0.75;
-	/* Optional: Add transparency */
 }
 
 #page1,
