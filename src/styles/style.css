@@ -490,8 +490,16 @@ a {
 /* -------------------- -------------------- -------------------- */
 /* -------------------- Page Classes and Ids -------------------- */
 /* -------------------- -------------------- -------------------- */
-#page1 {
+
+/* #page1 {
 	background: #0A0A0A url(img/Background_2.png) no-repeat center center;
+} */
+
+#page1 {
+	position: relative;
+	/* Establish a positioning context */
+	overflow: hidden;
+	/* Ensure the pseudo-element doesn't overflow the parent */
 }
 
 #page1::before {
@@ -499,60 +507,29 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* background: url("img/Background_2.png") no-repeat center center; */
-	background-color: rgba(0, 0, 0, 0.1);
+	width: 100%;
+	height: 100%;
+	background: url("img/Background_2.png") no-repeat center center;
 	background-size: cover;
-	filter: blur(1px);
-	z-index: -1;
+	filter: blur(1.5px);
+	/* Adjust the blur effect */
 	opacity: 0.75;
+	/* Adjust the transparency */
+	z-index: -1;
+	/* Place the pseudo-element behind the content */
 }
+
 
 #page2 {
 	background: #0A0A0A url(img/Background_3.jpg) no-repeat center center;
-}
-
-#page2::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url("img/Background_3.jpg") no-repeat center center;
-	background-size: cover;
-	filter: blur(1px);
-	z-index: -1;
-	opacity: 0.75;
 }
 
 #page3 {
 	background: #0A0A0A url(img/DrexelHyperloop_Tint.png) no-repeat center center;
 }
 
-#page3::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url("img/DrexelHyperloop_Tint.png") no-repeat center center;
-	background-size: cover;
-	filter: blur(1px);
-	z-index: -1;
-	opacity: 0.75;
-}
-
 #page4 {
 	background: #0A0A0A url(img/Background_5.png) no-repeat center center;
-}
-
-#page4::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url("img/Background_5.png") no-repeat center center;
-	background-size: cover;
-	filter: blur(1px);
-	z-index: -1;
-	opacity: 0.75;
 }
 
 #page1,
@@ -562,37 +539,6 @@ a {
 	height: 100%;
 	background-size: cover;
 }
-
-/* #tint1 {
-	background: -webkit-linear-gradient(141deg, rgba(15, 184, 173, 0.8) 0%, rgba(31, 200, 219, 0.8) 51%, rgba(44, 181, 232, 0.8) 75%);
-	background: linear-gradient(141deg, rgba(15, 184, 173, 0.8) 0%, rgba(31, 200, 219, 0.8) 51%, rgba(44, 181, 232, 0.8) 75%);
-}
-
-#tint2 {
-	background: -webkit-linear-gradient(141deg, rgba(44, 181, 232, 0.8), rgba(95, 44, 130, 0.8));
-	background: linear-gradient(141deg, rgba(44, 181, 232, 0.8), rgba(95, 44, 130, 0.8));
-}
-
-#tint3 {
-	background: -webkit-linear-gradient(141deg, rgba(95, 44, 130, 0.8), rgba(236, 111, 102, 0.8));
-	background: linear-gradient(141deg, rgba(95, 44, 130, 0.8), rgba(236, 111, 102, 0.8));
-}
-
-#tint4 {
-	background: -webkit-linear-gradient(141deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.4));
-	background: linear-gradient(141deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.4));
-}
-
-#tint1,
-#tint2,
-#tint3,
-#tint4 {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-} */
 
 #contentPage1,
 #contentPage2,
