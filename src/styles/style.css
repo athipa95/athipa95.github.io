@@ -513,6 +513,8 @@ a {
 	opacity: 0.75;
 	z-index: -1;
 	pointer-events: none;
+	clip-path: inset(0 0 calc(100vh * (N - 1)) 0);
+	/* Ensure #page1 only */
 }
 
 #page2 {
