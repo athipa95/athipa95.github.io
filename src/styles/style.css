@@ -492,18 +492,42 @@ a {
 /* -------------------- -------------------- -------------------- */
 #page1 {
 	background: #0A0A0A url(img/Background_2.png) no-repeat center center;
+	filter: blur(1.5px);
+	/* Apply blur only to the background */
+	z-index: -1;
+	/* Place it behind the content */
+	opacity: 0.75;
+	/* Optional: Add transparency */
 }
 
 #page2 {
 	background: #0A0A0A url(img/Background_3.jpg) no-repeat center center;
+	filter: blur(1.5px);
+	/* Apply blur only to the background */
+	z-index: -1;
+	/* Place it behind the content */
+	opacity: 0.75;
+	/* Optional: Add transparency */
 }
 
 #page3 {
 	background: #0A0A0A url(img/DrexelHyperloop_Tint.png) no-repeat center center;
+	filter: blur(1.5px);
+	/* Apply blur only to the background */
+	z-index: -1;
+	/* Place it behind the content */
+	opacity: 0.75;
+	/* Optional: Add transparency */
 }
 
 #page4 {
 	background: #0A0A0A url(img/Background_5.png) no-repeat center center;
+	filter: blur(1.5px);
+	/* Apply blur only to the background */
+	z-index: -1;
+	/* Place it behind the content */
+	opacity: 0.75;
+	/* Optional: Add transparency */
 }
 
 #page1,
@@ -514,7 +538,7 @@ a {
 	background-size: cover;
 }
 
-#tint1 {
+/* #tint1 {
 	background: -webkit-linear-gradient(141deg, rgba(15, 184, 173, 0.8) 0%, rgba(31, 200, 219, 0.8) 51%, rgba(44, 181, 232, 0.8) 75%);
 	background: linear-gradient(141deg, rgba(15, 184, 173, 0.8) 0%, rgba(31, 200, 219, 0.8) 51%, rgba(44, 181, 232, 0.8) 75%);
 }
@@ -543,7 +567,7 @@ a {
 	width: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-}
+} */
 
 #contentPage1,
 #contentPage2,
