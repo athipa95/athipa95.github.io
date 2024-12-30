@@ -499,7 +499,6 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
 	background: url("img/Background_2.png") no-repeat center center;
 	background-size: cover;
 	filter: blur(1px);
@@ -516,7 +515,6 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
 	background: url("img/Background_3.jpg") no-repeat center center;
 	background-size: cover;
 	filter: blur(1px);
@@ -533,7 +531,6 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
 	background: url("img/DrexelHyperloop_Tint.png") no-repeat center center;
 	background-size: cover;
 	filter: blur(1px);
@@ -550,7 +547,6 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
 	background: url("img/Background_5.png") no-repeat center center;
 	background-size: cover;
 	filter: blur(1px);
