@@ -401,11 +401,11 @@ a {
 	margin: -73.5px 0 0 -125px;
 	top: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, 0.7);
-	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.4);
-	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.4);
-	box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
 	-webkit-transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 	transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 }
