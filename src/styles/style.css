@@ -429,7 +429,7 @@ a {
 	font-size: 50px;
 	color: rgb(255, 255, 255);
 	font-weight: bolder;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 	z-index: 2;
