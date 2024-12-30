@@ -402,9 +402,9 @@ a {
 	top: 0px;
 	left: 0px;
 	background-color: rgba(0, 0, 0, 0.55);
-	-webkit-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
-	-o-box-shadow: 0px 0px 55px 40px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 0px 40px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 0px 40px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0px 0px 0px 40px rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 0px 0px 40px rgba(0, 0, 0, 0.5);
 	z-index: 1;
 	-webkit-transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
