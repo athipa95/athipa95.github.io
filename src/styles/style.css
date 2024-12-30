@@ -433,6 +433,7 @@ a {
 	background-color: rgba(0, 0, 0, 0);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
+	font: HelveticaNeue-CondensedBold;
 	z-index: 10;
 }
 
