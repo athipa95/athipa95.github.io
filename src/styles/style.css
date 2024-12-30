@@ -500,7 +500,7 @@ a {
 	top: 0;
 	left: 0;
 	/* background: url("img/Background_2.png") no-repeat center center; */
-	background: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.1);
 	background-size: cover;
 	filter: blur(1px);
 	z-index: -1;
