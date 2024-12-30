@@ -496,10 +496,7 @@ a {
 } */
 
 #page1 {
-	position: relative;
-	/* Establish a positioning context */
-	overflow: hidden;
-	/* Ensure the pseudo-element doesn't overflow the parent */
+	position: absolute;
 }
 
 #page1::before {
