@@ -503,7 +503,7 @@ a {
 	height: 100%;
 	background: url("img/Background_2.png") no-repeat center center;
 	background-size: cover;
-	filter: blur(1.5px);
+	filter: blur(1px);
 	z-index: -1;
 	opacity: 0.75;
 }
@@ -512,21 +512,63 @@ a {
 	background: #0A0A0A url(img/Background_3.jpg) no-repeat center center;
 }
 
+#page2::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("img/Background_3.jpg") no-repeat center center;
+	background-size: cover;
+	filter: blur(1px);
+	z-index: -1;
+	opacity: 0.75;
+}
+
 #page3 {
 	background: #0A0A0A url(img/DrexelHyperloop_Tint.png) no-repeat center center;
+}
+
+#page3::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("img/DrexelHyperloop_Tint.png") no-repeat center center;
+	background-size: cover;
+	filter: blur(1px);
+	z-index: -1;
+	opacity: 0.75;
 }
 
 #page4 {
 	background: #0A0A0A url(img/Background_5.png) no-repeat center center;
 }
 
-#page1,
+#page4::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("img/Background_5.png") no-repeat center center;
+	background-size: cover;
+	filter: blur(1px);
+	z-index: -1;
+	opacity: 0.75;
+}
+
+/* #page1,
 #page2,
 #page3,
 #page4 {
 	height: 100%;
 	background-size: cover;
-}
+} */
 
 /* #tint1 {
 	background: -webkit-linear-gradient(141deg, rgba(15, 184, 173, 0.8) 0%, rgba(31, 200, 219, 0.8) 51%, rgba(44, 181, 232, 0.8) 75%);
