@@ -554,13 +554,13 @@ a {
 	opacity: 0.75;
 }
 
-/* #page1,
+#page1,
 #page2,
 #page3,
 #page4 {
 	height: 100%;
 	background-size: cover;
-} */
+}
 
 /* #tint1 {
 	background: -webkit-linear-gradient(141deg, rgba(15, 184, 173, 0.8) 0%, rgba(31, 200, 219, 0.8) 51%, rgba(44, 181, 232, 0.8) 75%);
