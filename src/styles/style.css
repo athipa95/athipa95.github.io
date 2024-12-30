@@ -406,7 +406,7 @@ a {
 	-webkit-transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 	transition: top 1.5s, box-shadow 1.5s, background-color 1.5s, margin 1.5s;
 	z-index: 1;
-	-webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 500px 0px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
 	-o-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
