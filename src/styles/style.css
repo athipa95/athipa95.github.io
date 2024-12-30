@@ -502,7 +502,7 @@ a {
 	/* Ensure the pseudo-element doesn't overflow the parent */
 }
 
-#page1::before {
+/* #page1::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -512,13 +512,13 @@ a {
 	background: url("img/Background_2.png") no-repeat center center;
 	background-size: cover;
 	filter: blur(1.5px);
-	/* Adjust the blur effect */
 	opacity: 0.75;
-	/* Adjust the transparency */
 	z-index: -1;
-	/* Place the pseudo-element behind the content */
-}
+} */
 
+#page1::before {
+	background: red;
+}
 
 #page2 {
 	background: #0A0A0A url(img/Background_3.jpg) no-repeat center center;
