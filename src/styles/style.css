@@ -495,18 +495,24 @@ a {
 	background: #0A0A0A url(img/Background_2.png) no-repeat center center;
 } */
 
-#page1 {
+#page1,
+#page2,
+#page3,
+#page4 {
 	position: absolute;
 }
 
-#page1::before {
+#page1::before,
+#page2::before,
+#page3::before,
+#page4::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: url("img/Background_2.png") no-repeat center center;
+
 	background-attachment: fixed;
 	background-size: cover;
 	filter: blur(2px);
@@ -515,7 +521,23 @@ a {
 	pointer-events: none;
 }
 
-#page2 {
+#page1::before {
+	background-image: url("img/Background_2.png");
+}
+
+#page2::before {
+	background-image: url("img/Background_3.jpg");
+}
+
+#page3::before {
+	background-image: url("img/DrexelHyperloop_Tint.png");
+}
+
+#page4::before {
+	background-image: url("img/Background_5.png");
+}
+
+/* #page2 {
 	background: #0A0A0A url(img/Background_3.jpg) no-repeat center center;
 }
 
@@ -525,7 +547,7 @@ a {
 
 #page4 {
 	background: #0A0A0A url(img/Background_5.png) no-repeat center center;
-}
+} */
 
 #page1,
 #page2,
