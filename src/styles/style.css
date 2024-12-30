@@ -429,11 +429,11 @@ a {
 	left: 48.5%;
 	font-size: 50px;
 	color: rgb(255, 255, 255);
-	/* font-weight: bolder; */
+	font-weight: bolder;
 	background-color: rgba(0, 0, 0, 0);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
-	font-family: HelveticaNeue-CondensedBold;
+	/* font-family: HelveticaNeue-CondensedBold; */
 	z-index: 10;
 }
 
