@@ -560,6 +560,7 @@ a {
 	top: 0;
 	-webkit-transition: top 1s;
 	transition: top 1s;
+	z-index: 1;
 }
 
 .page {
@@ -568,6 +569,7 @@ a {
 	text-align: center;
 	-webkit-transition: left 1.5s;
 	transition: left 1.5s;
+	z-index: 1;
 }
 
 .linksBar {
