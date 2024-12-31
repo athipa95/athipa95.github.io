@@ -7,75 +7,33 @@
 
 body {
 	font-family: Arial, sans-serif;
-	line-height: 1.6;
 }
 
-/* Page Sections */
+/* Section Styling */
 .page {
 	min-height: 100vh;
 	/* Full viewport height */
 	width: 100%;
 	/* Full width */
-	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	background-size: cover;
-	/* Ensure the background covers the section */
-	background-position: center;
-	background-attachment: fixed;
-	/* Locks the background in place */
+	color: white;
 }
 
+/* Solid Backgrounds for Testing */
 #page1 {
 	background: red;
-	/* background-image: url('img/Background_1.jpg'); */
 }
 
 #page2 {
 	background: blue;
-	/* background-image: url('img/Background_2.jpg'); */
 }
 
 #page3 {
 	background: green;
-	/* background-image: url('img/Background_3.jpg'); */
 }
 
 #page4 {
-	background-image: url('img/Background_4.jpg');
-}
-
-/* Content Wrapper */
-.content {
-	background: rgba(0, 0, 0, 0.7);
-	/* Transparent background for readability */
-	padding: 20px;
-	border-radius: 10px;
-}
-
-/* Footer Navigation */
-footer {
-	position: fixed;
-	bottom: 10px;
-	left: 50%;
-	transform: translateX(-50%);
-	display: flex;
-	gap: 10px;
-	z-index: 10;
-}
-
-footer button {
-	background: white;
-	border: none;
-	padding: 10px 20px;
-	cursor: pointer;
-	font-size: 16px;
-	border-radius: 5px;
-	transition: background 0.3s;
-}
-
-footer button:hover {
-	background: #ddd;
+	background: yellow;
 }
