@@ -155,8 +155,10 @@ CONTACT INFO: athipa95@gmail.com
 /* -------------------- Reset CSS -------------------- */
 /* -------------------- --------- -------------------- */
 html {
-	background-color: #ff0000;
+	background-color: #ff000080;
+	/* 50% transparency */
 }
+
 
 body {
 	max-width: 100%;
