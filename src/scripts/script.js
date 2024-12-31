@@ -175,6 +175,21 @@ $(".footerButton").click(function () {
 	var previousIndex = pageIndex;
 	pageIndex = $(this).index();
 
+	const newIndex = $(this).index(); // Get the clicked button's index
+
+	if (newIndex !== pageIndex) {
+		// Hide the current background
+		$(".background").eq(pageIndex).hide();
+		// Show the new background
+		$(".background").eq(newIndex).show();
+
+		// Show the new page content
+		$(".page").hide(); // Hide all pages
+		$(".page").eq(newIndex).show(); // Show the selected page
+
+		pageIndex = newIndex; // Update the page index
+	}
+
 	if (previousIndex != pageIndex) {
 		offsetPages(pageIndex, windowWidth);
 		toggleActivePage(previousIndex, pageIndex);
