@@ -477,7 +477,6 @@ a {
 .footerButton {
 	margin: 0px 10px 0px 10px;
 	display: inline-block;
-	z-index: 2;
 }
 
 .active {
@@ -504,11 +503,13 @@ a {
 #page2,
 #page3,
 #page4 {
-	position: relative;
+	position: absolute;
 	height: 100vh;
 	width: 100%;
 	overflow: hidden;
 	overflow-y: auto;
+	height: 100%;
+	background-size: cover;
 }
 
 #page1::before,
@@ -545,14 +546,6 @@ a {
 	background-image: url("img/Background_2.png");
 }
 
-#page1,
-#page2,
-#page3,
-#page4 {
-	height: 100%;
-	background-size: cover;
-}
-
 #contentPage1,
 #contentPage2,
 #contentPage3,
@@ -561,7 +554,6 @@ a {
 	top: 0;
 	-webkit-transition: top 1s;
 	transition: top 1s;
-	z-index: 1;
 }
 
 .page {
@@ -570,7 +562,6 @@ a {
 	text-align: center;
 	-webkit-transition: left 1.5s;
 	transition: left 1.5s;
-	z-index: 1;
 }
 
 .linksBar {
