@@ -518,7 +518,7 @@ a {
 	background-size: cover;
 	filter: blur(2px);
 	opacity: 0.75;
-	z-index: -1;
+	z-index: -8;
 	pointer-events: none;
 }
 
