@@ -1,8 +1,8 @@
 /*
-PROGRAMMER: Frederick Wachter
-DATE CREATED: 2016-04-13
-PURPOSE: Engineering Portfolio of Frederick Wachter
-CONTACT INFO: wachterfreddy@gmail.com
+PROGRAMMER: Athip Thirupathi Raj, template taken from Frederick Wachter
+DATE CREATED: 2024-12-28
+PURPOSE: Engineering Portfolio of Athip Thirupathi Raj
+CONTACT INFO: athipa95@gmail.com
 */
 
 /* -------------------- ---------------------- -------------------- */
@@ -167,6 +167,19 @@ function displayPageName(index) {
 	$("#footerText").text(pageName);
 }
 
+function setVisibleBackground(pageId) {
+	// Hide all backgrounds
+	document.querySelectorAll('.page').forEach(page => {
+		page.style.display = 'none';
+	});
+
+	// Show the specific page
+	const activePage = document.getElementById(pageId);
+	if (activePage) {
+		activePage.style.display = 'block';
+	}
+}
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Click Functions -------------------- */
 /* -------------------- --------------- -------------------- */
@@ -194,6 +207,20 @@ $(".footerButton").click(function () {
 
 	displayPageName(pageIndex);
 });
+
+// Attach click listeners to footer buttons
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('.footerButton').forEach((button, index) => {
+		button.addEventListener('click', () => {
+			const pageId = `page${index + 1}`;
+			setVisibleBackground(pageId);
+		});
+	});
+
+	// Optional: Set the default visible page when the site loads
+	setVisibleBackground('page1');
+});
+
 
 /* -------------------- --------------- -------------------- */
 /* -------------------- Hover Functions -------------------- */
@@ -362,5 +389,16 @@ window.addEventListener('scroll', function () {
 
 ga('create', 'UA-69516450-3', 'auto');
 ga('send', 'pageview');
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('.footerButton').forEach((button, index) => {
+		button.addEventListener('click', () => {
+			const pageId = `page${index + 1}`;
+			setVisibleBackground(pageId); // Ensure this function is defined earlier
+		});
+	});
+});
+
 
 
