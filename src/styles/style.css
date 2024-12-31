@@ -503,7 +503,7 @@ a {
 	height: 42px;
 	width: 100%;
 	text-align: center;
-	z-index: 10;
+	z-index: 2;
 }
 
 #footerText {
@@ -528,7 +528,7 @@ a {
 	position: fixed;
 	margin: 0px 10px 0px 10px;
 	display: inline-block;
-	z-index: 10;
+	z-index: 2;
 }
 
 .active {
