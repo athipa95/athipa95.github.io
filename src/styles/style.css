@@ -244,6 +244,7 @@ a {
 	margin: 0px auto;
 	text-align: center;
 	max-width: 1500px;
+	z-index: 3;
 }
 
 .right {
@@ -518,7 +519,7 @@ a {
 	background-size: cover;
 	filter: blur(2px);
 	opacity: var(--background-opacity, 0);
-	z-index: -8;
+	z-index: -1;
 	pointer-events: none;
 	transition: opacity 0.5s ease;
 }
