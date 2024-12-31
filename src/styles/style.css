@@ -946,6 +946,8 @@ a {
 	font-size: 30px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	color: white;
+	background-color: rgba(0, 0, 0, 0.45);
+	box-shadow: rgba(0, 20, 10, 0.45);
 }
 
 #resumeButton:hover {
@@ -964,6 +966,8 @@ a {
 	font-size: 30px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	color: white;
+	background-color: rgba(0, 0, 0, 0.45);
+	box-shadow: rgba(0, 20, 10, 0.45);
 }
 
 #cvButton:hover {
