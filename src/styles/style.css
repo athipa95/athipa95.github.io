@@ -504,6 +504,9 @@ a {
 #page3,
 #page4 {
 	position: absolute;
+	height: 100vh;
+	width: 100%;
+	overflow-y: auto;
 }
 
 #page1::before,
