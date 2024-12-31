@@ -949,8 +949,8 @@ a {
 #resumeButton {
 	padding-top: 4px;
 	position: absolute;
-	top: 15px;
-	right: 0px;
+	top: 40%;
+	left: 0%;
 	width: 300px;
 	height: 40px;
 	font-size: 30px;
@@ -959,6 +959,24 @@ a {
 }
 
 #resumeButton:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+#cvButton {
+	padding-top: 4px;
+	position: absolute;
+	top: 60%;
+	left: 0%;
+	width: 300px;
+	height: 40px;
+	font-size: 30px;
+	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
+	color: white;
+}
+
+#cvButton:hover {
 	background-color: white;
 	color: black;
 	cursor: pointer;
