@@ -305,6 +305,23 @@ $(".project").hover(
 	}
 );
 
+window.addEventListener('scroll', function () {
+	var scrollPosition = window.scrollY;
+	var windowHeight = window.innerHeight;
+
+	document.getElementById('intro').style.opacity =
+		Math.max(0, 1 - scrollPosition / windowHeight);
+	document.getElementById('page1').style.opacity =
+		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
+	document.getElementById('page2').style.opacity =
+		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
+	document.getElementById('page3').style.opacity =
+		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
+	document.getElementById('page4').style.opacity =
+		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
+});
+
+
 // /* -------------------- ----------------------- -------------------- */
 // /* -------------------- Contact Form Submission -------------------- */
 // /* -------------------- ----------------------- -------------------- */
