@@ -360,7 +360,7 @@ a {
 	width: 64px;
 	border-radius: 5px 0px 0px 5px;
 	background-color: black;
-	z-index: 2;
+	z-index: 4;
 	-webkit-transition: right 1s;
 	transition: right 1s;
 }
@@ -456,7 +456,7 @@ a {
 	height: 42px;
 	width: 100%;
 	text-align: center;
-	z-index: 2;
+	z-index: 4;
 }
 
 #footerText {
@@ -466,7 +466,7 @@ a {
 	font-size: 25px;
 	color: rgb(255, 255, 255);
 	background-color: rgba(0, 0, 0, 0.85);
-	z-index: 2;
+	z-index: 4;
 }
 
 #lastModified {
@@ -481,7 +481,7 @@ a {
 .footerButton {
 	margin: 0px 10px 0px 10px;
 	display: inline-block;
-	z-index: 2;
+	z-index: 4;
 }
 
 .active {
