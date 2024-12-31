@@ -29,15 +29,18 @@ body {
 }
 
 #page1 {
-	background-image: url('img/Background_1.jpg');
+	background: red;
+	/* background-image: url('img/Background_1.jpg'); */
 }
 
 #page2 {
-	background-image: url('img/Background_2.jpg');
+	background: blue;
+	/* background-image: url('img/Background_2.jpg'); */
 }
 
 #page3 {
-	background-image: url('img/Background_3.jpg');
+	background: green;
+	/* background-image: url('img/Background_3.jpg'); */
 }
 
 #page4 {
