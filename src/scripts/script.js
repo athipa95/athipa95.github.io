@@ -168,17 +168,18 @@ function displayPageName(index) {
 }
 
 function setVisibleBackground(pageId) {
-	// Hide all backgrounds
+	// Reset all backgrounds by hiding their ::before pseudo-elements
 	document.querySelectorAll('.page').forEach(page => {
-		page.style.display = 'none';
+		page.style.setProperty('--background-opacity', '0');
 	});
 
-	// Show the specific page
+	// Show the specific page's background
 	const activePage = document.getElementById(pageId);
 	if (activePage) {
-		activePage.style.display = 'block';
+		activePage.style.setProperty('--background-opacity', '1');
 	}
 }
+
 
 /* -------------------- --------------- -------------------- */
 /* -------------------- Click Functions -------------------- */
