@@ -967,7 +967,7 @@ a {
 /* -------------------- ---- -------------------- */
 /* -------------------- Form -------------------- */
 /* -------------------- ---- -------------------- */
-form {
+/* form {
 	margin: 10px auto;
 	max-width: 308px;
 	text-align: center;
@@ -1014,4 +1014,4 @@ input:focus {
 	-moz-box-shadow: inset 0px 0px 5px #0A0A0A;
 	-o-box-shadow: inset 0px 0px 5px #0A0A0A;
 	box-shadow: inset 0px 0px 5px #0A0A0A;
-}
+} */
