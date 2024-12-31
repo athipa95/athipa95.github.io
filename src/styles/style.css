@@ -284,6 +284,14 @@ a {
 }
 
 .background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
 	-webkit-transition: opacity 0.4s;
 	transition: opacity 0.4s;
 }
@@ -341,11 +349,50 @@ a {
 	background-color: rgba(0, 0, 0, 0.9);
 }
 
+.page {
+	position: relative;
+	/* Ensure stacking context for content */
+	min-height: 100vh;
+	/* Full viewport height */
+	width: 100%;
+	overflow-y: auto;
+	/* Enable scrolling */
+	z-index: 0;
+	/* Content above background */
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+	/* Ensure content is above the background */
+	padding: 20px;
+	/* Adjust as needed */
+	color: white;
+	/* For readability on dark backgrounds */
+}
+
 .content-wrapper {
 	position: relative;
 	z-index: 1;
 }
 
+/* .page {
+	position: absolute;
+	top: 0;
+	text-align: center;
+	-webkit-transition: left 1.5s;
+	transition: left 1.5s;
+} */
+
+.linksBar {
+	position: absolute;
+	height: 40px;
+	width: 100%;
+	bottom: 0px;
+	opacity: 0;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
 
 /* -------------------- --------------- -------------------- */
 /* -------------------- Sidebar Section -------------------- */
@@ -499,7 +546,7 @@ a {
 /* -------------------- Page Classes and Ids -------------------- */
 /* -------------------- -------------------- -------------------- */
 
-#page1,
+/* #page1,
 #page2,
 #page3,
 #page4 {
@@ -544,6 +591,33 @@ a {
 
 #page4::before {
 	background-image: url("img/Background_2.png");
+} */
+
+#background1,
+#background2,
+#background3,
+#background4 {
+	/* background-attachment: fixed;
+	background-size: cover; */
+	filter: blur(2px);
+	opacity: 0.75;
+	pointer-events: none;
+}
+
+#background1 {
+	background-image: url("img/Background_2.png");
+}
+
+#background2 {
+	background-image: url("img/Background_4.jpg");
+}
+
+#background3 {
+	background-image: url("img/Background_5.png");
+}
+
+#background4 {
+	background-image: url("img/Background_2.png");
 }
 
 #contentPage1,
@@ -554,24 +628,6 @@ a {
 	top: 0;
 	-webkit-transition: top 1s;
 	transition: top 1s;
-}
-
-.page {
-	position: absolute;
-	top: 0;
-	text-align: center;
-	-webkit-transition: left 1.5s;
-	transition: left 1.5s;
-}
-
-.linksBar {
-	position: absolute;
-	height: 40px;
-	width: 100%;
-	bottom: 0px;
-	opacity: 0;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
 }
 
 /* -------------------- -------------------- -------------------- */
