@@ -391,7 +391,7 @@ a {
 	background-size: cover;
 	filter: blur(1.5px);
 	/* Apply blur only to the background */
-	z-index: -1;
+	z-index: -2;
 	/* Place it behind the content */
 	opacity: 0.75;
 	/* Optional: Add transparency */
@@ -516,7 +516,7 @@ a {
 #page3::before,
 #page4::before {
 	content: "";
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
