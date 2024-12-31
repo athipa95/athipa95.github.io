@@ -16,7 +16,7 @@ var pageNames = ["Home", "About Me", "Engineering Experience", "Project Experien
 var pageIndex = 0; // indicated the current page of the user
 var totalPages = $(".footerButton").length; // indicates the amount of available pages on the webpage
 var sidebarDisplayFlag = 1; // indicates if the sidebar should be displayed
-var pageTwoScrollFlag = 0; // indicates if the scrollbar is active on the second page
+var pageTwoScrollFlag = 1; // indicates if the scrollbar is active on the second page
 var resumeButtonDisplayFlag = 1; // indicates if the sidebar should be displayed
 var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or not
 
