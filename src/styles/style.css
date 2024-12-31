@@ -507,6 +507,7 @@ a {
 	height: 100vh;
 	width: 100%;
 	overflow-y: auto;
+	background-attachment: fixed;
 }
 
 #page1::before,
