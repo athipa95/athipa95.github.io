@@ -525,19 +525,19 @@ a {
 }
 
 #page1::before {
-	background-image: url("img/Background_2.png");
+	background-image: url("img/Background_2.png") no-repeat center center fixed;
 }
 
 #page2::before {
-	background-image: url("img/Background_4.jpg");
+	background-image: url("img/Background_4.jpg") no-repeat center center fixed;
 }
 
 #page3::before {
-	background-image: url("img/Background_5.png");
+	background-image: url("img/Background_5.png") no-repeat center center fixed;
 }
 
 #page4::before {
-	background-image: url("img/Background_2.png");
+	background-image: url("img/Background_2.png") no-repeat center center fixed;
 }
 
 #page1,
