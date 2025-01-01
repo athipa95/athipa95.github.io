@@ -156,16 +156,12 @@ CONTACT INFO: athipa95@gmail.com
 /* -------------------- --------- -------------------- */
 html {
 	background-color: #000000;
-	/* background-color: transparent; */
-	z-index: -3;
 }
 
 body {
 	max-width: 100%;
 	min-width: 980px;
 	margin: 0px auto;
-	background-color: transparent;
-	z-index: -3;
 }
 
 body,
