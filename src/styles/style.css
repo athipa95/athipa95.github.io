@@ -163,6 +163,7 @@ body {
 	max-width: 100%;
 	min-width: 980px;
 	margin: 0px auto;
+	background-color: transparent;
 }
 
 body,
