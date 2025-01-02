@@ -590,7 +590,7 @@ a {
 }
 
 #platform_background_deployable {
-	background: url(img/platforms/Deployable_1.png) no-repeat center center;
+	background: black url(img/platforms/Deployable_1.png) no-repeat center center;
 }
 
 #platform_background_blender {
@@ -602,7 +602,7 @@ a {
 }
 
 #platform_background_OSTER {
-	background: url(img/platforms/OSTER_LIDAR_1.png) no-repeat center center;
+	background: black url(img/platforms/OSTER_LIDAR_1.png) no-repeat center center;
 }
 
 #platform_background_myCobot {
@@ -642,7 +642,7 @@ a {
 }
 
 #platform_background_OSTER {
-	height: 100%;
+	width: 100%;
 	background-size: cover;
 }
 
