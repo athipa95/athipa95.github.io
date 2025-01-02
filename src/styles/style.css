@@ -629,6 +629,7 @@ a {
 #platform_background_3d_printers,
 #platform_background_computer_vision,
 #platform_background_deployable,
+#platform_background_OSTER,
 #platform_background_blender,
 #platform_background_Robotic,
 #platform_background_myCobot,
@@ -637,11 +638,6 @@ a {
 #platform_background_BitCraze,
 #platform_background_myAGV {
 	height: 100%;
-	width: 100%;
-	background-size: cover;
-}
-
-#platform_background_OSTER {
 	width: 100%;
 	background-size: cover;
 }
