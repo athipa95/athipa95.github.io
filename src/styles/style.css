@@ -870,6 +870,15 @@ a {
 	background-size: cover;
 }
 
+#project_background_gyro,
+#project_background_building,
+#project_background_secrts,
+#project_background_SAR,
+#project_background_sandbags,
+#project_background_attitude {
+	background-size: cover;
+}
+
 .project {
 	display: inline-block;
 	position: relative;
