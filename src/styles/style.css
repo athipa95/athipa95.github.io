@@ -843,11 +843,11 @@ a {
 }
 
 #project_background_Docking {
-	background: white url(img/projects/SwervePlatform.png) no-repeat center center;
+	background: white url(img/projects/Docking_2.png) no-repeat center center;
 }
 
 #project_background_RAVEN {
-	background: white url(img/projects/Soccer.png) no-repeat center center;
+	background: rgb(0, 0, 0) url(img/projects/RAVEN_2.png) no-repeat center center;
 }
 
 #project_background_MIRO,
