@@ -827,7 +827,7 @@ a {
 }
 
 #project_background_attitude {
-	background: url(img/projects/RASCAL.png) no-repeat center center;
+	background: url(img/projects/Attitude_2.png) no-repeat center center;
 }
 
 #project_background_collision {
@@ -852,13 +852,13 @@ a {
 
 #project_background_MIRO,
 #project_background_manual_docking,
-#project_background_gyro,
+/* #project_background_gyro, */
 #project_background_STARSS,
 #project_background_framework,
-#project_background_building,
-#project_background_secrts,
-#project_background_SAR,
-#project_background_sandbags,
+/* #project_background_building, */
+/* #project_background_secrts, */
+/* #project_background_SAR, */
+/* #project_background_sandbags, */
 #project_background_attitude,
 #project_background_collision,
 #project_background_AURA,
