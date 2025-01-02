@@ -577,20 +577,20 @@ a {
 /* -------------------- -------------------- -------------------- */
 /* -------------------- Platform Development -------------------- */
 /* -------------------- -------------------- -------------------- */
-#platform_background_hexcopter {
-	background: url(img/platforms/Hexcopter.jpg) no-repeat center center;
+#platform_background_balloons {
+	background: url(img/platforms/Balloon_1.png) no-repeat center center;
 }
 
-#platform_background_tdmr {
-	background: url(img/platforms/Mapping.png) no-repeat center center;
+#platform_background_3d_printers {
+	background: url(img/platforms/3D_Printers_1.png) no-repeat center center;
 }
 
-#platform_background_robot_arm {
-	background: url(img/platforms/Robot_Arm.png) no-repeat center center;
+#platform_background_computer_vision {
+	background: url(img/platforms/CV_1.png) no-repeat center center;
 }
 
-#platform_background_thor {
-	background: url(img/platforms/THOR.jpg) no-repeat center center;
+#platform_background_deployable {
+	background: url(img/platforms/Deployable_1.png) no-repeat center center;
 }
 
 #platform_background_blender {
@@ -625,10 +625,10 @@ a {
 	background: white url(img/platforms/myAGV_1.png) no-repeat center center;
 }
 
-#platform_background_hexcopter,
-#platform_background_tdmr,
-#platform_background_robot_arm,
-#platform_background_thor,
+#platform_background_balloons,
+#platform_background_3d_printers,
+#platform_background_computer_vision,
+#platform_background_deployable,
 #platform_background_blender,
 #platform_background_Robotic,
 #platform_background_OSTER,
