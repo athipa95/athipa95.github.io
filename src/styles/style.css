@@ -593,16 +593,16 @@ a {
 	background: url(img/platforms/THOR.jpg) no-repeat center center;
 }
 
-#platform_background_hyperloop {
-	background: url(img/platforms/Hyperloop.png) no-repeat center center;
+#platform_background_blender {
+	background: url(img/platforms/Blender_1.png) no-repeat center center;
 }
 
-#platform_background_yumi {
-	background: url(img/platforms/YuMi.png) no-repeat center center;
+#platform_background_Robotic {
+	background: url(img/platforms/Robotic_Platforms_teaching_1.png) no-repeat center center;
 }
 
-#platform_background_dragon {
-	background: url(img/platforms/Dragon.jpg) no-repeat center center;
+#platform_background_OSTER {
+	background: url(img/platforms/OSTER_LIDAR_1.png) no-repeat center center;
 }
 
 #platform_background_myCobot {
@@ -629,9 +629,9 @@ a {
 #platform_background_tdmr,
 #platform_background_robot_arm,
 #platform_background_thor,
-#platform_background_hyperloop,
-#platform_background_yumi,
-#platform_background_dragon,
+#platform_background_blender,
+#platform_background_Robotic,
+#platform_background_OSTER,
 #platform_background_myCobot,
 #platform_background_stewart,
 #platform_background_Gyro,
