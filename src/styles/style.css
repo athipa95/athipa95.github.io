@@ -614,7 +614,7 @@ a {
 }
 
 #platform_background_Gyro {
-	background: white url(img/platforms/Gyro_1.png) no-repeat center center;
+	background: rgb(0, 0, 0) url(img/platforms/Gyro_1.png) no-repeat center center;
 }
 
 #platform_background_BitCraze {
@@ -799,7 +799,7 @@ a {
 }
 
 #project_background_gyro {
-	background: url(img/projects/Gyro_2.png) no-repeat center center;
+	background: black url(img/projects/Gyro_2.png) no-repeat center center;
 }
 
 #project_background_STARSS {
@@ -807,27 +807,27 @@ a {
 }
 
 #project_background_framework {
-	background: url(img/projects/Framework_2.png) no-repeat center center;
+	background: white url(img/projects/Framework_2.png) no-repeat center center;
 }
 
 #project_background_building {
-	background: url(img/projects/Building_2.png) no-repeat center center;
+	background: white url(img/projects/Building_2.png) no-repeat center center;
 }
 
 #project_background_secrts {
-	background: url(img/projects/SeCrTS_2.png) no-repeat center center;
+	background: black url(img/projects/SeCrTS_2.png) no-repeat center center;
 }
 
 #project_background_SAR {
-	background: url(img/projects/Agnikul_2.png) no-repeat center center;
+	background: white url(img/projects/Agnikul_2.png) no-repeat center center;
 }
 
 #project_background_sandbags {
-	background: url(img/projects/Sandbags_2.png) no-repeat center center;
+	background: white url(img/projects/Sandbags_2.png) no-repeat center center;
 }
 
 #project_background_attitude {
-	background: url(img/projects/Attitude_2.png) no-repeat center center;
+	background: black url(img/projects/Attitude_2.png) no-repeat center center;
 }
 
 #project_background_collision {
@@ -851,10 +851,10 @@ a {
 }
 
 #project_background_MIRO,
-#project_background_manual_docking,
+/* #project_background_manual_docking, */
 /* #project_background_gyro, */
 #project_background_STARSS,
-#project_background_framework,
+/* #project_background_framework, */
 /* #project_background_building, */
 /* #project_background_secrts, */
 /* #project_background_SAR, */
@@ -870,11 +870,10 @@ a {
 	background-size: cover;
 }
 
-#project_background_gyro,
-#project_background_building,
+#project_background_manual_docking,
 #project_background_secrts,
 #project_background_SAR,
-#project_background_sandbags,
+#project_background_framework,
 #project_background_attitude {
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -882,6 +881,17 @@ a {
 	height: 250px;
 	width: 100%;
 }
+
+#project_background_gyro,
+#project_background_sandbags,
+#project_background_building {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 200px;
+	width: 100%;
+}
+
 
 .project {
 	display: inline-block;
