@@ -514,7 +514,7 @@ a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-size: cover;
 	filter: blur(2px);
 	opacity: 0.75;
@@ -876,7 +876,9 @@ a {
 #project_background_SAR,
 #project_background_sandbags,
 #project_background_attitude {
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .project {
