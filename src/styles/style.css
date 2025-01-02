@@ -631,7 +631,6 @@ a {
 #platform_background_deployable,
 #platform_background_blender,
 #platform_background_Robotic,
-#platform_background_OSTER,
 #platform_background_myCobot,
 #platform_background_stewart,
 #platform_background_Gyro,
@@ -639,6 +638,10 @@ a {
 #platform_background_myAGV {
 	height: 100%;
 	width: 100%;
+	background-size: cover;
+}
+
+#platform_background_OSTER {
 	background-size: cover;
 }
 
