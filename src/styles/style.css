@@ -605,8 +605,8 @@ a {
 	background: url(img/platforms/Dragon.jpg) no-repeat center center;
 }
 
-#platform_background_micromouse {
-	background: white url(img/platforms/Micromouse.png) no-repeat center center;
+#platform_background_myCobot {
+	background: white url(img/platforms/myCobot_1.png) no-repeat center center;
 }
 
 #platform_background_stewart {
@@ -621,8 +621,8 @@ a {
 	background: white url(img/platforms/ATL.png) no-repeat center center;
 }
 
-#platform_background_soccer {
-	background: white url(img/platforms/Soccer.png) no-repeat center center;
+#platform_background_myAGV {
+	background: white url(img/platforms/myAGV_1.png) no-repeat center center;
 }
 
 #platform_background_hexcopter,
@@ -632,17 +632,17 @@ a {
 #platform_background_hyperloop,
 #platform_background_yumi,
 #platform_background_dragon,
-#platform_background_micromouse,
+#platform_background_myCobot,
 #platform_background_stewart,
 #platform_background_auto_flight,
 #platform_background_auto_boat,
-#platform_background_soccer {
+#platform_background_myAGV {
 	height: 100%;
 	width: 100%;
 	background-size: cover;
 }
 
-#platform_background_micromouse,
+#platform_background_myCobot,
 #platform_background_stewart,
 #platform_background_auto_flight,
 #platform_background_auto_boat {
