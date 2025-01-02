@@ -831,15 +831,15 @@ a {
 }
 
 #project_background_collision {
-	background: url(img/projects/Canoe.jpg) no-repeat center center;
+	background: white url(img/projects/Collision_2.png) no-repeat center center;
 }
 
 #project_background_AURA {
-	background: url(img/projects/Mead.jpg) no-repeat center center;
+	background: black url(img/projects/AURA_2.JPG) no-repeat center center;
 }
 
 #project_background_VAYU {
-	background: url(img/projects/Mapping.png) no-repeat center center;
+	background: url(img/projects/Balloon_2.png) no-repeat center center;
 }
 
 #project_background_Docking {
@@ -851,17 +851,8 @@ a {
 }
 
 #project_background_MIRO,
-/* #project_background_manual_docking, */
-/* #project_background_gyro, */
 #project_background_STARSS,
-/* #project_background_framework, */
-/* #project_background_building, */
-/* #project_background_secrts, */
-/* #project_background_SAR, */
-/* #project_background_sandbags, */
 #project_background_attitude,
-#project_background_collision,
-#project_background_AURA,
 #project_background_VAYU,
 #project_background_Docking,
 #project_background_RAVEN {
@@ -873,6 +864,8 @@ a {
 #project_background_gyro,
 #project_background_manual_docking,
 #project_background_SAR,
+#project_background_collision,
+#project_background_AURA,
 #project_background_framework,
 #project_background_attitude,
 #project_background_secrts,
