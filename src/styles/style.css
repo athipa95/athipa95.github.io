@@ -609,12 +609,12 @@ a {
 	background: white url(img/platforms/Micromouse.png) no-repeat center center;
 }
 
-#platform_background_swerve {
-	background: white url(img/platforms/SwervePlatform.png) no-repeat center center;
+#platform_background_stewart {
+	background: white url(img/platforms/Stewart_Picture_1.png) no-repeat center center;
 }
 
 #platform_background_auto_flight {
-	background: white url(img/platforms/ATL.png) no-repeat center center;
+	background: white url(img/platforms/Soccer.png) no-repeat center center;
 }
 
 #platform_background_auto_boat {
@@ -633,7 +633,7 @@ a {
 #platform_background_yumi,
 #platform_background_dragon,
 #platform_background_micromouse,
-#platform_background_swerve,
+#platform_background_stewart,
 #platform_background_auto_flight,
 #platform_background_auto_boat,
 #platform_background_soccer {
@@ -643,7 +643,7 @@ a {
 }
 
 #platform_background_micromouse,
-#platform_background_swerve,
+#platform_background_stewart,
 #platform_background_auto_flight,
 #platform_background_auto_boat {
 	background-size: contain;
