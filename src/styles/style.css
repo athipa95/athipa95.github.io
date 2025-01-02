@@ -289,10 +289,6 @@ a {
 .largeText {
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	font-size: 28px;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	display: flex;
 }
 
 .mediumText {
@@ -302,10 +298,6 @@ a {
 
 .smallText {
 	font-size: 16px;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	display: flex;
 }
 
 .pageTitle {
