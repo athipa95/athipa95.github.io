@@ -714,21 +714,21 @@ a {
 /* -------------------- ---------------------- -------------------- */
 /* -------------------- Engineering Experience -------------------- */
 /* -------------------- ---------------------- -------------------- */
-#job_background_ATL {
-	background: url(img/work/ATL.png) no-repeat center center;
+#job_background_spacetrex {
+	background: url(img/work/Spacetrex_1.jpg) no-repeat center center;
 }
 
-#job_background_ASL {
-	background: url(img/work/ASL.png) no-repeat center center;
+#job_background_agnikul {
+	background: url(img/work/Agnikul_1.png) no-repeat center center;
 }
 
-#job_background_PTW {
-	background: url(img/work/PTW.png) no-repeat center center;
+#job_background_RE {
+	background: url(img/work/Royal_Enfield_1.png) no-repeat center center;
 }
 
-#job_background_ATL,
-#job_background_ASL,
-#job_background_PTW {
+#job_background_spacetrex,
+#job_background_agnikul,
+#job_background_RE {
 	height: 100%;
 	width: 100%;
 	background-size: contain;
