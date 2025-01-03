@@ -850,23 +850,18 @@ a {
 	background: rgb(0, 0, 0) url(img/projects/RAVEN_gif_2.gif) no-repeat center center;
 }
 
+
 #project_background_MIRO,
 #project_background_STARSS,
 #project_background_attitude,
 #project_background_VAYU,
-#project_background_Docking {
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-}
-
+#project_background_Docking,
 #project_background_gyro,
 #project_background_manual_docking,
 #project_background_SAR,
 #project_background_collision,
 #project_background_AURA,
 #project_background_framework,
-#project_background_attitude,
 #project_background_secrts,
 #project_background_RAVEN,
 #project_background_sandbags,
