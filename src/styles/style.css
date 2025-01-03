@@ -687,8 +687,8 @@ a {
 }
 
 .platform:hover {
-	height: 320px;
-	background: rgba(25, 25, 25, 1);
+	height: 260px;
+	background: black;
 }
 
 .platform:hover .platformImage {
