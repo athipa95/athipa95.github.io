@@ -791,19 +791,19 @@ a {
 /* -------------------- Project Experience -------------------- */
 /* -------------------- ------------------ -------------------- */
 #project_background_MIRO {
-	background: url(img/projects/MIRO_2.jpg) no-repeat center center;
+	background: url(img/projects/MIRO_gif_2.gif) no-repeat center center;
 }
 
 #project_background_manual_docking {
-	background: black url(img/projects/Manual_2.png) no-repeat center center;
+	background: black url(img/projects/Manual_gif_2.gif) no-repeat center center;
 }
 
 #project_background_gyro {
-	background: black url(img/projects/Gyro_2.png) no-repeat center center;
+	background: black url(img/projects/Gyro_gif_2.gif) no-repeat center center;
 }
 
 #project_background_STARSS {
-	background: url(img/projects/STARSS_2.png) no-repeat center center;
+	background: url(img/projects/STARSS_gif_2.gif) no-repeat center center;
 }
 
 #project_background_framework {
@@ -827,7 +827,7 @@ a {
 }
 
 #project_background_attitude {
-	background: black url(img/projects/Attitude_2.png) no-repeat center center;
+	background: black url(img/projects/Attitude_gif_2.gif) no-repeat center center;
 }
 
 #project_background_collision {
@@ -843,7 +843,7 @@ a {
 }
 
 #project_background_Docking {
-	background: white url(img/projects/Docking_2.png) no-repeat center center;
+	background: white url(img/projects/Docking_gif_2.gif) no-repeat center center;
 }
 
 #project_background_RAVEN {
