@@ -1,8 +1,8 @@
 /*
-PROGRAMMER: Frederick Wachter
-DATE CREATED: 2016-04-13
-PURPOSE: Engineering Portfolio of Frederick Wachter
-CONTACT INFO: wachterfreddy@gmail.com
+PROGRAMMER: Athip Thirupathi Raj, template taken from Fredrick Wachter
+DATE CREATED: 2024-12-28
+PURPOSE: Engineering Portfolio of Athip Thirupathi Raj
+CONTACT INFO: athipa95@gmail.com
 */
 
 /* -------------------- ---------------------- -------------------- */
