@@ -854,8 +854,7 @@ a {
 #project_background_STARSS,
 #project_background_attitude,
 #project_background_VAYU,
-#project_background_Docking,
-#project_background_RAVEN {
+#project_background_Docking {
 	height: 100%;
 	width: 100%;
 	background-size: cover;
@@ -869,6 +868,7 @@ a {
 #project_background_framework,
 #project_background_attitude,
 #project_background_secrts,
+#project_background_RAVEN,
 #project_background_sandbags,
 #project_background_building {
 	background-size: contain;
