@@ -791,7 +791,7 @@ a {
 /* -------------------- Project Experience -------------------- */
 /* -------------------- ------------------ -------------------- */
 #project_background_MIRO {
-	background: url(img/projects/MIRO_gif_2.gif) no-repeat center center;
+	background: black url(img/projects/MIRO_gif_2.gif) no-repeat center center;
 }
 
 #project_background_manual_docking {
@@ -803,7 +803,7 @@ a {
 }
 
 #project_background_STARSS {
-	background: url(img/projects/STARSS_gif_2.gif) no-repeat center center;
+	background: black url(img/projects/STARSS_gif_2.gif) no-repeat center center;
 }
 
 #project_background_framework {
@@ -839,15 +839,15 @@ a {
 }
 
 #project_background_VAYU {
-	background: url(img/projects/Balloon_2.png) no-repeat center center;
+	background: black url(img/projects/Balloon_2.png) no-repeat center center;
 }
 
 #project_background_Docking {
-	background: white url(img/projects/Docking_gif_2.gif) no-repeat center center;
+	background: black url(img/projects/Docking_gif_2.gif) no-repeat center center;
 }
 
 #project_background_RAVEN {
-	background: rgb(0, 0, 0) url(img/projects/RAVEN_gif_2.gif) no-repeat center center;
+	background: black url(img/projects/RAVEN_gif_2.gif) no-repeat center center;
 }
 
 
