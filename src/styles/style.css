@@ -772,7 +772,7 @@ a {
 
 .job:hover {
 	height: 290px;
-	background: rgba(25, 25, 25, 1);
+	background: black;
 }
 
 .job:hover .jobImage {
@@ -912,7 +912,7 @@ a {
 
 .project:hover {
 	height: 290px;
-	background: rgba(25, 25, 25, 1);
+	background: black;
 }
 
 .project:hover .projectImage {
