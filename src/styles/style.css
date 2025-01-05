@@ -566,13 +566,13 @@ a {
 
 .linksBar {
 	position: absolute;
-	height: 40px;
+	height: 45px;
 	width: 100%;
 	bottom: 0px;
 	opacity: 0;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-	background-color: rgb(67, 67, 67);
+	background-color: rgb(24, 24, 24);
 }
 
 /* -------------------- -------------------- -------------------- */
