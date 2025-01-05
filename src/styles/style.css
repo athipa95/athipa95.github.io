@@ -729,8 +729,13 @@ a {
 	background: url(img/work/Royal_Enfield_1.png) no-repeat center center;
 }
 
+#job_background_Michigan {
+	background: url(img/work/UofM_1.jpg) no-repeat center center;
+}
+
 #job_background_spacetrex,
 #job_background_agnikul,
+#job_background_Michigan,
 #job_background_RE {
 	height: 100%;
 	width: 100%;
