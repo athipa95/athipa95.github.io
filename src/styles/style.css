@@ -572,7 +572,7 @@ a {
 	opacity: 0;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-	background-color: grey;
+	background-color: rgb(67, 67, 67);
 }
 
 /* -------------------- -------------------- -------------------- */
@@ -688,7 +688,7 @@ a {
 }
 
 .platform:hover {
-	height: 275px;
+	height: 290px;
 	background: black;
 }
 
