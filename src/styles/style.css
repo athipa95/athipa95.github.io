@@ -511,7 +511,7 @@ a {
 #page3::before,
 #page4::before {
 	content: "";
-	position: absolute;
+	/* position: absolute; */
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -531,7 +531,7 @@ a {
 }
 
 #page2::before {
-	background-image: url("img/Background_4.jpg");
+	background-image: url("img/Galaxy_3.avif");
 }
 
 #page3::before {
@@ -539,7 +539,7 @@ a {
 }
 
 #page4::before {
-	background-image: url("img/Background_2.png");
+	background-image: url("img/Galaxy_2.avif");
 }
 
 #page1,
