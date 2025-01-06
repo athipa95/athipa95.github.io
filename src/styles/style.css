@@ -519,9 +519,9 @@ a {
 	background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
-	filter: blur(1.5px);
-	opacity: 0.75;
+	background-size: cover;
+	filter: blur(1px);
+	opacity: 0.8;
 	z-index: -1;
 	pointer-events: none;
 }
