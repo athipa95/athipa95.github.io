@@ -527,7 +527,7 @@ a {
 }
 
 #page1::before {
-	background-image: url("img/Eclipse_1.avif");
+	background-image: url("img/Galaxy_1.avif");
 }
 
 #page2::before {
@@ -535,7 +535,7 @@ a {
 }
 
 #page3::before {
-	background-image: url("img/Background_5.png");
+	background-image: url("img/Marble_1.avif");
 }
 
 #page4::before {
