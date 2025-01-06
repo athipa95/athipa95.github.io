@@ -516,16 +516,18 @@ a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-attachment: fixed;
+	background-attachment: scroll;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	filter: blur(2px);
+	filter: blur(1.5px);
 	opacity: 0.75;
 	z-index: -1;
 	pointer-events: none;
 }
 
 #page1::before {
-	background-image: url("img/Background_2.png");
+	background-image: url("img/Eclipse_1.avif");
 }
 
 #page2::before {
