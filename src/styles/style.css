@@ -83,7 +83,7 @@ CONTACT INFO: athipa95@gmail.com
 
 .icon-newspaper:before {
 	position: relative;
-	top: 3px;
+	top: 9px;
 	margin-left: 9px;
 	font-family: FontAwesome;
 	content: "\f1ea";
@@ -882,7 +882,6 @@ a {
 	height: 200px;
 	width: 100%;
 }
-
 
 .project {
 	display: inline-block;
