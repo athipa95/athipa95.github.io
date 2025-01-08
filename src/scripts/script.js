@@ -8,7 +8,7 @@ CONTACT INFO: athipa95@gmail.com
 /* -------------------- ---------------------- -------------------- */
 /* -------------------- User Defined Variables -------------------- */
 /* -------------------- ---------------------- -------------------- */
-var pageNames = ["Home", "About Me", "Engineering Experience", "Project Experience", "Awards and Media Mentions"];
+var pageNames = ["Home", "About Me", "Engineering Experience", "Project Experience", "Inventions and Provisional Patents", "Awards and Media Mentions"];
 
 /* -------------------- ---------------- -------------------- */
 /* -------------------- Static Variables -------------------- */
