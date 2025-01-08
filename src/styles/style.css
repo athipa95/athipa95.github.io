@@ -473,14 +473,14 @@ a {
 #page1,
 #page2,
 #page3,
-#page4 {
+#page5 {
 	position: absolute;
 }
 
 #page1::before,
 #page2::before,
 #page3::before,
-#page4::before {
+#page5::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -509,14 +509,14 @@ a {
 	background-image: url("img/Galaxy_2.avif");
 }
 
-#page4::before {
+#page5::before {
 	background-image: url("img/Background_4.jpg");
 }
 
 #page1,
 #page2,
 #page3,
-#page4 {
+#page5 {
 	height: 100%;
 	background-size: cover;
 }
@@ -524,7 +524,8 @@ a {
 #contentPage1,
 #contentPage2,
 #contentPage3,
-#contentPage4 {
+#contentPage4,
+#contentPage5 {
 	position: relative;
 	top: 0;
 	-webkit-transition: top 1s;
