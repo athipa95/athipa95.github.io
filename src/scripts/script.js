@@ -23,7 +23,7 @@ var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or n
 var platformIndexAdjust = $("#contentPage1").children().length - $(".platform").length - 1; // Adjustment to platform index
 var jobIndexAdjust = $("#contentPage2").children().length - $(".job").length - 1; // Adjustment to job index
 var projectIndexAdjust = $("#contentPage3").children().length - $(".project").length - 1; // Adjustment to project index
-var inventionIndexAdjust = $("#contentPage4").children().length - $(".project").length - 1; // Adjustment to project index
+var inventionIndexAdjust = $("#contentPage4").children().length - $(".invention").length - 1; // Adjustment to invention index
 
 /* -------------------- ------------- -------------------- */
 /* -------------------- Window Resize -------------------- */
@@ -301,6 +301,40 @@ $(".project").hover(
 			"opacity": ""
 		});
 		$(".projectDescription").eq(projectIndex).css({
+			"opacity": ""
+		});
+	}
+);
+
+$(".invention").hover(
+	function () {
+		var windowWidth = $(window).width();
+		var sidebarWidth = $("#sidebar").width();
+		var inventionPosition = $(this).position().left + $(this).width();
+
+		if (inventionPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+			sidebarDisplayFlag = 0;
+			toggleSidebarDisplay();
+		}
+
+		var inventionIndex = $(this).index() - inventionIndexAdjust;
+		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
+			"opacity": "0.2"
+		});
+		$(".inventionDescription").eq(inventionIndex).css({
+			"opacity": "1"
+		});
+	}, function () {
+		if (sidebarDisplayFlag == 0) {
+			sidebarDisplayFlag = 1;
+			toggleSidebarDisplay();
+		}
+
+		var inventionIndex = $(this).index() - inventionIndexAdjust;
+		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
+			"opacity": ""
+		});
+		$(".inventionDescription").eq(inventionIndex).css({
 			"opacity": ""
 		});
 	}
