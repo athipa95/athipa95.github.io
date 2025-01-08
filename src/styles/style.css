@@ -473,6 +473,7 @@ a {
 #page1,
 #page2,
 #page3,
+#page4,
 #page5 {
 	position: absolute;
 }
@@ -480,6 +481,7 @@ a {
 #page1::before,
 #page2::before,
 #page3::before,
+#page4::before,
 #page5::before {
 	content: "";
 	position: absolute;
@@ -509,6 +511,10 @@ a {
 	background-image: url("img/Galaxy_2.avif");
 }
 
+#page4::before {
+	background-image: url("img/Galaxy_2.avif");
+}
+
 #page5::before {
 	background-image: url("img/Background_4.jpg");
 }
@@ -516,6 +522,7 @@ a {
 #page1,
 #page2,
 #page3,
+#page4,
 #page5 {
 	height: 100%;
 	background-size: cover;
@@ -905,6 +912,104 @@ a {
 }
 
 .project:hover .linksBar {
+	opacity: 1;
+}
+
+/* -------------------- ------------------ -------------------- */
+/* ----------- Inventions and Provisional Patents ------------- */
+/* -------------------- ------------------ -------------------- */
+#invention_background_MIRO {
+	background: black url(img/inventions/MIRO_gif_2.gif) no-repeat center center;
+}
+
+#invention_background_manual_docking {
+	background: black url(img/inventions/Manual_gif_2.gif) no-repeat center center;
+}
+
+#invention_background_gyro {
+	background: black url(img/inventions/Gyro_gif_2.gif) no-repeat center center;
+}
+
+#invention_background_STARSS {
+	background: black url(img/inventions/STARSS_gif_2.gif) no-repeat center center;
+}
+
+#invention_background_framework {
+	background: white url(img/inventions/Framework_2.png) no-repeat center center;
+}
+
+#invention_background_building {
+	background: white url(img/inventions/Building_2.png) no-repeat center center;
+}
+
+#invention_background_secrts {
+	background: black url(img/inventions/SeCrTS_2.png) no-repeat center center;
+}
+
+#invention_background_MIRO,
+#invention_background_STARSS,
+#invention_background_attitude,
+#invention_background_VAYU,
+#invention_background_Docking,
+#invention_background_gyro,
+#invention_background_manual_docking {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 200px;
+	width: 100%;
+}
+
+.invention {
+	display: inline-block;
+	position: relative;
+	margin: 10px 10px;
+	height: 250px;
+	width: 475px;
+	background-color: none;
+	cursor: pointer;
+	background: rgba(25, 25, 25, 0.9);
+	-webkit-transition: height 0.5s;
+	transition: height 0.5s;
+	border: 1px solid white;
+}
+
+.inventionImage {
+	height: 200px;
+	width: 471px;
+	margin: 2px;
+}
+
+.inventionDescription {
+	top: 0px;
+	position: absolute;
+	margin: 5px 10px;
+	opacity: 0;
+	cursor: pointer;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.invention div div p,
+.invention div p {
+	margin: 5px;
+	color: white;
+}
+
+.invention:hover {
+	height: 350px;
+	background: black;
+}
+
+.invention:hover .inventionImage {
+	filter: brightness(0);
+}
+
+.invention:hover .blockTitle {
+	color: rgba(232, 232, 232, 0);
+}
+
+.invention:hover .linksBar {
 	opacity: 1;
 }
 

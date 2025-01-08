@@ -23,6 +23,7 @@ var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or n
 var platformIndexAdjust = $("#contentPage1").children().length - $(".platform").length - 1; // Adjustment to platform index
 var jobIndexAdjust = $("#contentPage2").children().length - $(".job").length - 1; // Adjustment to job index
 var projectIndexAdjust = $("#contentPage3").children().length - $(".project").length - 1; // Adjustment to project index
+var inventionIndexAdjust = $("#contentPage4").children().length - $(".project").length - 1; // Adjustment to project index
 
 /* -------------------- ------------- -------------------- */
 /* -------------------- Window Resize -------------------- */
