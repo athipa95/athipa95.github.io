@@ -471,12 +471,14 @@ a {
 	border: 2px solid white;
 	border-radius: 12px;
 } */
-.footerButton.active {
-	font-weight: bold;
-	/* Highlight active page */
-	color: #ffcc00;
-	/* Example color for active text */
-}
+
+/* .notActive {
+	background-color: white;
+	height: 20px;
+	width: 20px;
+	border: 2px solid black;
+	border-radius: 12px;
+} */
 
 .notActive {
 	background-color: white;
@@ -484,6 +486,24 @@ a {
 	width: 20px;
 	border: 2px solid black;
 	border-radius: 12px;
+}
+
+.active {
+	background-color: black;
+	height: 20px;
+	width: 20px;
+	border: 2px solid white;
+	border-radius: 12px;
+}
+
+.footerButton.active {
+	font-weight: bold;
+	color: #ffcc00;
+	/* Highlight active text */
+}
+
+.footerButton.notActive {
+	/* No additional styles; keep it text-only */
 }
 
 /* -------------------- -------------------- -------------------- */
