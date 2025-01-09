@@ -323,7 +323,7 @@ a {
 /* -------------------- --------------- -------------------- */
 #sidebar {
 	position: fixed;
-	top: 400px;
+	top: 50%;
 	right: 0;
 	height: 245px;
 	width: 64px;
@@ -1029,11 +1029,11 @@ a {
 #resumeButton {
 	padding-top: 4px;
 	position: absolute;
-	top: 46.5%;
-	left: 42%;
+	top: 65%;
+	right: 0px;
 	width: 300px;
 	height: 40px;
-	font-size: 30px;
+	font-size: 25px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	color: white;
 }
@@ -1047,11 +1047,11 @@ a {
 #cvButton {
 	padding-top: 4px;
 	position: absolute;
-	top: 53.5%;
-	left: 42%;
+	top: 70%;
+	right: 0px;
 	width: 300px;
 	height: 40px;
-	font-size: 30px;
+	font-size: 25px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	color: white;
 }
