@@ -1027,13 +1027,13 @@ a {
 /* -------------------- Contact Me -------------------- */
 /* -------------------- ---------- -------------------- */
 #resumeButton {
-	/* padding-top: 5px; */
+	padding-top: 5px;
 	position: fixed;
 	top: 65%;
-	right: 0px;
+	right: 10px;
 	width: 200px;
 	height: 40px;
-	font-size: 25px;
+	font-size: 30px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	vertical-align: middle;
 	text-align: right;
@@ -1047,13 +1047,13 @@ a {
 }
 
 #cvButton {
-	/* padding-top: 5px; */
+	padding-top: 5px;
 	position: fixed;
 	top: 70%;
-	right: 0px;
-	width: 200px;
+	right: 10px;
+	width: 180px;
 	height: 40px;
-	font-size: 25px;
+	font-size: 30px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
 	vertical-align: middle;
 	text-align: right;
