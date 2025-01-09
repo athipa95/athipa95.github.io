@@ -542,51 +542,6 @@ $(".platform, .job, .project, .invention").hover(
 	}
 );
 
-// window.addEventListener('scroll', function () {
-// 	var scrollPosition = window.scrollY;
-// 	var windowHeight = window.innerHeight;
-
-// 	document.getElementById('intro').style.opacity =
-// 		Math.max(0, 1 - scrollPosition / windowHeight);
-// 	document.getElementById('page1').style.opacity =
-// 		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
-// 	document.getElementById('page2').style.opacity =
-// 		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
-// 	document.getElementById('page3').style.opacity =
-// 		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
-// 	document.getElementById('page4').style.opacity =
-// 		Math.max(0, Math.min(1, (scrollPosition - windowHeight) / windowHeight));
-// });
-
-
-// /* -------------------- ----------------------- -------------------- */
-// /* -------------------- Contact Form Submission -------------------- */
-// /* -------------------- ----------------------- -------------------- */
-// $("#contentPage3").submit(function (e) {
-// 	e.preventDefault();
-// 	$.ajax({
-// 		url: "https://formspree.io/f/mjkkeweq",
-// 		method: "POST",
-// 		data: { name: $("#userName").val(), _replyto: $("#userEmail").val(), message: $("#userMessage").val() },
-// 		dataType: "json"
-// 	});
-
-// 	setTimeout(function () {
-// 		clearForm();
-// 	}, 1000);
-// });
-
-// function clearForm() {
-// 	var elems = document.getElementsByTagName("input");
-// 	var l = elems.length - 1;
-// 	for (var i = 0; i < l; ++i) {
-// 		elems[i].value = "";
-// 	}
-// 	$("textarea").val("");
-
-// 	alert("Contact request sent.");
-// }
-
 /* -------------------- --------------- -------------------- */
 /* -------------------- Google Tracking -------------------- */
 /* -------------------- --------------- -------------------- */

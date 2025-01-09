@@ -1039,6 +1039,7 @@ a {
 	vertical-align: middle;
 	text-align: right;
 	color: white;
+	transition: right 1s;
 }
 
 #resumeButton:hover {
@@ -1060,6 +1061,7 @@ a {
 	vertical-align: middle;
 	text-align: right;
 	color: white;
+	transition: right 1s;
 }
 
 #cvButton:hover {
