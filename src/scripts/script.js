@@ -20,8 +20,8 @@ var pageTwoScrollFlag = 0; // indicates if the scrollbar is active on the second
 var resumeButtonDisplayFlag = 1; // indicates if the resume button should be displayed
 var cvButtonDisplayFlag = 1; // indicates if the CV button should be displayed
 var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or not
-var resumeButtonDisplayTolerance = 30; // tolerance to decide to display sidebar or not
-var cvButtonDisplayTolerance = 30; // tolerance to decide to display sidebar or not
+var resumeButtonDisplayTolerance = 30; // tolerance to decide to display resume button or not
+var cvButtonDisplayTolerance = 30; // tolerance to decide to display cv button or not
 
 
 var platformIndexAdjust = $("#contentPage1").children().length - $(".platform").length - 1; // Adjustment to platform index
@@ -257,12 +257,12 @@ $(".platform").hover(
 			toggleSidebarDisplay();
 		}
 
-		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
 			resumeButtonDisplayFlag = 0;
 			toggleResumeButtonDisplay();
 		}
 
-		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
@@ -310,12 +310,12 @@ $(".job").hover(
 			toggleSidebarDisplay();
 		}
 
-		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
 			resumeButtonDisplayFlag = 0;
 			toggleResumeButtonDisplay();
 		}
 
-		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
@@ -363,12 +363,12 @@ $(".project").hover(
 			toggleSidebarDisplay();
 		}
 
-		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
 			resumeButtonDisplayFlag = 0;
 			toggleResumeButtonDisplay();
 		}
 
-		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
@@ -417,12 +417,12 @@ $(".invention").hover(
 			toggleSidebarDisplay();
 		}
 
-		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
 			resumeButtonDisplayFlag = 0;
 			toggleResumeButtonDisplay();
 		}
 
-		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
