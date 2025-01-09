@@ -521,20 +521,27 @@ $(".platform, .job, .project, .invention").hover(
 	}
 );
 
+// Sidebar hover logic
 $("#sidebar").hover(
 	function () {
 		// Always show the sidebar when hovering over it
 		sidebarDisplayFlag = 1;
 		toggleSidebarDisplay();
-	},
-	function () {
-		// Allow normal sidebar behavior when leaving the hover
-		if (!$(".platform:hover, .job:hover, .project:hover, .invention:hover").length) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
 	}
 );
+
+// Reapply overlap logic when leaving the sidebar
+$("#sidebar").mouseleave(function () {
+	const windowWidth = $(window).width();
+	const sidebarWidth = $("#sidebar").width();
+	const lastHoveredElement = $(".platform:hover, .job:hover, .project:hover, .invention:hover");
+
+	if (!lastHoveredElement.length ||
+		(lastHoveredElement.position().left + lastHoveredElement.width()) <= (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+		sidebarDisplayFlag = 0;
+		toggleSidebarDisplay();
+	}
+});
 
 // window.addEventListener('scroll', function () {
 // 	var scrollPosition = window.scrollY;
