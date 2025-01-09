@@ -174,6 +174,32 @@ function toggleSidebarDisplay() {
 		alert("Error (3): Flag was set to incorrect value.");
 	}
 }
+function toggleResumeButtonDisplay() {
+	if (resumeButtonDisplayFlag == 0) {
+		$("#resumeButton").css({
+			"right": "-220px"
+		});
+	} else if (resumeButtonDisplayFlag == 1) {
+		$("#resumeButton").css({
+			"right": ""
+		});
+	} else {
+		alert("Error (3): Flag was set to incorrect value.");
+	}
+}
+function toggleCVButtonDisplay() {
+	if (cvButtonDisplayFlag == 0) {
+		$("#cvButton").css({
+			"right": "-157px"
+		});
+	} else if (cvButtonDisplayFlag == 1) {
+		$("#cvButton").css({
+			"right": ""
+		});
+	} else {
+		alert("Error (3): Flag was set to incorrect value.");
+	}
+}
 function displayPageName(index) {
 	var pageName;
 	pageName = pageNames[index];
@@ -222,11 +248,23 @@ $(".platform").hover(
 	function () {
 		var windowWidth = $(window).width();
 		var sidebarWidth = $("#sidebar").width();
+		var resumeButtonWidth = $("#resumeButton").width();
+		var cvButtonWidth = $("#cvButton").width();
 		var platformPosition = $(this).position().left + $(this).width();
 
 		if (platformPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
 			sidebarDisplayFlag = 0;
 			toggleSidebarDisplay();
+		}
+
+		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+			resumeButtonDisplayFlag = 0;
+			toggleResumeButtonDisplay();
+		}
+
+		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+			cvButtonDisplayFlag = 0;
+			toggleCVButtonDisplay();
 		}
 
 		var platformIndex = $(this).index() - platformIndexAdjust;
@@ -240,6 +278,14 @@ $(".platform").hover(
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
 			toggleSidebarDisplay();
+		}
+		if (resumeButtonDisplayFlag == 0) {
+			resumeButtonDisplayFlag = 1;
+			toggleResumeButtonDisplay();
+		}
+		if (cvButtonDisplayFlag == 0) {
+			cvButtonDisplayFlag = 1;
+			toggleCVButtonDisplay();
 		}
 
 		var platformIndex = $(this).index() - platformIndexAdjust;
