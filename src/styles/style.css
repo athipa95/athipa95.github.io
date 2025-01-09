@@ -445,17 +445,37 @@ a {
 	background-color: rgba(0, 0, 0, 0.85);
 }
 
-.footerButton {
+/* .footerButton {
 	margin: 0px 10px 0px 10px;
 	display: inline-block;
+} */
+footerButton {
+	padding: 10px 15px;
+	font-size: 16px;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	transition: color 0.3s ease;
 }
 
-.active {
+.footerButton:hover {
+	color: #ddd;
+	/* Change color on hover */
+}
+
+/* .active {
 	background-color: black;
 	height: 20px;
 	width: 20px;
 	border: 2px solid white;
 	border-radius: 12px;
+} */
+.footerButton.active {
+	font-weight: bold;
+	/* Highlight active page */
+	color: #ffcc00;
+	/* Example color for active text */
 }
 
 .notActive {
