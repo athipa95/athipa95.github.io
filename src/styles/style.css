@@ -462,7 +462,8 @@ a {
 	border: none;
 	height: auto;
 	width: auto;
-	margin: 15px 30px;
+	margin-bottom: 15px;
+	margin-left: 30px;
 }
 
 .footerButton:hover {
