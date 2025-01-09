@@ -451,7 +451,7 @@ a {
 } */
 .footerButton {
 	padding: 10px 25px;
-	font-size: 16px;
+	font-size: 18px;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
@@ -487,18 +487,14 @@ a {
 
 .notActive {
 	background-color: none;
-	height: 20px;
-	width: 20px;
-	border: 2px solid none;
-	border-radius: 12px;
+	height: 30px;
+	width: 50px;
 }
 
 .active {
 	background-color: none;
-	height: 20px;
-	width: 20px;
-	border: 2px solid none;
-	border-radius: 12px;
+	height: 30px;
+	width: 50px;
 }
 
 .footerButton.active {
