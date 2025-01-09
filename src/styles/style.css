@@ -427,6 +427,14 @@ a {
 	text-align: center;
 }
 
+#topButtons {
+	position: fixed;
+	top: 0;
+	height: 42px;
+	width: 100%;
+	text-align: center;
+}
+
 #footerText {
 	position: absolute;
 	top: -15px;
