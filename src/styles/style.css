@@ -918,41 +918,41 @@ a {
 /* -------------------- ------------------ -------------------- */
 /* ----------- Inventions and Provisional Patents ------------- */
 /* -------------------- ------------------ -------------------- */
-#invention_background_MIRO {
-	background: black url(img/inventions/MIRO_gif_2.gif) no-repeat center center;
+#invention_background_RAVEN {
+	background: black url(img/inventions/RAVEN_gif_3.gif) no-repeat center center;
 }
 
-#invention_background_manual_docking {
-	background: black url(img/inventions/Manual_gif_2.gif) no-repeat center center;
+#invention_background_Electromagnetic {
+	background: black url(img/inventions/Electromagnets_3.png) no-repeat center center;
 }
 
-#invention_background_gyro {
-	background: black url(img/inventions/Gyro_gif_2.gif) no-repeat center center;
+#invention_background_STARSS_Station {
+	background: black url(img/inventions/STARSS_Station_gif_3.gif) no-repeat center center;
+}
+
+#invention_background_Docking {
+	background: black url(img/inventions/Docking_gif_3.gif) no-repeat center center;
+}
+
+#invention_background_Lighting {
+	background: white url(img/inventions/Attitude_gif_3.gif) no-repeat center center;
 }
 
 #invention_background_STARSS {
-	background: black url(img/inventions/STARSS_gif_2.gif) no-repeat center center;
+	background: white url(img/inventions/STARSS_gif_3.gif) no-repeat center center;
 }
 
-#invention_background_framework {
-	background: white url(img/inventions/Framework_2.png) no-repeat center center;
+#invention_background_Swarms {
+	background: black url(img/inventions/Inflatable_3.png) no-repeat center center;
 }
 
-#invention_background_building {
-	background: white url(img/inventions/Building_2.png) no-repeat center center;
-}
-
-#invention_background_secrts {
-	background: black url(img/inventions/SeCrTS_2.png) no-repeat center center;
-}
-
-#invention_background_MIRO,
-#invention_background_STARSS,
-#invention_background_attitude,
-#invention_background_VAYU,
+#invention_background_RAVEN,
+#invention_background_Electromagnetic,
+#invention_background_STARSS_Station,
 #invention_background_Docking,
-#invention_background_gyro,
-#invention_background_manual_docking {
+#invention_background_Lighting,
+#invention_background_STARSS,
+#invention_background_Swarms {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
