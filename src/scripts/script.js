@@ -542,6 +542,36 @@ $(".platform, .job, .project, .invention").hover(
 	}
 );
 
+// Ensure that the platform's content is visible on hover
+$(".platform").hover(
+	function () {
+		// Get the index of the current platform
+		let platformIndex = $(this).index() - platformIndexAdjust;
+
+		// Dim the background slightly
+		$(".background").eq(platformIndex).css({
+			"opacity": "0.5" // Adjust for visibility
+		});
+
+		// Make the description content fully visible
+		$(".platformDescription").eq(platformIndex).css({
+			"opacity": "1"
+		});
+	},
+	function () {
+		// Reset the styles when the mouse leaves the platform
+		let platformIndex = $(this).index() - platformIndexAdjust;
+
+		$(".background").eq(platformIndex).css({
+			"opacity": "1" // Restore original background opacity
+		});
+
+		$(".platformDescription").eq(platformIndex).css({
+			"opacity": "0" // Hide the description
+		});
+	}
+);
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Google Tracking -------------------- */
 /* -------------------- --------------- -------------------- */
