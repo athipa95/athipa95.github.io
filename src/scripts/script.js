@@ -16,7 +16,7 @@ var pageNames = ["Home", "About Me", "Engineering Experience", "Project Experien
 var pageIndex = 0; // indicated the current page of the user
 var totalPages = $(".footerButton").length; // indicates the amount of available pages on the webpage
 var sidebarDisplayFlag = 1; // indicates if the sidebar should be displayed
-var pageTwoScrollFlag = 0; // indicates if the scrollbar is active on the second page
+var pageTwoScrollFlag = 1; // indicates if the scrollbar is active on the second page
 var resumeButtonDisplayFlag = 1; // indicates if the resume button should be displayed
 var cvButtonDisplayFlag = 1; // indicates if the CV button should be displayed
 var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or not
@@ -244,217 +244,280 @@ $(".footerButton").hover(
 		displayPageName(pageIndex);
 	}
 );
-$(".platform").hover(
-	function () {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var resumeButtonWidth = $("#resumeButton").width();
-		var cvButtonWidth = $("#cvButton").width();
-		var platformPosition = $(this).position().left + $(this).width();
+// $(".platform").hover(
+// 	function () {
+// 		var windowWidth = $(window).width();
+// 		var sidebarWidth = $("#sidebar").width();
+// 		var resumeButtonWidth = $("#resumeButton").width();
+// 		var cvButtonWidth = $("#cvButton").width();
+// 		var platformPosition = $(this).position().left + $(this).width();
 
-		if (platformPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+// 		if (platformPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+// 			sidebarDisplayFlag = 0;
+// 			toggleSidebarDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
+// 			resumeButtonDisplayFlag = 0;
+// 			toggleResumeButtonDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
+// 			cvButtonDisplayFlag = 0;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var platformIndex = $(this).index() - platformIndexAdjust;
+// 		$(".background").eq(platformIndex).css({
+// 			"opacity": "0.2"
+// 		});
+// 		$(".platformDescription").eq(platformIndex).css({
+// 			"opacity": "1"
+// 		});
+// 	}, function () {
+// 		if (sidebarDisplayFlag == 0) {
+// 			sidebarDisplayFlag = 1;
+// 			toggleSidebarDisplay();
+// 		}
+// 		if (resumeButtonDisplayFlag == 0) {
+// 			resumeButtonDisplayFlag = 1;
+// 			toggleResumeButtonDisplay();
+// 		}
+// 		if (cvButtonDisplayFlag == 0) {
+// 			cvButtonDisplayFlag = 1;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var platformIndex = $(this).index() - platformIndexAdjust;
+// 		$(".background").eq(platformIndex).css({
+// 			"opacity": ""
+// 		});
+// 		$(".platformDescription").eq(platformIndex).css({
+// 			"opacity": ""
+// 		});
+// 	}
+// );
+// $(".job").hover(
+// 	function () {
+// 		var windowWidth = $(window).width();
+// 		var sidebarWidth = $("#sidebar").width();
+// 		var resumeButtonWidth = $("#resumeButton").width();
+// 		var cvButtonWidth = $("#cvButton").width();
+// 		var jobPosition = $(this).position().left + $(this).width();
+
+// 		if (jobPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+// 			sidebarDisplayFlag = 0;
+// 			toggleSidebarDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
+// 			resumeButtonDisplayFlag = 0;
+// 			toggleResumeButtonDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
+// 			cvButtonDisplayFlag = 0;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var jobIndex = $(this).index() - jobIndexAdjust;
+// 		$(".background").eq(jobIndex + $(".platform").length).css({
+// 			"opacity": "0.2"
+// 		});
+// 		$(".jobDescription").eq(jobIndex).css({
+// 			"opacity": "1"
+// 		});
+// 	}, function () {
+// 		if (sidebarDisplayFlag == 0) {
+// 			sidebarDisplayFlag = 1;
+// 			toggleSidebarDisplay();
+// 		}
+// 		if (resumeButtonDisplayFlag == 0) {
+// 			resumeButtonDisplayFlag = 1;
+// 			toggleResumeButtonDisplay();
+// 		}
+// 		if (cvButtonDisplayFlag == 0) {
+// 			cvButtonDisplayFlag = 1;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var jobIndex = $(this).index() - jobIndexAdjust;
+// 		$(".background").eq(jobIndex + $(".platform").length).css({
+// 			"opacity": ""
+// 		});
+// 		$(".jobDescription").eq(jobIndex).css({
+// 			"opacity": ""
+// 		});
+// 	}
+// );
+// $(".project").hover(
+// 	function () {
+// 		var windowWidth = $(window).width();
+// 		var sidebarWidth = $("#sidebar").width();
+// 		var resumeButtonWidth = $("#resumeButton").width();
+// 		var cvButtonWidth = $("#cvButton").width();
+// 		var projectPosition = $(this).position().left + $(this).width();
+
+// 		if (projectPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+// 			sidebarDisplayFlag = 0;
+// 			toggleSidebarDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
+// 			resumeButtonDisplayFlag = 0;
+// 			toggleResumeButtonDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
+// 			cvButtonDisplayFlag = 0;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var projectIndex = $(this).index() - projectIndexAdjust;
+// 		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
+// 			"opacity": "0.2"
+// 		});
+// 		$(".projectDescription").eq(projectIndex).css({
+// 			"opacity": "1"
+// 		});
+// 	}, function () {
+// 		if (sidebarDisplayFlag == 0) {
+// 			sidebarDisplayFlag = 1;
+// 			toggleSidebarDisplay();
+// 		}
+// 		if (resumeButtonDisplayFlag == 0) {
+// 			resumeButtonDisplayFlag = 1;
+// 			toggleResumeButtonDisplay();
+// 		}
+// 		if (cvButtonDisplayFlag == 0) {
+// 			cvButtonDisplayFlag = 1;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var projectIndex = $(this).index() - projectIndexAdjust;
+// 		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
+// 			"opacity": ""
+// 		});
+// 		$(".projectDescription").eq(projectIndex).css({
+// 			"opacity": ""
+// 		});
+// 	}
+// );
+
+// $(".invention").hover(
+// 	function () {
+// 		var windowWidth = $(window).width();
+// 		var sidebarWidth = $("#sidebar").width();
+// 		var resumeButtonWidth = $("#resumeButton").width();
+// 		var cvButtonWidth = $("#cvButton").width();
+// 		var inventionPosition = $(this).position().left + $(this).width();
+
+// 		if (inventionPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
+// 			sidebarDisplayFlag = 0;
+// 			toggleSidebarDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
+// 			resumeButtonDisplayFlag = 0;
+// 			toggleResumeButtonDisplay();
+// 		}
+
+// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
+// 			cvButtonDisplayFlag = 0;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var inventionIndex = $(this).index() - inventionIndexAdjust;
+// 		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
+// 			"opacity": "0.2"
+// 		});
+// 		$(".inventionDescription").eq(inventionIndex).css({
+// 			"opacity": "1"
+// 		});
+// 	}, function () {
+// 		if (sidebarDisplayFlag == 0) {
+// 			sidebarDisplayFlag = 1;
+// 			toggleSidebarDisplay();
+// 		}
+// 		if (resumeButtonDisplayFlag == 0) {
+// 			resumeButtonDisplayFlag = 1;
+// 			toggleResumeButtonDisplay();
+// 		}
+// 		if (cvButtonDisplayFlag == 0) {
+// 			cvButtonDisplayFlag = 1;
+// 			toggleCVButtonDisplay();
+// 		}
+
+// 		var inventionIndex = $(this).index() - inventionIndexAdjust;
+// 		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
+// 			"opacity": ""
+// 		});
+// 		$(".inventionDescription").eq(inventionIndex).css({
+// 			"opacity": ""
+// 		});
+// 	}
+// );
+
+$(".platform, .job, .project, .invention").hover(
+	function () {
+		const element = $(this);
+		const windowWidth = $(window).width();
+		const sidebarWidth = $("#sidebar").width();
+		const resumeButtonWidth = $("#resumeButton").width();
+		const cvButtonWidth = $("#cvButton").width();
+		const elementPosition = element.position().left + element.width();
+
+		// Hide buttons if overlapping
+		if (elementPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
 			sidebarDisplayFlag = 0;
 			toggleSidebarDisplay();
 		}
 
-		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
+		if (elementPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
 			resumeButtonDisplayFlag = 0;
 			toggleResumeButtonDisplay();
 		}
 
-		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
+		if (elementPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
 
-		var platformIndex = $(this).index() - platformIndexAdjust;
-		$(".background").eq(platformIndex).css({
-			"opacity": "0.2"
-		});
-		$(".platformDescription").eq(platformIndex).css({
-			"opacity": "1"
-		});
-	}, function () {
-		if (sidebarDisplayFlag == 0) {
-			sidebarDisplayFlag = 1;
-			toggleSidebarDisplay();
-		}
-		if (resumeButtonDisplayFlag == 0) {
-			resumeButtonDisplayFlag = 1;
-			toggleResumeButtonDisplay();
-		}
-		if (cvButtonDisplayFlag == 0) {
-			cvButtonDisplayFlag = 1;
-			toggleCVButtonDisplay();
-		}
-
-		var platformIndex = $(this).index() - platformIndexAdjust;
-		$(".background").eq(platformIndex).css({
-			"opacity": ""
-		});
-		$(".platformDescription").eq(platformIndex).css({
-			"opacity": ""
-		});
-	}
-);
-$(".job").hover(
+		// Highlight effect
+		const indexAdjust = $(".platform").length + $(".job").length + $(".project").length;
+		const elementIndex = element.index() - indexAdjust;
+		$(".background").eq(elementIndex).css({ "opacity": "0.2" });
+		$(".description").eq(elementIndex).css({ "opacity": "1" });
+	},
 	function () {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var resumeButtonWidth = $("#resumeButton").width();
-		var cvButtonWidth = $("#cvButton").width();
-		var jobPosition = $(this).position().left + $(this).width();
+		// Reset buttons conditionally
+		const element = $(this);
+		const windowWidth = $(window).width();
+		const sidebarWidth = $("#sidebar").width();
+		const resumeButtonWidth = $("#resumeButton").width();
+		const cvButtonWidth = $("#cvButton").width();
+		const elementPosition = element.position().left + element.width();
 
-		if (jobPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
-
-		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-			resumeButtonDisplayFlag = 0;
-			toggleResumeButtonDisplay();
-		}
-
-		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-			cvButtonDisplayFlag = 0;
-			toggleCVButtonDisplay();
-		}
-
-		var jobIndex = $(this).index() - jobIndexAdjust;
-		$(".background").eq(jobIndex + $(".platform").length).css({
-			"opacity": "0.2"
-		});
-		$(".jobDescription").eq(jobIndex).css({
-			"opacity": "1"
-		});
-	}, function () {
-		if (sidebarDisplayFlag == 0) {
+		if (elementPosition <= (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
 			sidebarDisplayFlag = 1;
 			toggleSidebarDisplay();
 		}
-		if (resumeButtonDisplayFlag == 0) {
+
+		if (elementPosition <= (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
 			resumeButtonDisplayFlag = 1;
 			toggleResumeButtonDisplay();
 		}
-		if (cvButtonDisplayFlag == 0) {
+
+		if (elementPosition <= (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 1;
 			toggleCVButtonDisplay();
 		}
 
-		var jobIndex = $(this).index() - jobIndexAdjust;
-		$(".background").eq(jobIndex + $(".platform").length).css({
-			"opacity": ""
-		});
-		$(".jobDescription").eq(jobIndex).css({
-			"opacity": ""
-		});
-	}
-);
-$(".project").hover(
-	function () {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var resumeButtonWidth = $("#resumeButton").width();
-		var cvButtonWidth = $("#cvButton").width();
-		var projectPosition = $(this).position().left + $(this).width();
-
-		if (projectPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
-
-		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-			resumeButtonDisplayFlag = 0;
-			toggleResumeButtonDisplay();
-		}
-
-		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-			cvButtonDisplayFlag = 0;
-			toggleCVButtonDisplay();
-		}
-
-		var projectIndex = $(this).index() - projectIndexAdjust;
-		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
-			"opacity": "0.2"
-		});
-		$(".projectDescription").eq(projectIndex).css({
-			"opacity": "1"
-		});
-	}, function () {
-		if (sidebarDisplayFlag == 0) {
-			sidebarDisplayFlag = 1;
-			toggleSidebarDisplay();
-		}
-		if (resumeButtonDisplayFlag == 0) {
-			resumeButtonDisplayFlag = 1;
-			toggleResumeButtonDisplay();
-		}
-		if (cvButtonDisplayFlag == 0) {
-			cvButtonDisplayFlag = 1;
-			toggleCVButtonDisplay();
-		}
-
-		var projectIndex = $(this).index() - projectIndexAdjust;
-		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
-			"opacity": ""
-		});
-		$(".projectDescription").eq(projectIndex).css({
-			"opacity": ""
-		});
-	}
-);
-
-$(".invention").hover(
-	function () {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var resumeButtonWidth = $("#resumeButton").width();
-		var cvButtonWidth = $("#cvButton").width();
-		var inventionPosition = $(this).position().left + $(this).width();
-
-		if (inventionPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
-
-		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-			resumeButtonDisplayFlag = 0;
-			toggleResumeButtonDisplay();
-		}
-
-		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-			cvButtonDisplayFlag = 0;
-			toggleCVButtonDisplay();
-		}
-
-		var inventionIndex = $(this).index() - inventionIndexAdjust;
-		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
-			"opacity": "0.2"
-		});
-		$(".inventionDescription").eq(inventionIndex).css({
-			"opacity": "1"
-		});
-	}, function () {
-		if (sidebarDisplayFlag == 0) {
-			sidebarDisplayFlag = 1;
-			toggleSidebarDisplay();
-		}
-		if (resumeButtonDisplayFlag == 0) {
-			resumeButtonDisplayFlag = 1;
-			toggleResumeButtonDisplay();
-		}
-		if (cvButtonDisplayFlag == 0) {
-			cvButtonDisplayFlag = 1;
-			toggleCVButtonDisplay();
-		}
-
-		var inventionIndex = $(this).index() - inventionIndexAdjust;
-		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
-			"opacity": ""
-		});
-		$(".inventionDescription").eq(inventionIndex).css({
-			"opacity": ""
-		});
+		// Remove highlight effect
+		const indexAdjust = $(".platform").length + $(".job").length + $(".project").length;
+		const elementIndex = element.index() - indexAdjust;
+		$(".background").eq(elementIndex).css({ "opacity": "" });
+		$(".description").eq(elementIndex).css({ "opacity": "" });
 	}
 );
 
