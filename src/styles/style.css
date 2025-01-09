@@ -489,18 +489,18 @@ a {
 } */
 
 .notActive {
-	background-color: white;
+	background-color: none;
 	height: 20px;
 	width: 20px;
-	border: 2px solid black;
+	border: 2px solid none;
 	border-radius: 12px;
 }
 
 .active {
-	background-color: black;
+	background-color: none;
 	height: 20px;
 	width: 20px;
-	border: 2px solid white;
+	border: 2px solid none;
 	border-radius: 12px;
 }
 
