@@ -1039,6 +1039,104 @@ a {
 	opacity: 1;
 }
 
+/* -------------------- ------------------ -------------------- */
+/* ---------------- Awards and Media Mentions ----------------- */
+/* -------------------- ------------------ -------------------- */
+#award_background_RAVEN {
+	background: black url(img/awards/RAVEN_gif_3.gif) no-repeat center center;
+}
+
+#award_background_Electromagnetic {
+	background: white url(img/awards/Electromagnets_3.png) no-repeat center center;
+}
+
+#award_background_STARSS_Station {
+	background: black url(img/awards/STARSS_Station_gif_3.gif) no-repeat center center;
+}
+
+#award_background_Docking {
+	background: black url(img/awards/Docking_gif_3.gif) no-repeat center center;
+}
+
+#award_background_Lighting {
+	background: white url(img/awards/Attitude_gif_3.gif) no-repeat center center;
+}
+
+#award_background_STARSS {
+	background: white url(img/awards/STARSS_gif_3.gif) no-repeat center center;
+}
+
+#award_background_Swarms {
+	background: white url(img/awards/Inflatable_3.png) no-repeat center center;
+}
+
+#award_background_RAVEN,
+#award_background_Electromagnetic,
+#award_background_STARSS_Station,
+#award_background_Docking,
+#award_background_Lighting,
+#award_background_STARSS,
+#award_background_Swarms {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 200px;
+	width: 100%;
+}
+
+.award {
+	display: inline-block;
+	position: relative;
+	margin: 10px 10px;
+	height: 250px;
+	width: 475px;
+	background-color: none;
+	cursor: pointer;
+	background: rgba(25, 25, 25, 0.9);
+	-webkit-transition: height 0.5s;
+	transition: height 0.5s;
+	border: 1px solid white;
+}
+
+.awardImage {
+	height: 200px;
+	width: 471px;
+	margin: 2px;
+}
+
+.awardDescription {
+	top: 0px;
+	position: absolute;
+	margin: 5px 10px;
+	opacity: 0;
+	cursor: pointer;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.award div div p,
+.award div p {
+	margin: 5px;
+	color: white;
+}
+
+.award:hover {
+	height: 380px;
+	background: black;
+}
+
+.award:hover .awardImage {
+	filter: brightness(0);
+}
+
+.award:hover .blockTitle {
+	color: rgba(232, 232, 232, 0);
+}
+
+.award:hover .linksBar {
+	opacity: 1;
+}
+
 /* -------------------- ------------------------ -------------------- */
 /* -------------------- General Block Properties -------------------- */
 /* -------------------- ------------------------ -------------------- */

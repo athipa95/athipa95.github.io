@@ -28,6 +28,7 @@ var platformIndexAdjust = $("#contentPage1").children().length - $(".platform").
 var jobIndexAdjust = $("#contentPage2").children().length - $(".job").length - 1; // Adjustment to job index
 var projectIndexAdjust = $("#contentPage3").children().length - $(".project").length - 1; // Adjustment to project index
 var inventionIndexAdjust = $("#contentPage4").children().length - $(".invention").length - 1; // Adjustment to invention index
+var awardIndexAdjust = $("#contentPage5").children().length - $(".award").length - 1; // Adjustment to award index
 
 /* -------------------- ------------- -------------------- */
 /* -------------------- Window Resize -------------------- */
@@ -244,221 +245,8 @@ $(".footerButton").hover(
 		displayPageName(pageIndex);
 	}
 );
-// $(".platform").hover(
-// 	function () {
-// 		var windowWidth = $(window).width();
-// 		var sidebarWidth = $("#sidebar").width();
-// 		var resumeButtonWidth = $("#resumeButton").width();
-// 		var cvButtonWidth = $("#cvButton").width();
-// 		var platformPosition = $(this).position().left + $(this).width();
 
-// 		if (platformPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-// 			sidebarDisplayFlag = 0;
-// 			toggleSidebarDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-// 			resumeButtonDisplayFlag = 0;
-// 			toggleResumeButtonDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-// 			cvButtonDisplayFlag = 0;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var platformIndex = $(this).index() - platformIndexAdjust;
-// 		$(".background").eq(platformIndex).css({
-// 			"opacity": "0.2"
-// 		});
-// 		$(".platformDescription").eq(platformIndex).css({
-// 			"opacity": "1"
-// 		});
-// 	}, function () {
-// 		if (sidebarDisplayFlag == 0) {
-// 			sidebarDisplayFlag = 1;
-// 			toggleSidebarDisplay();
-// 		}
-// 		if (resumeButtonDisplayFlag == 0) {
-// 			resumeButtonDisplayFlag = 1;
-// 			toggleResumeButtonDisplay();
-// 		}
-// 		if (cvButtonDisplayFlag == 0) {
-// 			cvButtonDisplayFlag = 1;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var platformIndex = $(this).index() - platformIndexAdjust;
-// 		$(".background").eq(platformIndex).css({
-// 			"opacity": ""
-// 		});
-// 		$(".platformDescription").eq(platformIndex).css({
-// 			"opacity": ""
-// 		});
-// 	}
-// );
-// $(".job").hover(
-// 	function () {
-// 		var windowWidth = $(window).width();
-// 		var sidebarWidth = $("#sidebar").width();
-// 		var resumeButtonWidth = $("#resumeButton").width();
-// 		var cvButtonWidth = $("#cvButton").width();
-// 		var jobPosition = $(this).position().left + $(this).width();
-
-// 		if (jobPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-// 			sidebarDisplayFlag = 0;
-// 			toggleSidebarDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-// 			resumeButtonDisplayFlag = 0;
-// 			toggleResumeButtonDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-// 			cvButtonDisplayFlag = 0;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var jobIndex = $(this).index() - jobIndexAdjust;
-// 		$(".background").eq(jobIndex + $(".platform").length).css({
-// 			"opacity": "0.2"
-// 		});
-// 		$(".jobDescription").eq(jobIndex).css({
-// 			"opacity": "1"
-// 		});
-// 	}, function () {
-// 		if (sidebarDisplayFlag == 0) {
-// 			sidebarDisplayFlag = 1;
-// 			toggleSidebarDisplay();
-// 		}
-// 		if (resumeButtonDisplayFlag == 0) {
-// 			resumeButtonDisplayFlag = 1;
-// 			toggleResumeButtonDisplay();
-// 		}
-// 		if (cvButtonDisplayFlag == 0) {
-// 			cvButtonDisplayFlag = 1;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var jobIndex = $(this).index() - jobIndexAdjust;
-// 		$(".background").eq(jobIndex + $(".platform").length).css({
-// 			"opacity": ""
-// 		});
-// 		$(".jobDescription").eq(jobIndex).css({
-// 			"opacity": ""
-// 		});
-// 	}
-// );
-// $(".project").hover(
-// 	function () {
-// 		var windowWidth = $(window).width();
-// 		var sidebarWidth = $("#sidebar").width();
-// 		var resumeButtonWidth = $("#resumeButton").width();
-// 		var cvButtonWidth = $("#cvButton").width();
-// 		var projectPosition = $(this).position().left + $(this).width();
-
-// 		if (projectPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-// 			sidebarDisplayFlag = 0;
-// 			toggleSidebarDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-// 			resumeButtonDisplayFlag = 0;
-// 			toggleResumeButtonDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-// 			cvButtonDisplayFlag = 0;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var projectIndex = $(this).index() - projectIndexAdjust;
-// 		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
-// 			"opacity": "0.2"
-// 		});
-// 		$(".projectDescription").eq(projectIndex).css({
-// 			"opacity": "1"
-// 		});
-// 	}, function () {
-// 		if (sidebarDisplayFlag == 0) {
-// 			sidebarDisplayFlag = 1;
-// 			toggleSidebarDisplay();
-// 		}
-// 		if (resumeButtonDisplayFlag == 0) {
-// 			resumeButtonDisplayFlag = 1;
-// 			toggleResumeButtonDisplay();
-// 		}
-// 		if (cvButtonDisplayFlag == 0) {
-// 			cvButtonDisplayFlag = 1;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var projectIndex = $(this).index() - projectIndexAdjust;
-// 		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
-// 			"opacity": ""
-// 		});
-// 		$(".projectDescription").eq(projectIndex).css({
-// 			"opacity": ""
-// 		});
-// 	}
-// );
-
-// $(".invention").hover(
-// 	function () {
-// 		var windowWidth = $(window).width();
-// 		var sidebarWidth = $("#sidebar").width();
-// 		var resumeButtonWidth = $("#resumeButton").width();
-// 		var cvButtonWidth = $("#cvButton").width();
-// 		var inventionPosition = $(this).position().left + $(this).width();
-
-// 		if (inventionPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-// 			sidebarDisplayFlag = 0;
-// 			toggleSidebarDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - resumeButtonWidth - resumeButtonDisplayTolerance)) {
-// 			resumeButtonDisplayFlag = 0;
-// 			toggleResumeButtonDisplay();
-// 		}
-
-// 		if (platformPosition > (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
-// 			cvButtonDisplayFlag = 0;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var inventionIndex = $(this).index() - inventionIndexAdjust;
-// 		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
-// 			"opacity": "0.2"
-// 		});
-// 		$(".inventionDescription").eq(inventionIndex).css({
-// 			"opacity": "1"
-// 		});
-// 	}, function () {
-// 		if (sidebarDisplayFlag == 0) {
-// 			sidebarDisplayFlag = 1;
-// 			toggleSidebarDisplay();
-// 		}
-// 		if (resumeButtonDisplayFlag == 0) {
-// 			resumeButtonDisplayFlag = 1;
-// 			toggleResumeButtonDisplay();
-// 		}
-// 		if (cvButtonDisplayFlag == 0) {
-// 			cvButtonDisplayFlag = 1;
-// 			toggleCVButtonDisplay();
-// 		}
-
-// 		var inventionIndex = $(this).index() - inventionIndexAdjust;
-// 		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
-// 			"opacity": ""
-// 		});
-// 		$(".inventionDescription").eq(inventionIndex).css({
-// 			"opacity": ""
-// 		});
-// 	}
-// );
-
-$(".platform, .job, .project, .invention").hover(
+$(".platform, .job, .project, .invention, .award").hover(
 	function () {
 		const element = $(this);
 		const windowWidth = $(window).width();
@@ -482,12 +270,6 @@ $(".platform, .job, .project, .invention").hover(
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
-
-		// // Highlight effect
-		// const indexAdjust = $(".platform").length + $(".job").length + $(".project").length + $(".invention").length;
-		// const elementIndex = element.index() - indexAdjust;
-		// $(".background").eq(elementIndex).css({ "opacity": "0.2" });
-		// $(".description").eq(elementIndex).css({ "opacity": "1" });
 	}, function () {
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
@@ -657,6 +439,36 @@ $(".invention").hover(
 		});
 
 		$(".inventionDescription").eq(inventionIndex).css({
+			"opacity": "0" // Hide the description
+		});
+	}
+);
+
+// Ensure that the awards's content is visible on hover
+$(".award").hover(
+	function () {
+		// Get the index of the current award
+		let awardIndex = $(this).index() - awardIndexAdjust;
+
+		// Dim the background slightly
+		$(".background").eq(awardIndex).css({
+			"opacity": "0.5" // Adjust for visibility
+		});
+
+		// Make the description content fully visible
+		$(".awardDescription").eq(awardIndex).css({
+			"opacity": "1"
+		});
+	},
+	function () {
+		// Reset the styles when the mouse leaves the award
+		let awardIndex = $(this).index() - awardIndexAdjust;
+
+		$(".background").eq(awardIndex).css({
+			"opacity": "1" // Restore original background opacity
+		});
+
+		$(".awardDescription").eq(awardIndex).css({
 			"opacity": "0" // Hide the description
 		});
 	}
