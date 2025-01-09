@@ -484,7 +484,7 @@ $(".platform, .job, .project, .invention").hover(
 		}
 
 		// Highlight effect
-		const indexAdjust = $(".platform").length + $(".job").length + $(".project").length;
+		const indexAdjust = $(".platform").length + $(".job").length + $(".project").length + $(".invention").length;
 		const elementIndex = element.index() - indexAdjust;
 		$(".background").eq(elementIndex).css({ "opacity": "0.2" });
 		$(".description").eq(elementIndex).css({ "opacity": "1" });
