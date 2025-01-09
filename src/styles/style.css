@@ -462,7 +462,7 @@ a {
 	border: none;
 	height: auto;
 	width: auto;
-	margin: 0 30px;
+	margin: 5px 30px;
 }
 
 .footerButton:hover {
@@ -489,7 +489,7 @@ a {
 .notActive {
 	background-color: none;
 	height: 30px;
-	width: 50px;
+	width: 100px;
 }
 
 .active {
