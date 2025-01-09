@@ -301,11 +301,23 @@ $(".job").hover(
 	function () {
 		var windowWidth = $(window).width();
 		var sidebarWidth = $("#sidebar").width();
+		var resumeButtonWidth = $("#resumeButton").width();
+		var cvButtonWidth = $("#cvButton").width();
 		var jobPosition = $(this).position().left + $(this).width();
 
 		if (jobPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
 			sidebarDisplayFlag = 0;
 			toggleSidebarDisplay();
+		}
+
+		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+			resumeButtonDisplayFlag = 0;
+			toggleResumeButtonDisplay();
+		}
+
+		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+			cvButtonDisplayFlag = 0;
+			toggleCVButtonDisplay();
 		}
 
 		var jobIndex = $(this).index() - jobIndexAdjust;
@@ -319,6 +331,14 @@ $(".job").hover(
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
 			toggleSidebarDisplay();
+		}
+		if (resumeButtonDisplayFlag == 0) {
+			resumeButtonDisplayFlag = 1;
+			toggleResumeButtonDisplay();
+		}
+		if (cvButtonDisplayFlag == 0) {
+			cvButtonDisplayFlag = 1;
+			toggleCVButtonDisplay();
 		}
 
 		var jobIndex = $(this).index() - jobIndexAdjust;
@@ -334,11 +354,23 @@ $(".project").hover(
 	function () {
 		var windowWidth = $(window).width();
 		var sidebarWidth = $("#sidebar").width();
+		var resumeButtonWidth = $("#resumeButton").width();
+		var cvButtonWidth = $("#cvButton").width();
 		var projectPosition = $(this).position().left + $(this).width();
 
 		if (projectPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
 			sidebarDisplayFlag = 0;
 			toggleSidebarDisplay();
+		}
+
+		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+			resumeButtonDisplayFlag = 0;
+			toggleResumeButtonDisplay();
+		}
+
+		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+			cvButtonDisplayFlag = 0;
+			toggleCVButtonDisplay();
 		}
 
 		var projectIndex = $(this).index() - projectIndexAdjust;
@@ -352,6 +384,14 @@ $(".project").hover(
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
 			toggleSidebarDisplay();
+		}
+		if (resumeButtonDisplayFlag == 0) {
+			resumeButtonDisplayFlag = 1;
+			toggleResumeButtonDisplay();
+		}
+		if (cvButtonDisplayFlag == 0) {
+			cvButtonDisplayFlag = 1;
+			toggleCVButtonDisplay();
 		}
 
 		var projectIndex = $(this).index() - projectIndexAdjust;
@@ -368,11 +408,23 @@ $(".invention").hover(
 	function () {
 		var windowWidth = $(window).width();
 		var sidebarWidth = $("#sidebar").width();
+		var resumeButtonWidth = $("#resumeButton").width();
+		var cvButtonWidth = $("#cvButton").width();
 		var inventionPosition = $(this).position().left + $(this).width();
 
 		if (inventionPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
 			sidebarDisplayFlag = 0;
 			toggleSidebarDisplay();
+		}
+
+		if (platformPosition > (windowWidth - resumeButtonWidth - sidebarDisplayTolerance)) {
+			resumeButtonDisplayFlag = 0;
+			toggleResumeButtonDisplay();
+		}
+
+		if (platformPosition > (windowWidth - cvButtonWidth - sidebarDisplayTolerance)) {
+			cvButtonDisplayFlag = 0;
+			toggleCVButtonDisplay();
 		}
 
 		var inventionIndex = $(this).index() - inventionIndexAdjust;
@@ -386,6 +438,14 @@ $(".invention").hover(
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
 			toggleSidebarDisplay();
+		}
+		if (resumeButtonDisplayFlag == 0) {
+			resumeButtonDisplayFlag = 1;
+			toggleResumeButtonDisplay();
+		}
+		if (cvButtonDisplayFlag == 0) {
+			cvButtonDisplayFlag = 1;
+			toggleCVButtonDisplay();
 		}
 
 		var inventionIndex = $(this).index() - inventionIndexAdjust;
