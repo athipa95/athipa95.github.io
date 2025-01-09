@@ -457,6 +457,14 @@ a {
 	cursor: pointer;
 	display: inline-block;
 	transition: color 0.3s ease;
+	background: none;
+	/* Remove background */
+	border: none;
+	/* Remove borders */
+	height: auto;
+	/* Ensure height is dynamic */
+	width: auto;
+	/* Ensure width is dynamic */
 }
 
 .footerButton:hover {

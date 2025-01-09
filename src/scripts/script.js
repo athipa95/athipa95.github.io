@@ -130,11 +130,11 @@ function setIconLocation(previousIndex, currentIndex, windowResize) {
 function toggleActivePage(previousIndex, currentIndex) {
 	$(".footerButton").eq(previousIndex).removeClass("active");
 	$(".footerButton").eq(previousIndex).addClass("notActive");
-	$(".footerButton").eq(previousIndex).addClass("icon");
+	// $(".footerButton").eq(previousIndex).addClass("icon");
 
 	$(".footerButton").eq(currentIndex).addClass("active");
 	$(".footerButton").eq(currentIndex).removeClass("notActive");
-	$(".footerButton").eq(currentIndex).removeClass("icon");
+	// $(".footerButton").eq(currentIndex).removeClass("icon");
 
 	setIconLocation(previousIndex, currentIndex, 0);
 }
