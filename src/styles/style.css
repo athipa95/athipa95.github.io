@@ -450,7 +450,7 @@ a {
 	display: inline-block;
 } */
 .footerButton {
-	padding: 10px 15px;
+	padding: 10px 25px;
 	font-size: 16px;
 	color: white;
 	text-decoration: none;
@@ -458,13 +458,10 @@ a {
 	display: inline-block;
 	transition: color 0.3s ease;
 	background: none;
-	/* Remove background */
 	border: none;
-	/* Remove borders */
 	height: auto;
-	/* Ensure height is dynamic */
 	width: auto;
-	/* Ensure width is dynamic */
+	margin: 0 30px;
 }
 
 .footerButton:hover {
