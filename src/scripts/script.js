@@ -18,7 +18,11 @@ var totalPages = $(".footerButton").length; // indicates the amount of available
 var sidebarDisplayFlag = 1; // indicates if the sidebar should be displayed
 var pageTwoScrollFlag = 0; // indicates if the scrollbar is active on the second page
 var resumeButtonDisplayFlag = 1; // indicates if the resume button should be displayed
+var cvButtonDisplayFlag = 1; // indicates if the CV button should be displayed
 var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or not
+var resumeButtonDisplayTolerance = 30; // tolerance to decide to display sidebar or not
+var cvButtonDisplayTolerance = 30; // tolerance to decide to display sidebar or not
+
 
 var platformIndexAdjust = $("#contentPage1").children().length - $(".platform").length - 1; // Adjustment to platform index
 var jobIndexAdjust = $("#contentPage2").children().length - $(".job").length - 1; // Adjustment to job index
@@ -53,6 +57,14 @@ function windowResize() {
 	} else if ((!resumeButtonDisplayFlag) && windowWidth >= 875) {
 		$("#resumeButton").removeClass("hidden");
 		resumeButtonDisplayFlag = 1;
+	}
+
+	if ((cvButtonDisplayFlag) && (windowWidth < 875)) {
+		$("#cvButton").addClass("hidden");
+		cvButtonDisplayFlag = 0;
+	} else if ((!cvButtonDisplayFlag) && windowWidth >= 875) {
+		$("#cvButton").removeClass("hidden");
+		cvButtonDisplayFlag = 1;
 	}
 
 	if ((windowHeight < 800) && (pageTwoScrollFlag == 0)) {
