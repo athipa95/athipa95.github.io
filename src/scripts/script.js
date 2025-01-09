@@ -483,11 +483,11 @@ $(".platform, .job, .project, .invention").hover(
 			toggleCVButtonDisplay();
 		}
 
-		// Highlight effect
-		const indexAdjust = $(".platform").length + $(".job").length + $(".project").length + $(".invention").length;
-		const elementIndex = element.index() - indexAdjust;
-		$(".background").eq(elementIndex).css({ "opacity": "0.2" });
-		$(".description").eq(elementIndex).css({ "opacity": "1" });
+		// // Highlight effect
+		// const indexAdjust = $(".platform").length + $(".job").length + $(".project").length + $(".invention").length;
+		// const elementIndex = element.index() - indexAdjust;
+		// $(".background").eq(elementIndex).css({ "opacity": "0.2" });
+		// $(".description").eq(elementIndex).css({ "opacity": "1" });
 	}, function () {
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
@@ -503,7 +503,7 @@ $(".platform, .job, .project, .invention").hover(
 		}
 
 		var inventionIndex = $(this).index() - inventionIndexAdjust;
-		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length + $(".project").length + $(".invention").length).css({
+		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
 			"opacity": ""
 		});
 		$(".inventionDescription").eq(inventionIndex).css({
