@@ -521,6 +521,21 @@ $(".platform, .job, .project, .invention").hover(
 	}
 );
 
+$("#sidebar").hover(
+	function () {
+		// Always show the sidebar when hovering over it
+		sidebarDisplayFlag = 1;
+		toggleSidebarDisplay();
+	},
+	function () {
+		// Allow normal sidebar behavior when leaving the hover
+		if (!$(".platform:hover, .job:hover, .project:hover, .invention:hover").length) {
+			sidebarDisplayFlag = 0;
+			toggleSidebarDisplay();
+		}
+	}
+);
+
 // window.addEventListener('scroll', function () {
 // 	var scrollPosition = window.scrollY;
 // 	var windowHeight = window.innerHeight;
