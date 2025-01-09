@@ -450,7 +450,8 @@ a {
 	display: inline-block;
 } */
 .footerButton {
-	padding: 10px 25px;
+	padding: 5px 0px 5px 0px;
+	/* Top Right Bottom Left */
 	font-size: 18px;
 	color: white;
 	text-decoration: none;
