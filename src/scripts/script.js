@@ -572,6 +572,96 @@ $(".platform").hover(
 	}
 );
 
+// Ensure that the job's content is visible on hover
+$(".job").hover(
+	function () {
+		// Get the index of the current job
+		let jobIndex = $(this).index() - jobIndexAdjust;
+
+		// Dim the background slightly
+		$(".background").eq(jobIndex).css({
+			"opacity": "0.5" // Adjust for visibility
+		});
+
+		// Make the description content fully visible
+		$(".jobDescription").eq(jobIndex).css({
+			"opacity": "1"
+		});
+	},
+	function () {
+		// Reset the styles when the mouse leaves the job
+		let jobIndex = $(this).index() - jobIndexAdjust;
+
+		$(".background").eq(jobIndex).css({
+			"opacity": "1" // Restore original background opacity
+		});
+
+		$(".jobDescription").eq(jobIndex).css({
+			"opacity": "0" // Hide the description
+		});
+	}
+);
+
+// Ensure that the project's content is visible on hover
+$(".project").hover(
+	function () {
+		// Get the index of the current project
+		let projectIndex = $(this).index() - projectIndexAdjust;
+
+		// Dim the background slightly
+		$(".background").eq(projectIndex).css({
+			"opacity": "0.5" // Adjust for visibility
+		});
+
+		// Make the description content fully visible
+		$(".projectDescription").eq(projectIndex).css({
+			"opacity": "1"
+		});
+	},
+	function () {
+		// Reset the styles when the mouse leaves the project
+		let projectIndex = $(this).index() - projectIndexAdjust;
+
+		$(".background").eq(projectIndex).css({
+			"opacity": "1" // Restore original background opacity
+		});
+
+		$(".projectDescription").eq(projectIndex).css({
+			"opacity": "0" // Hide the description
+		});
+	}
+);
+
+// Ensure that the invention's content is visible on hover
+$(".invention").hover(
+	function () {
+		// Get the index of the current invention
+		let inventionIndex = $(this).index() - inventionIndexAdjust;
+
+		// Dim the background slightly
+		$(".background").eq(inventionIndex).css({
+			"opacity": "0.5" // Adjust for visibility
+		});
+
+		// Make the description content fully visible
+		$(".inventionDescription").eq(inventionIndex).css({
+			"opacity": "1"
+		});
+	},
+	function () {
+		// Reset the styles when the mouse leaves the invention
+		let inventionIndex = $(this).index() - inventionIndexAdjust;
+
+		$(".background").eq(inventionIndex).css({
+			"opacity": "1" // Restore original background opacity
+		});
+
+		$(".inventionDescription").eq(inventionIndex).css({
+			"opacity": "0" // Hide the description
+		});
+	}
+);
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Google Tracking -------------------- */
 /* -------------------- --------------- -------------------- */
