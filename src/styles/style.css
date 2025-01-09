@@ -923,7 +923,7 @@ a {
 }
 
 #invention_background_Electromagnetic {
-	background: black url(img/inventions/Electromagnets_3.png) no-repeat center center;
+	background: white url(img/inventions/Electromagnets_3.png) no-repeat center center;
 }
 
 #invention_background_STARSS_Station {
@@ -943,7 +943,7 @@ a {
 }
 
 #invention_background_Swarms {
-	background: black url(img/inventions/Inflatable_3.png) no-repeat center center;
+	background: white url(img/inventions/Inflatable_3.png) no-repeat center center;
 }
 
 #invention_background_RAVEN,
@@ -997,7 +997,7 @@ a {
 }
 
 .invention:hover {
-	height: 350px;
+	height: 380px;
 	background: black;
 }
 
