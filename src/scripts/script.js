@@ -488,6 +488,27 @@ $(".platform, .job, .project, .invention").hover(
 		const elementIndex = element.index() - indexAdjust;
 		$(".background").eq(elementIndex).css({ "opacity": "0.2" });
 		$(".description").eq(elementIndex).css({ "opacity": "1" });
+	}, function () {
+		if (sidebarDisplayFlag == 0) {
+			sidebarDisplayFlag = 1;
+			toggleSidebarDisplay();
+		}
+		if (resumeButtonDisplayFlag == 0) {
+			resumeButtonDisplayFlag = 1;
+			toggleResumeButtonDisplay();
+		}
+		if (cvButtonDisplayFlag == 0) {
+			cvButtonDisplayFlag = 1;
+			toggleCVButtonDisplay();
+		}
+
+		var inventionIndex = $(this).index() - inventionIndexAdjust;
+		$(".background").eq(inventionIndex + $(".platform").length + $(".job").length).css({
+			"opacity": ""
+		});
+		$(".inventionDescription").eq(inventionIndex).css({
+			"opacity": ""
+		});
 	},
 	function () {
 		// Reset buttons conditionally
