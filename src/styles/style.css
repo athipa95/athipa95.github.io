@@ -1028,9 +1028,10 @@ a {
 /* -------------------- ---------- -------------------- */
 #resumeButton {
 	padding-top: 5px;
+	padding-right: 5px;
 	position: fixed;
 	top: 65%;
-	right: 10px;
+	right: 20px;
 	width: 225px;
 	height: 40px;
 	font-size: 30px;
@@ -1048,10 +1049,11 @@ a {
 
 #cvButton {
 	padding-top: 5px;
+	padding-right: 5px;
 	position: fixed;
 	top: 70%;
-	right: 10px;
-	width: 180px;
+	right: 20px;
+	width: 175px;
 	height: 40px;
 	font-size: 30px;
 	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
