@@ -1059,15 +1059,15 @@ a {
 }
 
 #award_background_TechBriefs {
-	background: white url(img/awards/techbriefs_5.png) no-repeat center center;
+	background: black url(img/awards/techbriefs_5.png) no-repeat center center;
 }
 
 #award_background_UMich {
-	background: white url(img/awards/UofM_5.png) no-repeat center center;
+	background: black url(img/awards/UofM_5.png) no-repeat center center;
 }
 
 #award_background_NITT {
-	background: white url(img/awards/NITT_5.png) no-repeat center center;
+	background: black url(img/awards/NITT_5.png) no-repeat center center;
 }
 
 #award_background_UANews {
@@ -1079,11 +1079,11 @@ a {
 }
 
 #award_background_Lunar {
-	background: white url(img/awards/UofA_5.png) no-repeat center center;
+	background: black url(img/awards/Lunar_5.png) no-repeat center center;
 }
 
 #award_background_NASAPress {
-	background: white url(img/awards/Catalyst_5.JPG) no-repeat center center;
+	background: black url(img/awards/Catalyst_5.JPG) no-repeat center center;
 }
 
 #award_background_Catalyst,
