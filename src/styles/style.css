@@ -1042,41 +1042,61 @@ a {
 /* -------------------- ------------------ -------------------- */
 /* ---------------- Awards and Media Mentions ----------------- */
 /* -------------------- ------------------ -------------------- */
-#award_background_RAVEN {
-	background: black url(img/awards/RAVEN_gif_3.gif) no-repeat center center;
+#award_background_Catalyst {
+	background: black url(img/awards/Catalyst_5.JPG) no-repeat center center;
 }
 
-#award_background_Electromagnetic {
-	background: white url(img/awards/Electromagnets_3.png) no-repeat center center;
+#award_background_MIRO {
+	background: white url(img/awards/NASA_MIRO_5.jpg) no-repeat center center;
 }
 
-#award_background_STARSS_Station {
-	background: black url(img/awards/STARSS_Station_gif_3.gif) no-repeat center center;
+#award_background_GPSC {
+	background: black url(img/awards/UofA_5.png) no-repeat center center;
 }
 
-#award_background_Docking {
-	background: black url(img/awards/Docking_gif_3.gif) no-repeat center center;
+#award_background_GISAL {
+	background: black url(img/awards/UofA_5.png) no-repeat center center;
 }
 
-#award_background_Lighting {
-	background: white url(img/awards/Attitude_gif_3.gif) no-repeat center center;
+#award_background_TechBriefs {
+	background: white url(img/awards/techbriefs_5.png) no-repeat center center;
 }
 
-#award_background_STARSS {
-	background: white url(img/awards/STARSS_gif_3.gif) no-repeat center center;
+#award_background_UMich {
+	background: white url(img/awards/UofM_5.png) no-repeat center center;
 }
 
-#award_background_Swarms {
-	background: white url(img/awards/Inflatable_3.png) no-repeat center center;
+#award_background_NITT {
+	background: white url(img/awards/NITT_5.png) no-repeat center center;
 }
 
-#award_background_RAVEN,
-#award_background_Electromagnetic,
-#award_background_STARSS_Station,
-#award_background_Docking,
-#award_background_Lighting,
-#award_background_STARSS,
-#award_background_Swarms {
+#award_background_UANews {
+	background: black url(img/awards/UofA_5.png) no-repeat center center;
+}
+
+#award_background_PBS {
+	background: black url(img/awards/PBS_5.jpg) no-repeat center center;
+}
+
+#award_background_Lunar {
+	background: white url(img/awards/UofA_5.png) no-repeat center center;
+}
+
+#award_background_NASAPress {
+	background: white url(img/awards/Catalyst_5.JPG) no-repeat center center;
+}
+
+#award_background_Catalyst,
+#award_background_MIRO,
+#award_background_GPSC,
+#award_background_GISAL,
+#award_background_TechBriefs,
+#award_background_UMich,
+#award_background_NITT,
+#award_background_UANews,
+#award_background_PBS,
+#award_background_Lunar,
+#award_background_NASAPress {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
