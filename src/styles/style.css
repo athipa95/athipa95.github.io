@@ -430,9 +430,15 @@ a {
 #topButtons {
 	position: fixed;
 	top: 0;
-	height: 42px;
 	width: 100%;
 	text-align: center;
+	background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    backdrop-filter: blur(10px);    /* Modern frost effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 60px; /* Increased slightly for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footerText {
@@ -467,9 +473,12 @@ a {
 	width: auto;
 	margin-top: 25px;
 	margin-left: 30px;
-	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9), /* Dark halo for light backgrounds */
-                 0px 0px 4px rgba(0, 0, 0, 1);
+	text-shadow: 
+        0 0 5px rgba(0, 0, 0, 1),   /* Sharp dark core for light backgrounds */
+        0 0 10px rgba(0, 0, 0, 0.8), 
+        0 0 15px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+	margin-top: 0 !important; /* Reset your 25px margin to center in bar */
 }
 
 .footerButton:hover {
@@ -492,8 +501,11 @@ a {
 .footerButton.active {
 	font-weight: bold;
 	color: #ffcc00;
-	text-shadow: 0px 0px 20px rgba(255, 204, 0, 0.7), /* Yellow glow for active state */
-                 0px 0px 4px rgba(0, 0, 0, 0.5);
+	text-shadow: 
+        0 0 5px #ffcc00,            /* Glow core */
+        0 0 10px rgba(255, 204, 0, 0.8), 
+        0 0 20px rgba(255, 204, 0, 0.6), 
+        0 0 40px rgba(255, 204, 0, 0.4); /* Wide wash of light */
 	/* Highlight active text */
 }
 
