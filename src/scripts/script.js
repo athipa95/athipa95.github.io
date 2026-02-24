@@ -479,6 +479,41 @@ $(document).ready(function() {
     $('img').attr('loading', 'lazy');
 });
 
+// Mobile Swipe Navigation
+let touchstartX = 0;
+let touchendX = 0;
+
+function handleGesture() {
+    const windowWidth = $(window).width();
+    const previousIndex = pageIndex;
+
+    if (touchendX < touchstartX - 50) {
+        // Swiped Left -> Go to Next Page
+        if (pageIndex < totalPages - 1) pageIndex++;
+    }
+    if (touchendX > touchstartX + 50) {
+        // Swiped Right -> Go to Previous Page
+        if (pageIndex > 0) pageIndex--;
+    }
+
+    if (previousIndex !== pageIndex) {
+        offsetPages(pageIndex, windowWidth);
+        toggleActivePage(previousIndex, pageIndex);
+        displayPageName(pageIndex);
+        // Sync the logo and intro text opacity
+        $("#introText").css("opacity", pageIndex === 0 ? "1" : "0");
+    }
+}
+
+document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+});
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Google Tracking -------------------- */
 /* -------------------- --------------- -------------------- */
