@@ -425,7 +425,7 @@ a {
 	height: 42px;
 	width: 100%;
 	text-align: center;
-	padding: 0 40px;
+	padding: 0 10px;
 }
 
 #topButtons {
@@ -434,14 +434,14 @@ a {
     left: 0;
     width: 100%;
     height: 60px;
-    background: rgba(0, 0, 0, 0.85); 
+    background: rgba(0, 0, 0, 0.65); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 10000;
     display: flex;
     justify-content: center; /* Centers the whole cluster on PC */
     align-items: center;     /* Centers them vertically */
-    gap: 40px;               /* Professional spacing between links */
+    gap: 75px;               /* Professional spacing between links */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -461,13 +461,6 @@ a {
 	font-size: 15px;
 	color: rgb(255, 255, 255);
 	background-color: rgba(0, 0, 0, 0.85);
-}
-
-#footerText, #lastModified {
-    position: relative !important; /* Move away from absolute corner pinning */
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
 }
 
 .footerButton {
