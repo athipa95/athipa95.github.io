@@ -425,7 +425,6 @@ a {
 	height: 42px;
 	width: 100%;
 	text-align: center;
-	padding: 0 30px;
 }
 
 #topButtons {
@@ -451,7 +450,7 @@ a {
 	left: 5px;
 	font-size: 25px;
 	color: rgb(255, 255, 255);
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.45);
 }
 
 #lastModified {
