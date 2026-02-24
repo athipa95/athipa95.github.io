@@ -440,7 +440,7 @@ a {
     display: flex;
     justify-content: center; /* Centers the whole cluster on PC */
     align-items: center;     /* Centers them vertically */
-    gap: 175px;               /* Professional spacing between links */
+    gap: 45px;               /* Professional spacing between links */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
