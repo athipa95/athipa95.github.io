@@ -432,7 +432,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* Allow it to grow if buttons wrap on narrow screens */
+    height: 60px; /* Allow it to grow if buttons wrap on narrow screens */
     min-height: 50px;
     background: rgba(0, 0, 0, 0.85); /* Slightly darker for better legibility */
     backdrop-filter: blur(12px);
@@ -442,8 +442,8 @@ a {
     flex-wrap: wrap; /* This is key for the folded screen! */
     justify-content: center;
     align-items: center;
-    padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0;   /* Remove any default padding */
 }
 
 #footerText {
@@ -477,10 +477,11 @@ a {
 	height: auto;
     transition: all 0.3s ease;
     text-shadow: 0 0 10px rgba(0,0,0,1); /* Added heavy shadow */
-	margin: 5px 12px !important; 
-    padding: 5px;
     text-align: center;
     width: auto !important; /* Prevents the 150px fixed width from pushing things */
+	margin: 0 10px !important; /* Use horizontal margin only */
+    padding: 0;               /* Reset padding */
+    line-height: 60px;        /* Matches height of #topButtons for perfect centering */
 }
 
 .footerButton {
