@@ -486,13 +486,11 @@ a {
 
 .notActive {
 	background-color: none;
-	height: 30px;
 	width: 150px;
 }
 
 .active {
 	background-color: none;
-	height: 30px;
 	width: 150px;
 }
 
