@@ -474,6 +474,11 @@ $(".award").hover(
 	}
 );
 
+// Automatically apply lazy loading to all images on the page
+$(document).ready(function() {
+    $('img').attr('loading', 'lazy');
+});
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Google Tracking -------------------- */
 /* -------------------- --------------- -------------------- */
@@ -486,5 +491,4 @@ $(".award").hover(
 
 ga('create', 'UA-69516450-3', 'auto');
 ga('send', 'pageview');
-
 
