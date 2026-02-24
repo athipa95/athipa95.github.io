@@ -1229,3 +1229,28 @@ a {
 	color: black;
 	cursor: pointer;
 }
+
+@media only screen and (max-width: 875px) {
+    /* Hide sidebar icons to prevent overlap in the center */
+    #sidebar {
+        display: none;
+    }
+
+    /* Move Resume and CV buttons to a more readable spot */
+    #resumeButton, #cvButton {
+        right: 10px;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    /* Stack the University name properly */
+    #introText {
+        font-size: 30px;
+        width: 90%;
+        left: 5%;
+        margin-left: 0;
+        text-align: center;
+    }
+}
