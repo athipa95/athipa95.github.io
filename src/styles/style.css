@@ -433,13 +433,13 @@ a {
     left: 0;
     width: 100%;
     height: 60px;
-    background: rgba(0, 0, 0, 0.65); 
+    background: rgba(0, 0, 0, 0.45); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 10000;
     display: flex;
     justify-content: center; /* Centers the whole cluster on PC */
-    align-items: center;     /* Centers them vertically */
+    align-items: stretch;     /* Centers them vertically */
     gap: 45px;               /* Professional spacing between links */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -463,20 +463,19 @@ a {
 }
 
 .footerButton {
-    top: 0 !important; 
-    margin: 0 !important; 
-    line-height: normal !important;
-    height: 100%;
-    
-    /* Technical styling */
+    flex: 1; /* Give every button equal width to prevent crowding */
+    max-width: 200px; /* Limits width on ultra-wide monitors */
+    margin: 0 !important;
+    padding: 0;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    justify-content: center;
+    font-size: 18px; /* Slightly smaller to ensure fit */
     color: white;
     text-shadow: 0 0 10px rgba(0,0,0,1);
     transition: all 0.3s ease;
     cursor: pointer;
-    white-space: nowrap; /* Prevents "Work Experience" from breaking */
+    white-space: nowrap;
 }
 
 .footerButton:hover {
