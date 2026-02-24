@@ -463,12 +463,12 @@ a {
 }
 
 .footerButton {
-	top: 30;
+	top: 25;
 	font-size: 18px;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-	display: flex;
+	display: inline-block;
 	transition: color 0.3s ease;
 	background: none;
 	border: none;
@@ -480,15 +480,6 @@ a {
 	margin: 0 10px !important; /* Use horizontal margin only */
     padding: 0;               /* Reset padding */
     line-height: 60px;        /* Matches height of #topButtons for perfect centering */
-}
-
-.footerButton {
-    /* Override the original script/css margins */
-    margin: 5px 12px !important; 
-    padding: 5px;
-    font-size: 15px; /* Slightly smaller to fit more on one line */
-    text-align: center;
-    width: auto !important; /* Prevents the 150px fixed width from pushing things */
 }
 
 .footerButton:hover {
@@ -1240,29 +1231,3 @@ a {
 	color: black;
 	cursor: pointer;
 }
-
-@media only screen and (max-width: 875px) {
-    /* Hide sidebar icons to prevent overlap in the center */
-    #sidebar {
-        display: none;
-    }
-
-    /* Move Resume and CV buttons to a more readable spot */
-    #resumeButton, #cvButton {
-        right: 10px;
-        font-size: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    /* Stack the University name properly */
-    #introText {
-        font-size: 30px;
-        width: 90%;
-        left: 5%;
-        margin-left: 0;
-        text-align: center;
-    }
-}
-
