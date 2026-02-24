@@ -432,18 +432,16 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Allow it to grow if buttons wrap on narrow screens */
-    min-height: 50px;
-    background: rgba(0, 0, 0, 0.85); /* Slightly darker for better legibility */
+    height: 60px; /* Increased height for better thumb-tapping */
+    background: rgba(0, 0, 0, 0.85); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    z-index: 9999;
+    z-index: 10000;
     display: flex;
-    flex-wrap: wrap; /* This is key for the folded screen! */
+	flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Centers text perfectly vertically */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0;   /* Remove any default padding */
 }
 
 #footerText {
@@ -465,12 +463,12 @@ a {
 }
 
 .footerButton {
-	top: 20;
+	top: 30;
 	font-size: 18px;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-	display: inline-block;
+	display: flex;
 	transition: color 0.3s ease;
 	background: none;
 	border: none;
@@ -1268,30 +1266,3 @@ a {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    /* Hide the sidebar entirely on narrow screens to clear the nameplate */
-    #sidebar {
-        display: none !important;
-    }
-
-    /* Shrink the name and logo so they don't collide */
-    #introText {
-        font-size: 24px !important;
-        top: 60% !important; /* Move it down a bit to clear the nav bar */
-        width: 100%;
-        left: 0;
-        margin-left: 0;
-    }
-
-    #mainLogo {
-        width: 180px !important; /* Scale down the logo */
-    }
-
-    /* Move the Resume/CV buttons so they aren't floating in the middle */
-    #resumeButton, #cvButton {
-        font-size: 18px !important;
-        right: 5px !important;
-        background: rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-}
