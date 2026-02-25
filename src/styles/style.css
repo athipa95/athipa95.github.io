@@ -409,12 +409,18 @@ a {
 	font-size: 60px;
 	color: rgb(255, 255, 255);
 	font-weight: bolder;
-	background-color: rgba(0, 0, 0, 0.65);
+	background-color: rgba(0, 0, 0, 0);
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
-	/* font-family: HelveticaNeue-CondensedBold; */
+	font-family: HelveticaNeue-CondensedBold;
 	z-index: 10;
 	letter-spacing: 2px;
+	text-align: center;
+    white-space: nowrap;
+	text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.9),   /* Sharp dark core for contrast */
+        0 0 20px rgba(0, 0, 0, 0.6), 
+        0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 /* -------------------- -------------- -------------------- */
