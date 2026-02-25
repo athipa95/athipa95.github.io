@@ -399,7 +399,7 @@ a {
 
 #introText {
 	position: absolute;
-	margin: 110px 0 0 -187px;
+	margin: 0 !important;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 5px;
@@ -409,7 +409,7 @@ a {
 	font-size: 60px;
 	color: rgb(255, 255, 255);
 	font-weight: bolder;
-	background-color: rgba(0, 0, 0, 0);
+	background-color: transparent !important;
 	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 	font-family: HelveticaNeue-CondensedBold;
