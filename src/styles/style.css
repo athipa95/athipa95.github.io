@@ -407,6 +407,7 @@ a {
 		0 0 60px rgba(0, 0, 0, 0.4); /* Extra-wide atmospheric "bloom" */
     background-color: transparent !important;
     transition: opacity 1s;
+	letter-spacing: 2px;
 }
 
 /* -------------------- -------------- -------------------- */
