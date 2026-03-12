@@ -521,6 +521,11 @@ function handleGesture() {
 		offsetPages(pageIndex, windowWidth);
 		toggleActivePage(previousIndex, pageIndex);
 		displayPageName(pageIndex);
+
+		// Switch Background Layers on Swipe
+		$(".bg-layer").removeClass("active");
+		$(".bg-layer").eq(pageIndex).addClass("active");
+
 		// Sync the logo and intro text opacity
 		$("#introText").css("opacity", pageIndex === 0 ? "1" : "0");
 	}
