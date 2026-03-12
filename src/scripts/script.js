@@ -555,6 +555,40 @@ document.addEventListener('touchend', e => {
 	handleGesture();
 });
 
+// Intersection Observer to update UI on scroll
+const observerOptions = {
+	root: null,
+	rootMargin: '0px',
+	threshold: 0.5 // Trigger when 50% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+	if ($(window).width() <= 800) { // Only run on mobile
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const index = $(".page").index(entry.target);
+
+				// Update Global Index
+				const previousIndex = pageIndex;
+				pageIndex = index;
+
+				// Sync UI
+				toggleActivePage(previousIndex, pageIndex);
+				displayPageName(pageIndex);
+
+				// Sync Background
+				$(".bg-layer").removeClass("active");
+				$(".bg-layer").eq(pageIndex).addClass("active");
+			}
+		});
+	}
+}, observerOptions);
+
+// Tell the observer to watch all pages
+document.querySelectorAll('.page').forEach(page => {
+	observer.observe(page);
+});
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Google Tracking -------------------- */
 /* -------------------- --------------- -------------------- */

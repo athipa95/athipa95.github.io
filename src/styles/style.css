@@ -1267,13 +1267,15 @@ a {
 		min-height: 100vh;
 		display: block !important;
 		padding: 80px 15px 40px 15px;
-		/* Space so the top bar doesn't cover your name */
+		overflow: visible !important;
+		margin-bottom: 50px;
 	}
 
-	#aboutMeDescription {
-		width: 95% !important;
-		padding: 20px 10px !important;
-		margin: 0 auto !important;
+	/* Fix the "fat" footer button highlight on mobile */
+	#topButtons {
+		gap: 15px !important;
+		/* Tighter for small screens */
+		padding: 0 10px;
 	}
 
 	/* Hide the sidebar to prevent it from overlapping text */
@@ -1336,6 +1338,11 @@ a {
 	/* Hide the background image when expanded to make text readable */
 	.expanded .background {
 		filter: brightness(0.1) !important;
+	}
+
+	.footerButton {
+		font-size: 14px !important;
+		/* Smaller text to prevent wrapping */
 	}
 
 	/* Move Resume/CV links into the flow so they don't float over text */
