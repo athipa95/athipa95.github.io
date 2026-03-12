@@ -488,12 +488,10 @@ a {
 
 .notActive {
 	background-color: none;
-	width: 150px;
 }
 
 .active {
 	background-color: none;
-	width: 150px;
 }
 
 .footerButton.active {
@@ -524,44 +522,52 @@ a {
 	background: none !important;
 }
 
-#page1::before,
-#page2::before,
-#page3::before,
-#page4::before,
-#page5::before {
-	content: "";
-	position: fixed !important;
+#fixed-bg-container {
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	filter: blur(1px);
-	opacity: 0.8;
 	z-index: -1;
-	pointer-events: none;
 }
 
-#page1::before {
+.bg-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out;
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
+	/* Scroll is fine here because the container is fixed */
+	filter: blur(1.5px);
+}
+
+.bg-layer.active {
+	opacity: 0.8;
+}
+
+/* Assign your specific images */
+#bg1 {
 	background-image: url("img/Galaxy_1.avif");
 }
 
-#page2::before {
+#bg2 {
 	background-image: url("img/Galaxy_3.avif");
 }
 
-#page3::before {
+#bg3 {
 	background-image: url("img/Galaxy_2.avif");
 }
 
-#page4::before {
+#bg4 {
 	background-image: url("img/Galaxy_1.avif");
 }
 
-#page5::before {
+#bg5 {
 	background-image: url("img/Background_4.jpg");
 }
 
@@ -1232,9 +1238,9 @@ a {
 .project,
 .invention,
 .award {
-	transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
-		box-shadow 0.8s ease,
-		border-color 0.8s ease !important;
+	transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+		box-shadow 1.2s ease,
+		border-color 1.2s ease !important;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	/* Subtle initial border */
 }
