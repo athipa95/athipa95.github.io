@@ -112,7 +112,8 @@ function offsetPages(index, windowWidth) {
 		$(".page").css({
 			"left": "0",
 			"position": "relative",
-			"width": "100%"
+			"width": "100%",
+			"display": "block"
 		});
 	}
 }
