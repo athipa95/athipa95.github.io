@@ -1266,8 +1266,14 @@ a {
 		height: auto !important;
 		min-height: 100vh;
 		display: block !important;
-		padding-top: 70px;
+		padding: 80px 15px 40px 15px;
 		/* Space so the top bar doesn't cover your name */
+	}
+
+	#aboutMeDescription {
+		width: 95% !important;
+		padding: 20px 10px !important;
+		margin: 0 auto !important;
 	}
 
 	/* Hide the sidebar to prevent it from overlapping text */
@@ -1277,12 +1283,10 @@ a {
 
 	/* Adjust the Home Page nameplate for narrow screens */
 	#introText {
-		font-size: 32px !important;
+		font-size: 30px !important;
 		width: 90% !important;
 		white-space: normal !important;
-		/* Allows long names to wrap if needed */
-		top: 40% !important;
-		/* Move it up to clear the background graphics */
+		transform: translate(-50%, -40%) !important;
 	}
 
 	/* Stack all project/job cards into one readable column */
@@ -1292,9 +1296,10 @@ a {
 	.invention,
 	.award {
 		display: block !important;
-		width: 92% !important;
-		height: auto !important;
+		width: 100% !important;
+		max-width: 350px;
 		margin: 20px auto !important;
+		height: auto !important;
 	}
 
 	/* Make descriptions visible by default (no hover on mobile) */
@@ -1305,7 +1310,7 @@ a {
 	.awardDescription {
 		position: relative !important;
 		opacity: 1 !important;
-		padding: 15px;
+		padding: 10px;
 	}
 
 	/* Move Resume/CV links into the flow so they don't float over text */
