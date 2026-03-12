@@ -1054,7 +1054,7 @@ a {
 /* ---------------- Awards and Media Mentions ----------------- */
 /* -------------------- ------------------ -------------------- */
 #award_background_AsteroidAthipathi {
-	background: black url(img/awards/Asteroid_Athipathi.JPG) no-repeat center center;
+	background: black url(img/awards/Asteroid_Athipathi.png) no-repeat center center;
 }
 
 #award_background_Catalyst {
@@ -1157,7 +1157,7 @@ a {
 }
 
 .award:hover {
-	height: 380px;
+	height: 350px;
 	background: black;
 }
 
