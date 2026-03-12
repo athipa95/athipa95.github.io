@@ -1232,19 +1232,6 @@ a {
 	cursor: pointer;
 }
 
-/* Apply a smooth transition to all card types */
-.platform,
-.job,
-.project,
-.invention,
-.award {
-	transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1),
-		box-shadow 1.2s ease,
-		border-color 1.2s ease !important;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	/* Subtle initial border */
-}
-
 /* The Lift Effect */
 .platform:hover,
 .job:hover,
