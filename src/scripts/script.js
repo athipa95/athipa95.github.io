@@ -531,6 +531,21 @@ function handleGesture() {
 	}
 }
 
+// Tap-to-Expand Logic for Mobile
+$(".platform, .job, .project, .invention, .award").on("click", function (e) {
+	if ($(window).width() <= 800) {
+		const isExpanded = $(this).hasClass("expanded");
+
+		// Close any other open cards first
+		$(".expanded").removeClass("expanded");
+
+		// Toggle the current card
+		if (!isExpanded) {
+			$(this).addClass("expanded");
+		}
+	}
+});
+
 document.addEventListener('touchstart', e => {
 	touchstartX = e.changedTouches[0].screenX;
 });

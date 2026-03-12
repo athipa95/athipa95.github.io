@@ -1302,15 +1302,40 @@ a {
 		height: auto !important;
 	}
 
+	/* Expand state: Card grows on tap */
+	.platform.expanded,
+	.job.expanded,
+	.project.expanded,
+	.invention.expanded,
+	.award.expanded {
+		height: 420px !important;
+		/* Enough room for full project text */
+		background: black !important;
+	}
+
 	/* Make descriptions visible by default (no hover on mobile) */
 	.platformDescription,
 	.jobDescription,
 	.projectDescription,
 	.inventionDescription,
 	.awardDescription {
-		position: relative !important;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.expanded .platformDescription,
+	.expanded .jobDescription,
+	.expanded .projectDescription,
+	.expanded .inventionDescription,
+	.expanded .awardDescription {
 		opacity: 1 !important;
-		padding: 10px;
+		position: absolute !important;
+		top: 0;
+	}
+
+	/* Hide the background image when expanded to make text readable */
+	.expanded .background {
+		filter: brightness(0.1) !important;
 	}
 
 	/* Move Resume/CV links into the flow so they don't float over text */
