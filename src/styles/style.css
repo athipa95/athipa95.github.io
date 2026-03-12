@@ -538,6 +538,10 @@ a {
 }
 
 /* Assign your specific images */
+#bg0 {
+	background-image: url("img/Background_1.png");
+}
+
 #bg1 {
 	background-image: url("img/Galaxy_1.avif");
 }

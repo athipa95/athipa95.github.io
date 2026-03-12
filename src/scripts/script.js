@@ -37,7 +37,7 @@ var awardIndexAdjust = $("#contentPage5").children().length - $(".award").length
 // Force the Home background to be active immediately on load
 $(document).ready(function () {
 	$(".bg-layer").removeClass("active"); // Clear any browser-cached classes
-	$("#bg1").addClass("active"); // Lock in the Galaxy_1.avif for Home
+	$("#bg0").addClass("active"); // Lock in the Galaxy_1.avif for Home
 });
 
 windowResize();
