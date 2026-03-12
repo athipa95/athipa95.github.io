@@ -91,10 +91,20 @@ function windowResize() {
 /* -------------------- Function -------------------- */
 /* -------------------- -------- -------------------- */
 function offsetPages(index, windowWidth) {
-	var offset = (-index) * windowWidth;
-	for (var i = 0; i < totalPages; i++) {
-		$(".page").eq(i).css({
-			"left": offset + (windowWidth * i) + "px"
+	// Only slide pages if the screen is wider than 800px (PC/Inner Fold)
+	if (windowWidth > 800) {
+		var offset = (-index) * windowWidth;
+		for (var i = 0; i < totalPages; i++) {
+			$(".page").eq(i).css({
+				"left": offset + (windowWidth * i) + "px",
+				"position": "absolute" // Keep original sliding logic
+			});
+		}
+	} else {
+		// Reset positions for vertical stacking on mobile
+		$(".page").css({
+			"left": "0",
+			"position": "relative"
 		});
 	}
 }

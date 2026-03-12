@@ -1246,3 +1246,86 @@ a {
 		0 0 15px rgba(255, 204, 0, 0.2);
 	z-index: 50;
 }
+
+
+/* Apply these rules ONLY for screens narrower than 800px */
+@media only screen and (max-width: 800px) {
+
+	/* Enable standard scrolling and disable the JS "clipping" */
+	html,
+	body,
+	main {
+		overflow-y: auto !important;
+		overflow-x: hidden !important;
+		height: auto !important;
+	}
+
+	.content-wrapper {
+		display: flex;
+		flex-direction: column;
+		/* Stacks Home, About, Projects vertically */
+	}
+
+	/* Force pages to sit one under another */
+	.page {
+		position: relative !important;
+		width: 100% !important;
+		left: 0 !important;
+		top: 0 !important;
+		height: auto !important;
+		min-height: 100vh;
+		display: block !important;
+		padding-top: 70px;
+		/* Space so the top bar doesn't cover your name */
+	}
+
+	/* Hide the sidebar to prevent it from overlapping text */
+	#sidebar {
+		display: none !important;
+	}
+
+	/* Adjust the Home Page nameplate for narrow screens */
+	#introText {
+		font-size: 32px !important;
+		width: 90% !important;
+		white-space: normal !important;
+		/* Allows long names to wrap if needed */
+		top: 40% !important;
+		/* Move it up to clear the background graphics */
+	}
+
+	/* Stack all project/job cards into one readable column */
+	.platform,
+	.job,
+	.project,
+	.invention,
+	.award {
+		display: block !important;
+		width: 92% !important;
+		height: auto !important;
+		margin: 20px auto !important;
+	}
+
+	/* Make descriptions visible by default (no hover on mobile) */
+	.platformDescription,
+	.jobDescription,
+	.projectDescription,
+	.inventionDescription,
+	.awardDescription {
+		position: relative !important;
+		opacity: 1 !important;
+		padding: 15px;
+	}
+
+	/* Move Resume/CV links into the flow so they don't float over text */
+	#resumeButton,
+	#cvButton {
+		position: relative !important;
+		top: 0 !important;
+		right: 0 !important;
+		display: block;
+		margin: 10px auto;
+		text-align: center;
+		font-size: 22px !important;
+	}
+}
