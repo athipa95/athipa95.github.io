@@ -111,7 +111,8 @@ function offsetPages(index, windowWidth) {
 		// Reset positions for vertical stacking on mobile
 		$(".page").css({
 			"left": "0",
-			"position": "relative"
+			"position": "relative",
+			"width": "100%"
 		});
 	}
 }
