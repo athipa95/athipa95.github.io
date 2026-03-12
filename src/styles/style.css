@@ -1053,6 +1053,10 @@ a {
 /* -------------------- ------------------ -------------------- */
 /* ---------------- Awards and Media Mentions ----------------- */
 /* -------------------- ------------------ -------------------- */
+#award_background_AsteroidAthipathi {
+	background: black url(img/awards/Asteroid_Athipathi.JPG) no-repeat center center;
+}
+
 #award_background_Catalyst {
 	background: black url(img/awards/Catalyst_5.JPG) no-repeat center center;
 }
@@ -1098,6 +1102,7 @@ a {
 }
 
 #award_background_Catalyst,
+#award_background_AsteroidAthipathi,
 #award_background_MIRO,
 #award_background_GPSC,
 #award_background_GISAL,
