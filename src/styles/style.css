@@ -457,7 +457,7 @@ a {
 #lastModified {
 	position: absolute;
 	top: 5px;
-	right: 5px;
+	right: 35px;
 	font-size: 15px;
 	color: rgb(255, 255, 255);
 	background-color: rgba(0, 0, 0, 0.45);
@@ -1239,14 +1239,8 @@ a {
 .invention:hover,
 .award:hover {
 	transform: translateY(-10px);
-	/* Lifts the card up */
 	border-color: #ffcc00;
-	/* Highlights with your signature yellow */
-
-	/* Depth Shadow + Subtle Glow */
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
 		0 0 15px rgba(255, 204, 0, 0.2);
-
 	z-index: 50;
-	/* Ensures the lifted card stays on top of neighbors */
 }
