@@ -519,6 +519,9 @@ a {
 #page4,
 #page5 {
 	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: none !important;
 }
 
 #page1::before,
@@ -527,11 +530,11 @@ a {
 #page4::before,
 #page5::before {
 	content: "";
-	position: absolute;
+	position: fixed !important;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -562,14 +565,6 @@ a {
 	background-image: url("img/Background_4.jpg");
 }
 
-#page1,
-#page2,
-#page3,
-#page4,
-#page5 {
-	height: 100%;
-	background-size: cover;
-}
 
 #contentPage1,
 #contentPage2,
