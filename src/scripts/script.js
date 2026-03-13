@@ -231,39 +231,33 @@ function displayPageName(index) {
 $(".footerButton").click(function () {
 	var windowWidth = $(window).width();
 	var previousIndex = pageIndex;
-	pageIndex = $(this).index();
-	var index = $(this).index();
+	var index = $(this).index(); // The button the user just tapped
 
 	if (windowWidth <= 800) {
-		// MOBILE: Scroll to the selected page
-		const targetPage = $(".page").eq(index);
+		// MOBILE: Instant UI sync + Smooth Scroll
+		pageIndex = index; // Update the global tracker immediately
+		toggleActivePage(previousIndex, pageIndex);
+		displayPageName(pageIndex);
 
+		const targetPage = $(".page").eq(index);
 		$("html, body, main").animate({
-			scrollTop: targetPage.offset().top - 60 // Adjusts for the 60px top bar
+			scrollTop: targetPage.offset().top - 60
 		}, 800);
 
 	} else {
+		// PC: Standard Slider Logic
+		pageIndex = index;
 		if (previousIndex != pageIndex) {
 			offsetPages(pageIndex, windowWidth);
 			toggleActivePage(previousIndex, pageIndex);
+			displayPageName(pageIndex);
 
-			if (pageIndex != 0) {
-				$("#introText").css({
-					"opacity": "0"
-				});
-			} else if (pageIndex == 0) {
-				$("#introText").css({
-					"opacity": "1"
-				});
-			} else {
-				alert("Error (1): Current page index is incorrect.");
-			}
+			// Intro Text Opacity logic
+			$("#introText").css("opacity", pageIndex === 0 ? "1" : "0");
 		}
 	}
 
-	displayPageName(pageIndex);
-
-	// Switch Background Layers
+	// Universal Background Switch
 	$(".bg-layer").removeClass("active");
 	$(".bg-layer").eq(pageIndex).addClass("active");
 });
