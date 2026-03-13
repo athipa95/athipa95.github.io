@@ -1310,6 +1310,8 @@ a {
 	.blockTitle {
 		position: absolute !important;
 		bottom: 0 !important;
+		top: auto !important;
+		/* Clears any 'top' values from desktop or previous fixes */
 		width: 100% !important;
 		height: 40px !important;
 		display: flex !important;
@@ -1318,7 +1320,7 @@ a {
 		background-color: rgba(30, 30, 30, 0.9) !important;
 		font-size: 16px !important;
 		z-index: 10;
-		transition: color 0.3s;
+		transition: opacity 0.3s, color 0.3s;
 	}
 
 	.platformImage,
@@ -1338,8 +1340,10 @@ a {
 	}
 
 	.expanded .blockTitle {
+		opacity: 0 !important;
 		color: rgba(232, 232, 232, 0) !important;
-		z-index: -1;
+		pointer-events: none;
+		/* Prevents title bar from blocking link taps */
 	}
 
 	/* Fades title like PC hover */
