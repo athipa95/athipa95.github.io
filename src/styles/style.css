@@ -1289,9 +1289,11 @@ a {
 
 	/* Fix the "fat" footer button highlight on mobile */
 	#topButtons {
-		gap: 15px !important;
+		gap: 10px !important;
 		/* Tighter for small screens */
 		padding: 0 10px;
+		justify-content: space-around !important;
+		/* Spreads buttons evenly */
 	}
 
 	/* Hide the sidebar to prevent it from overlapping text */
@@ -1342,6 +1344,24 @@ a {
 		background: black !important;
 	}
 
+	/* Center the titles in the card footer */
+	.blockTitle {
+		top: 0 !important;
+		/* Reset the negative float */
+		height: 45px;
+		/* Matches the bottom area of your card */
+		display: flex !important;
+		align-items: center !important;
+		/* Vertical center */
+		justify-content: center !important;
+		/* Horizontal center */
+		font-size: 18px !important;
+		/* Slightly smaller for mobile fitting */
+		margin: 0 !important;
+		background-color: rgba(0, 0, 0, 0.5);
+		/* Optional: ensures legibility */
+	}
+
 	/* Make descriptions visible by default (no hover on mobile) */
 	.platformDescription,
 	.jobDescription,
@@ -1378,12 +1398,17 @@ a {
 	}
 
 	.footerButton {
-		font-size: 14px !important;
+		font-size: 12px !important;
 		/* Smaller text to prevent wrapping */
+		min-width: auto !important;
 	}
 
 	.largeText {
 		margin: 0 0 10px 0 !important;
+	}
+
+	#lastModified {
+		display: none !important;
 	}
 
 	/* Move Resume/CV links into the flow so they don't float over text */
