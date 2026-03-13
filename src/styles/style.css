@@ -1346,6 +1346,12 @@ a {
 		/* Prevents title bar from blocking link taps */
 	}
 
+	.expanded .linksBar {
+		opacity: 1 !important;
+		visibility: visible !important;
+		pointer-events: auto !important;
+	}
+
 	/* Fades title like PC hover */
 	.expanded [class*="Image"] {
 		filter: brightness(0) !important;
@@ -1389,7 +1395,10 @@ a {
 		width: 100% !important;
 		height: 50px !important;
 		z-index: 30 !important;
-		opacity: 1 !important;
+		opacity: 0 !important;
+		visibility: hidden !important;
+		pointer-events: none !important;
+		transition: opacity 0.3s ease;
 		display: flex !important;
 		justify-content: center !important;
 		align-items: center !important;
