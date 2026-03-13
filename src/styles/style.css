@@ -1386,16 +1386,19 @@ a {
 		opacity: 0;
 		display: flex !important;
 		flex-direction: column !important;
-		justify-content: center !important;
+		justify-content: flex-start !important;
+		/* Forces text to the TOP */
 		align-items: center !important;
 		text-align: center;
 		height: calc(100% - 50px) !important;
-		padding: 15px !important;
+		padding: 30px 15px 15px 15px !important;
+		/* Added extra top padding for professional spacing */
 		box-sizing: border-box;
 		overflow-y: auto;
 		transition: opacity 0.3s;
 	}
 
+	/* Expanded state remains the same */
 	.expanded [class*="Description"] {
 		opacity: 1 !important;
 		position: absolute !important;
@@ -1427,14 +1430,14 @@ a {
 
 	/* UI Navigation Cleanup */
 	#topButtons {
-		gap: 3px !important;
-		padding: 0 5px;
+		gap: 2px !important;
+		padding: 0 4px;
 		justify-content: center !important;
 	}
 
 	.footerButton {
 		font-size: 11px !important;
-		padding: 0 4px !important;
+		padding: 0 3px !important;
 	}
 
 	#sidebar,
