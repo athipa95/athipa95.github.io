@@ -1357,6 +1357,21 @@ a {
 		filter: brightness(0) !important;
 	}
 
+	/* Top-align content for all expanded descriptions */
+	[class*="Description"] {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: flex-start !important;
+		/* Forces text to the TOP */
+		align-items: center !important;
+		text-align: center;
+		height: calc(100% - 50px) !important;
+		padding: 25px 15px 15px 15px !important;
+		/* Extra top padding for breathing room */
+		box-sizing: border-box;
+		overflow-y: auto;
+	}
+
 	/* Blacks out image like PC hover */
 	.expanded .background {
 		filter: brightness(0.1) !important;

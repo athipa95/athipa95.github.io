@@ -232,21 +232,32 @@ $(".footerButton").click(function () {
 	var windowWidth = $(window).width();
 	var previousIndex = pageIndex;
 	pageIndex = $(this).index();
+	var index = $(this).index();
 
-	if (previousIndex != pageIndex) {
-		offsetPages(pageIndex, windowWidth);
-		toggleActivePage(previousIndex, pageIndex);
+	if (windowWidth <= 800) {
+		// MOBILE: Scroll to the selected page
+		const targetPage = $(".page").eq(index);
 
-		if (pageIndex != 0) {
-			$("#introText").css({
-				"opacity": "0"
-			});
-		} else if (pageIndex == 0) {
-			$("#introText").css({
-				"opacity": "1"
-			});
-		} else {
-			alert("Error (1): Current page index is incorrect.");
+		$("html, body, main").animate({
+			scrollTop: targetPage.offset().top - 60 // Adjusts for the 60px top bar
+		}, 800);
+
+	} else {
+		if (previousIndex != pageIndex) {
+			offsetPages(pageIndex, windowWidth);
+			toggleActivePage(previousIndex, pageIndex);
+
+			if (pageIndex != 0) {
+				$("#introText").css({
+					"opacity": "0"
+				});
+			} else if (pageIndex == 0) {
+				$("#introText").css({
+					"opacity": "1"
+				});
+			} else {
+				alert("Error (1): Current page index is incorrect.");
+			}
 		}
 	}
 
