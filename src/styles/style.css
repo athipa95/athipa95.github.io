@@ -1291,8 +1291,8 @@ a {
 	#topButtons {
 		gap: 10px !important;
 		/* Tighter for small screens */
-		padding: 0 10px;
-		justify-content: space-around !important;
+		padding: 0 5px;
+		justify-content: center !important;
 		/* Spreads buttons evenly */
 	}
 
@@ -1331,6 +1331,7 @@ a {
 		width: 100% !important;
 		height: 180px !important;
 		background-size: cover !important;
+		margin-bottom: 40px !important;
 	}
 
 	/* Expand state: Card grows on tap */
@@ -1346,20 +1347,22 @@ a {
 
 	/* Center the titles in the card footer */
 	.blockTitle {
-		top: 0 !important;
-		/* Reset the negative float */
-		height: 45px;
-		/* Matches the bottom area of your card */
+		position: absolute !important;
+		/* Pin it to the bottom of the card */
+		bottom: 0 !important;
+		top: auto !important;
+		/* Clear the desktop "top: -16px" */
+		width: 100% !important;
+		height: 40px !important;
 		display: flex !important;
 		align-items: center !important;
-		/* Vertical center */
 		justify-content: center !important;
-		/* Horizontal center */
-		font-size: 18px !important;
-		/* Slightly smaller for mobile fitting */
+		background-color: rgba(30, 30, 30, 0.9) !important;
+		/* Matches the theme */
 		margin: 0 !important;
-		background-color: rgba(0, 0, 0, 0.5);
-		/* Optional: ensures legibility */
+		padding: 0 !important;
+		font-size: 16px !important;
+		z-index: 10;
 	}
 
 	/* Make descriptions visible by default (no hover on mobile) */
@@ -1400,7 +1403,9 @@ a {
 	.footerButton {
 		font-size: 12px !important;
 		/* Smaller text to prevent wrapping */
-		min-width: auto !important;
+		padding: 0 4px !important;
+		/* Smaller hit-boxes for narrow screens */
+		max-width: none !important;
 	}
 
 	.largeText {
