@@ -1296,6 +1296,10 @@ a {
 		/* Spreads buttons evenly */
 	}
 
+	#topButtons::-webkit-scrollbar {
+		display: none;
+	}
+
 	/* Hide the sidebar to prevent it from overlapping text */
 	#sidebar {
 		display: none !important;
@@ -1380,28 +1384,30 @@ a {
 		align-items: center !important;
 		/* Centers text horizontally */
 		text-align: center;
-		height: calc(100% - 50px) !important;
+		height: calc(100% - 95px) !important;
 		/* Leaves room for the links at the bottom */
-		top: 0 !important;
+		top: 45px !important;
 		z-index: 10 !important;
 		padding: 15px !important;
 		box-sizing: border-box;
 		pointer-events: auto;
 		/* Allows tapping through to the card if needed */
+		overflow-y: auto;
 	}
 
 	.linksBar {
 		position: absolute !important;
 		bottom: 0 !important;
-		z-index: 20 !important;
-		/* Higher than the description and blockTitle */
+		left: 0 !important;
+		width: 100% !important;
+		height: 50px !important;
+		z-index: 30 !important;
+		/* Highest priority for tapping */
 		opacity: 1 !important;
-		/* Always visible when the card is expanded */
 		display: flex !important;
 		justify-content: center !important;
 		align-items: center !important;
-		height: 50px !important;
-		background-color: rgba(20, 20, 20, 0.95) !important;
+		background-color: rgb(24, 24, 24) !important;
 	}
 
 	/* Center the icons within the bar */
@@ -1423,6 +1429,16 @@ a {
 	/* Hide the background image when expanded to make text readable */
 	.expanded .background {
 		filter: brightness(0.1) !important;
+	}
+
+	.expanded .blockTitle {
+		position: relative !important;
+		top: 0 !important;
+		background: rgba(0, 0, 0, 0.8) !important;
+		z-index: 25 !important;
+		font-weight: bold;
+		border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+		/* Thematic accent */
 	}
 
 	.footerButton {
