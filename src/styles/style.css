@@ -1250,7 +1250,7 @@ a {
 /* Apply these rules ONLY for screens narrower than 800px */
 @media only screen and (max-width: 800px) {
 
-	/* 1. Global Reset */
+	/* Global Mobile Flow */
 	html,
 	body,
 	main {
@@ -1264,7 +1264,6 @@ a {
 		flex-direction: column;
 	}
 
-	/* 2. Page & Container Alignment */
 	.page {
 		position: relative !important;
 		width: 100vw !important;
@@ -1284,7 +1283,16 @@ a {
 		align-items: center;
 	}
 
-	/* 3. Card Base State (Mirroring PC Resting) */
+	/* Home Page Intro Text */
+	#introText {
+		font-size: 26px !important;
+		width: 85% !important;
+		white-space: normal !important;
+		transform: translate(-50%, -50%) !important;
+		margin-top: 100px !important;
+	}
+
+	/* Card Base State (Mirroring PC Resting) */
 	.platform,
 	.job,
 	.project,
@@ -1294,11 +1302,11 @@ a {
 		position: relative !important;
 		overflow: hidden !important;
 		transition: height 0.5s ease;
-		width: 90vw !important;
+		width: 92vw !important;
 		margin: 15px auto !important;
+		border: 1px solid black;
 	}
 
-	/* Card Title - Pinned to bottom when closed */
 	.blockTitle {
 		position: absolute !important;
 		bottom: 0 !important;
@@ -1310,29 +1318,41 @@ a {
 		background-color: rgba(30, 30, 30, 0.9) !important;
 		font-size: 16px !important;
 		z-index: 10;
+		transition: color 0.3s;
 	}
 
-	/* 4. Expanded State (Mirroring PC Hover) */
+	.platformImage,
+	.jobImage,
+	.projectImage,
+	.inventionImage,
+	.awardImage {
+		width: 100% !important;
+		height: 180px !important;
+		background-size: cover !important;
+	}
+
+	/* Expanded State (Mirroring PC Hover) */
 	.expanded {
-		height: 400px !important;
+		height: 480px !important;
 		background: black !important;
 	}
 
-	/* Push title to top when expanded */
 	.expanded .blockTitle {
-		position: relative !important;
-		top: 0 !important;
-		bottom: auto !important;
-		background: rgba(0, 0, 0, 0.8) !important;
-		z-index: 25 !important;
-		border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+		color: rgba(232, 232, 232, 0) !important;
+		z-index: -1;
 	}
 
+	/* Fades title like PC hover */
+	.expanded [class*="Image"] {
+		filter: brightness(0) !important;
+	}
+
+	/* Blacks out image like PC hover */
 	.expanded .background {
 		filter: brightness(0.1) !important;
 	}
 
-	/* Description - Centered in the middle */
+	/* Description (Centered like PC Hover) */
 	.platformDescription,
 	.jobDescription,
 	.projectDescription,
@@ -1344,32 +1364,40 @@ a {
 		justify-content: center !important;
 		align-items: center !important;
 		text-align: center;
-		height: calc(100% - 95px) !important;
+		height: calc(100% - 50px) !important;
 		padding: 15px !important;
 		box-sizing: border-box;
 		overflow-y: auto;
+		transition: opacity 0.3s;
 	}
 
 	.expanded [class*="Description"] {
 		opacity: 1 !important;
-		position: relative !important;
+		position: absolute !important;
 		top: 0 !important;
+		z-index: 5;
 	}
 
-	/* 5. Links Bar - Pinned to bottom when expanded */
+	/* LinksBar (Pinned to bottom like PC) */
 	.linksBar {
 		position: absolute !important;
 		bottom: 0 !important;
 		width: 100% !important;
 		height: 50px !important;
 		z-index: 30 !important;
+		opacity: 1 !important;
 		display: flex !important;
 		justify-content: center !important;
 		align-items: center !important;
 		background-color: rgb(24, 24, 24) !important;
 	}
 
-	/* 6. Navigation & UI Cleanup */
+	.linksBar a {
+		margin: 0 10px !important;
+		display: inline-block !important;
+	}
+
+	/* UI Navigation Cleanup */
 	#topButtons {
 		gap: 3px !important;
 		padding: 0 5px;
@@ -1389,6 +1417,8 @@ a {
 	#resumeButton,
 	#cvButton {
 		position: relative !important;
+		top: 0 !important;
+		right: 0 !important;
 		display: block;
 		margin: 10px auto;
 		text-align: center;
