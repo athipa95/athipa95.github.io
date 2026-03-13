@@ -1250,7 +1250,7 @@ a {
 /* Apply these rules ONLY for screens narrower than 800px */
 @media only screen and (max-width: 800px) {
 
-	/* Enable standard scrolling and disable the JS "clipping" */
+	/* 1. Global Reset */
 	html,
 	body,
 	main {
@@ -1262,10 +1262,9 @@ a {
 	.content-wrapper {
 		display: flex;
 		flex-direction: column;
-		/* Stacks Home, About, Projects vertically */
 	}
 
-	/* Force pages to sit one under another */
+	/* 2. Page & Container Alignment */
 	.page {
 		position: relative !important;
 		width: 100vw !important;
@@ -1279,190 +1278,117 @@ a {
 
 	.center {
 		width: 100% !important;
-		max-width: 100% !important;
-		margin: 0 !important;
 		padding: 0 10px !important;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	/* Fix the "fat" footer button highlight on mobile */
-	#topButtons {
-		gap: 5px !important;
-		/* Tighter for small screens */
-		padding: 0 5px;
-		justify-content: center !important;
-		/* Spreads buttons evenly */
-	}
-
-	#topButtons::-webkit-scrollbar {
-		display: none;
-	}
-
-	/* Hide the sidebar to prevent it from overlapping text */
-	#sidebar {
-		display: none !important;
-	}
-
-	/* Adjust the Home Page nameplate for narrow screens */
-	#introText {
-		font-size: 30px !important;
-		width: 90% !important;
-		white-space: normal !important;
-		transform: translate(-50%, -40%) !important;
-	}
-
-	/* Stack all project/job cards into one readable column */
+	/* 3. Card Base State (Mirroring PC Resting) */
 	.platform,
 	.job,
 	.project,
 	.invention,
 	.award {
-		display: block !important;
-		width: 90% !important;
-		margin: 15px auto !important;
-		float: none !important;
 		height: 250px !important;
+		position: relative !important;
+		overflow: hidden !important;
+		transition: height 0.5s ease;
+		width: 90vw !important;
+		margin: 15px auto !important;
 	}
 
-	/* Fix the image size inside the card */
-	.platformImage,
-	.jobImage,
-	.projectImage,
-	.inventionImage,
-	.awardImage {
-		width: 100% !important;
-		height: 180px !important;
-		background-size: cover !important;
-		margin-bottom: 40px !important;
-	}
-
-	/* Expand state: Card grows on tap */
-	.platform.expanded,
-	.job.expanded,
-	.project.expanded,
-	.invention.expanded,
-	.award.expanded {
-		height: 420px !important;
-		/* Enough room for full project text */
-		background: black !important;
-	}
-
-	/* Center the titles in the card footer */
+	/* Card Title - Pinned to bottom when closed */
 	.blockTitle {
 		position: absolute !important;
-		/* Pin it to the bottom of the card */
 		bottom: 0 !important;
-		top: auto !important;
-		/* Clear the desktop "top: -16px" */
 		width: 100% !important;
 		height: 40px !important;
 		display: flex !important;
 		align-items: center !important;
 		justify-content: center !important;
 		background-color: rgba(30, 30, 30, 0.9) !important;
-		/* Matches the theme */
-		margin: 0 !important;
-		padding: 0 !important;
 		font-size: 16px !important;
 		z-index: 10;
 	}
 
-	/* Make descriptions visible by default (no hover on mobile) */
+	/* 4. Expanded State (Mirroring PC Hover) */
+	.expanded {
+		height: 400px !important;
+		background: black !important;
+	}
+
+	/* Push title to top when expanded */
+	.expanded .blockTitle {
+		position: relative !important;
+		top: 0 !important;
+		bottom: auto !important;
+		background: rgba(0, 0, 0, 0.8) !important;
+		z-index: 25 !important;
+		border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+	}
+
+	.expanded .background {
+		filter: brightness(0.1) !important;
+	}
+
+	/* Description - Centered in the middle */
 	.platformDescription,
 	.jobDescription,
 	.projectDescription,
 	.inventionDescription,
 	.awardDescription {
 		opacity: 0;
-		transition: opacity 0.3s ease;
 		display: flex !important;
 		flex-direction: column !important;
 		justify-content: center !important;
-		/* Centers text vertically */
 		align-items: center !important;
-		/* Centers text horizontally */
 		text-align: center;
 		height: calc(100% - 95px) !important;
-		/* Leaves room for the links at the bottom */
-		top: 45px !important;
-		z-index: 10 !important;
 		padding: 15px !important;
 		box-sizing: border-box;
-		pointer-events: auto;
-		/* Allows tapping through to the card if needed */
 		overflow-y: auto;
 	}
 
+	.expanded [class*="Description"] {
+		opacity: 1 !important;
+		position: relative !important;
+		top: 0 !important;
+	}
+
+	/* 5. Links Bar - Pinned to bottom when expanded */
 	.linksBar {
 		position: absolute !important;
 		bottom: 0 !important;
-		left: 0 !important;
 		width: 100% !important;
 		height: 50px !important;
 		z-index: 30 !important;
-		/* Highest priority for tapping */
-		opacity: 1 !important;
 		display: flex !important;
 		justify-content: center !important;
 		align-items: center !important;
 		background-color: rgb(24, 24, 24) !important;
 	}
 
-	/* Center the icons within the bar */
-	.linksBar a {
-		margin: 0 10px !important;
-		display: inline-block !important;
-	}
-
-	.expanded .platformDescription,
-	.expanded .jobDescription,
-	.expanded .projectDescription,
-	.expanded .inventionDescription,
-	.expanded .awardDescription {
-		opacity: 1 !important;
-		position: absolute !important;
-		top: 0;
-	}
-
-	/* Hide the background image when expanded to make text readable */
-	.expanded .background {
-		filter: brightness(0.1) !important;
-	}
-
-	.expanded .blockTitle {
-		position: relative !important;
-		top: 0 !important;
-		background: rgba(0, 0, 0, 0.8) !important;
-		z-index: 25 !important;
-		font-weight: bold;
-		border-bottom: 1px solid rgba(255, 204, 0, 0.3);
-		/* Thematic accent */
+	/* 6. Navigation & UI Cleanup */
+	#topButtons {
+		gap: 3px !important;
+		padding: 0 5px;
+		justify-content: center !important;
 	}
 
 	.footerButton {
-		font-size: 12px !important;
-		/* Smaller text to prevent wrapping */
+		font-size: 11px !important;
 		padding: 0 4px !important;
-		/* Smaller hit-boxes for narrow screens */
-		max-width: none !important;
 	}
 
-	.largeText {
-		margin: 0 0 10px 0 !important;
-	}
-
+	#sidebar,
 	#lastModified {
 		display: none !important;
 	}
 
-	/* Move Resume/CV links into the flow so they don't float over text */
 	#resumeButton,
 	#cvButton {
 		position: relative !important;
-		top: 0 !important;
-		right: 0 !important;
 		display: block;
 		margin: 10px auto;
 		text-align: center;
