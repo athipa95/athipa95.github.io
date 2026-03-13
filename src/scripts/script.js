@@ -559,27 +559,28 @@ document.addEventListener('touchend', e => {
 // Intersection Observer to update UI on scroll
 const observerOptions = {
 	root: null,
-	rootMargin: '0px',
-	threshold: 0.5 // Trigger when 50% of the section is visible
+	rootMargin: '-25% 0px -25% 0px', // Triggers when the section is in the center 50% of screen
+	threshold: 0
 };
 
 const observer = new IntersectionObserver((entries) => {
-	if ($(window).width() <= 800) { // Only run on mobile
+	if ($(window).width() <= 800) {
 		entries.forEach(entry => {
+			// Trigger as soon as the section enters the center detection zone
 			if (entry.isIntersecting) {
 				const index = $(".page").index(entry.target);
-
-				// Update Global Index
 				const previousIndex = pageIndex;
-				pageIndex = index;
 
-				// Sync UI
-				toggleActivePage(previousIndex, pageIndex);
-				displayPageName(pageIndex);
+				if (pageIndex !== index) {
+					pageIndex = index;
 
-				// Sync Background
-				$(".bg-layer").removeClass("active");
-				$(".bg-layer").eq(pageIndex).addClass("active");
+					// Sync UI and Background
+					toggleActivePage(previousIndex, pageIndex);
+					displayPageName(pageIndex);
+
+					$(".bg-layer").removeClass("active");
+					$(".bg-layer").eq(pageIndex).addClass("active");
+				}
 			}
 		});
 	}
