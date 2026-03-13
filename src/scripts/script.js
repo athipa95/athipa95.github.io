@@ -113,7 +113,6 @@ function offsetPages(index, windowWidth) {
 			"left": "0",
 			"position": "relative",
 			"width": "100%",
-			"display": "block"
 		});
 	}
 }
