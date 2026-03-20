@@ -19,9 +19,11 @@ var sidebarDisplayFlag = 1; // indicates if the sidebar should be displayed
 var pageTwoScrollFlag = 1; // indicates if the scrollbar is active on the second page
 var resumeButtonDisplayFlag = 1; // indicates if the resume button should be displayed
 var cvButtonDisplayFlag = 1; // indicates if the CV button should be displayed
+var portfolioButtonDisplayFlag = 1; // indicates if the portfolio button should be displayed
 var sidebarDisplayTolerance = 30; // tolerance to decide to display sidebar or not
 var resumeButtonDisplayTolerance = 30; // tolerance to decide to display resume button or not
 var cvButtonDisplayTolerance = 30; // tolerance to decide to display cv button or not
+var portfolioButtonDisplayTolerance = 30; // tolerance to decide to display portfolio button or not
 
 
 var platformIndexAdjust = $("#contentPage1").children().length - $(".platform").length - 1; // Adjustment to platform index
@@ -74,6 +76,15 @@ function windowResize() {
 		$("#cvButton").removeClass("hidden");
 		cvButtonDisplayFlag = 1;
 	}
+
+	if ((portfolioButtonDisplayFlag) && (windowWidth < 875)) {
+		$("#portfolioButton").addClass("hidden");
+		portfolioButtonDisplayFlag = 0;
+	} else if ((!portfolioButtonDisplayFlag) && windowWidth >= 875) {
+		$("#portfolioButton").removeClass("hidden");
+		portfolioButtonDisplayFlag = 1;
+	}
+
 
 	if ((windowHeight < 800) && (pageTwoScrollFlag == 0)) {
 		$("#tint1").addClass("scroll");
@@ -219,6 +230,20 @@ function toggleCVButtonDisplay() {
 		alert("Error (3): Flag was set to incorrect value.");
 	}
 }
+function togglePortfolioButtonDisplay() {
+	if (portfolioButtonDisplayFlag == 0) {
+		$("#portfolioButton").css({
+			"right": "-157px"
+		});
+	} else if (portfolioButtonDisplayFlag == 1) {
+		$("#portfolioButton").css({
+			"right": ""
+		});
+	} else {
+		alert("Error (3): Flag was set to incorrect value.");
+	}
+}
+
 function displayPageName(index) {
 	var pageName;
 	pageName = pageNames[index];
@@ -294,6 +319,7 @@ $(".platform, .job, .project, .invention, .award").hover(
 		const sidebarWidth = $("#sidebar").width();
 		const resumeButtonWidth = $("#resumeButton").width();
 		const cvButtonWidth = $("#cvButton").width();
+		const portfolioButtonWidth = $("#portfolioButton").width();
 		const elementPosition = element.position().left + element.width();
 
 		// Hide buttons if overlapping
@@ -311,6 +337,11 @@ $(".platform, .job, .project, .invention, .award").hover(
 			cvButtonDisplayFlag = 0;
 			toggleCVButtonDisplay();
 		}
+
+		if (elementPosition > (windowWidth - portfolioButtonWidth - portfolioButtonDisplayTolerance)) {
+			portfolioButtonDisplayFlag = 0;
+			togglePortfolioButtonDisplay();
+		}
 	}, function () {
 		if (sidebarDisplayFlag == 0) {
 			sidebarDisplayFlag = 1;
@@ -323,6 +354,10 @@ $(".platform, .job, .project, .invention, .award").hover(
 		if (cvButtonDisplayFlag == 0) {
 			cvButtonDisplayFlag = 1;
 			toggleCVButtonDisplay();
+		}
+		if (portfolioButtonDisplayFlag == 0) {
+			portfolioButtonDisplayFlag = 1;
+			togglePortfolioButtonDisplay();
 		}
 
 		var inventionIndex = $(this).index() - inventionIndexAdjust;
@@ -340,6 +375,7 @@ $(".platform, .job, .project, .invention, .award").hover(
 		const sidebarWidth = $("#sidebar").width();
 		const resumeButtonWidth = $("#resumeButton").width();
 		const cvButtonWidth = $("#cvButton").width();
+		const portfolioButtonWidth = $("#portfolioButton").width();
 		const elementPosition = element.position().left + element.width();
 
 		if (elementPosition <= (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
@@ -355,6 +391,11 @@ $(".platform, .job, .project, .invention, .award").hover(
 		if (elementPosition <= (windowWidth - cvButtonWidth - cvButtonDisplayTolerance)) {
 			cvButtonDisplayFlag = 1;
 			toggleCVButtonDisplay();
+		}
+
+		if (elementPosition <= (windowWidth - portfolioButtonWidth - portfolioButtonDisplayTolerance)) {
+			portfolioButtonDisplayFlag = 1;
+			togglePortfolioButtonDisplay();
 		}
 
 		// Remove highlight effect

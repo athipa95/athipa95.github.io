@@ -1294,6 +1294,28 @@ a {
 	cursor: pointer;
 }
 
+#portfolioButton {
+	padding-top: 5px;
+	padding-right: 10px;
+	position: fixed;
+	top: 82.5%;
+	right: 10px;
+	width: 157px;
+	height: 40px;
+	font-size: 30px;
+	font-family: HelveticaNeue-CondensedBold, HelveticaNeue-Thin, Helvetica, Arial;
+	vertical-align: middle;
+	text-align: right;
+	color: white;
+	transition: right 1s;
+}
+
+#portfolioButton:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
 /* The Lift Effect */
 .platform:hover,
 .job:hover,
@@ -1542,7 +1564,8 @@ a {
 	}
 
 	#resumeButton,
-	#cvButton {
+	#cvButton,
+	#portfolioButton {
 		position: relative !important;
 		top: 0 !important;
 		right: 0 !important;
