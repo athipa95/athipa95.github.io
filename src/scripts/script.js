@@ -650,15 +650,6 @@ $(".platform, .job, .project, .invention, .award").on("click", function (e) {
 	}
 });
 
-document.addEventListener('touchstart', e => {
-	touchstartX = e.changedTouches[0].screenX;
-});
-
-document.addEventListener('touchend', e => {
-	touchendX = e.changedTouches[0].screenX;
-	handleGesture();
-});
-
 // Intersection Observer to update UI on scroll
 const observerOptions = {
 	root: null,
