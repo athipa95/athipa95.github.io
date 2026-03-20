@@ -1580,20 +1580,62 @@ a {
 		padding: 0 3px !important;
 	}
 
-	#sidebar,
 	#lastModified {
 		display: none !important;
+	}
+
+	#sidebar {
+		display: flex !important;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		position: relative !important;
+		width: 100% !important;
+		height: auto !important;
+		top: 0 !important;
+		right: 0 !important;
+		background: transparent !important;
+		margin: 40px 0 !important;
+		/* Pushes it to the very end of the scroll flow */
+		z-index: 100 !important;
 	}
 
 	#resumeButton,
 	#cvButton,
 	#portfolioButton {
+		order: 1;
+		/* Appears first in the flex container */
+		width: 80% !important;
+		flex: 0 0 80%;
+		margin: 10px auto !important;
 		position: relative !important;
-		top: 0 !important;
-		right: 0 !important;
-		display: block;
-		margin: 10px auto;
-		text-align: center;
-		font-size: 22px !important;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px !important;
+		background-color: rgba(40, 40, 40, 0.95) !important;
+		border: 1px solid #ffcc00;
+		border-radius: 8px;
+		height: 50px !important;
+		visibility: visible !important;
+		/* Force visibility over script logic */
+	}
+
+	#sidebar a:not([id$="Button"]) {
+		order: 2;
+		/* Appears after buttons */
+		margin: 15px 10px !important;
+		display: inline-block !important;
+	}
+
+	.sidebarIcon {
+		width: 45px !important;
+		/* Slightly smaller for a single row on mobile */
+	}
+
+	/* Ensure script-added .hidden class doesn't kill the layout */
+	.hidden {
+		display: flex !important;
 	}
 }
