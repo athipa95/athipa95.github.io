@@ -1494,7 +1494,7 @@ a {
 
 	/* Expanded State (Mirroring PC Hover) */
 	.expanded {
-		height: 480px !important;
+		height: 380px !important;
 		background: black !important;
 	}
 
