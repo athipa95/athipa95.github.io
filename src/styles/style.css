@@ -1308,6 +1308,8 @@ a {
 	text-align: right;
 	color: white;
 	transition: right 1s;
+	transition: left 1s, opacity 0.5s;
+	/* Matched to 1s to sync with sidebar/resume buttons */
 }
 
 #portfolioButton:hover {
