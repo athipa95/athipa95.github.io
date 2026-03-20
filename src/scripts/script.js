@@ -628,33 +628,36 @@ function handleGesture() {
 
 document.addEventListener('touchstart', e => {
 	touchstartX = e.changedTouches[0].screenX;
-});
+}, { passive: true });
 
 document.addEventListener('touchend', e => {
 	touchendX = e.changedTouches[0].screenX;
 	handleGesture();
 });
 
-// Tap-to-Expand Logic for Mobile
-$(".platform, .job, .project, .invention, .award").on("click", function (e) {
+/* --- Mobile Tap-to-Expand Logic (Scroll-Safe) --- */
+$(".platform, .job, .project, .invention, .award").on("touchend", function (e) {
 	if ($(window).width() <= 800) {
-		const card = $(this);
-		const isExpanded = card.hasClass("expanded");
+		const deltaX = Math.abs(touchendX - touchstartX);
 
-		// Close any other open cards first to mimic "mouse leave"
-		$(".expanded").removeClass("expanded");
+		// ONLY expand if the finger moved less than 10px (A deliberate tap)
+		if (deltaX < 10) {
+			const card = $(this);
+			const isExpanded = card.hasClass("expanded");
 
-		if (!isExpanded) {
-			card.addClass("expanded");
-			// The following logic mirrors your PC hover functions exactly
-			card.find(".background").css("opacity", "0.5");
-			card.find("[class*='Description']").css("opacity", "1");
-			card.find(".linksBar").css("opacity", "1");
-		} else {
-			// "Un-tap" to mimic mouse leave
-			card.find(".background").css("opacity", "1");
-			card.find("[class*='Description']").css("opacity", "0");
-			card.find(".linksBar").css("opacity", "0");
+			$(".expanded").removeClass("expanded"); // Close others
+
+			if (!isExpanded) {
+				card.addClass("expanded");
+				// Trigger your thematic effects
+				card.find(".background").css("opacity", "0.5");
+				card.find("[class*='Description']").css("opacity", "1");
+				card.find(".linksBar").css("opacity", "1");
+			} else {
+				card.find(".background").css("opacity", "1");
+				card.find("[class*='Description']").css("opacity", "0");
+				card.find(".linksBar").css("opacity", "0");
+			}
 		}
 	}
 });

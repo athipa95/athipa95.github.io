@@ -1414,6 +1414,10 @@ a {
 		width: 92vw !important;
 		margin: 15px auto !important;
 		border: 1px solid black;
+		touch-action: pan-y !important;
+		/* Forces native vertical scrolling to start instantly */
+		-webkit-tap-highlight-color: transparent;
+		/* Removes the gray flicker on tap */
 	}
 
 	.blockTitle {
