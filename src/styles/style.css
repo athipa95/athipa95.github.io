@@ -1344,7 +1344,10 @@ a {
 }
 
 /* Maintain the Legend's own priority */
-#siteLegend {
+#siteLegend,
+#resumeButton,
+#cvButton,
+#portfolioButton {
 	z-index: 10001 !important;
 }
 
