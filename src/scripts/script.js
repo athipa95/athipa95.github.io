@@ -613,6 +613,14 @@ function handleGesture() {
 	}
 
 	if (previousIndex !== pageIndex) {
+		if ($(window).width() <= 800) {
+			const targetPage = $(".page").eq(pageIndex);
+			$("html, body, main").animate({
+				scrollTop: targetPage.offset().top - 60
+			}, 800);
+		} else {
+			offsetPages(pageIndex, $(window).width());
+		}
 		offsetPages(pageIndex, windowWidth);
 		toggleActivePage(previousIndex, pageIndex);
 		displayPageName(pageIndex);
