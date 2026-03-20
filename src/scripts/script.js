@@ -626,14 +626,26 @@ function handleGesture() {
 	}
 }
 
+let touchstartY = 0;
+let touchendY = 0;
+
 document.addEventListener('touchstart', e => {
 	touchstartX = e.changedTouches[0].screenX;
-}, { passive: true });
+	touchstartY = e.changedTouches[0].screenY;
+}, { passive: true }); // Passive ensures the scroll starts immediately
 
 document.addEventListener('touchend', e => {
 	touchendX = e.changedTouches[0].screenX;
-	handleGesture();
-});
+	touchendY = e.changedTouches[0].screenY;
+
+	const deltaX = Math.abs(touchendX - touchstartX);
+	const deltaY = Math.abs(touchendY - touchstartY);
+
+	// Only trigger horizontal swipe if movement is primarily horizontal AND passes your 200px limit
+	if (deltaX > deltaY && deltaX > 200) {
+		handleGesture();
+	}
+}, { passive: true });
 
 /* --- Clean Tap Logic (Scroll-Friendly) --- */
 $(".platform, .job, .project, .invention, .award").off("click touchend").on("click", function (e) {
