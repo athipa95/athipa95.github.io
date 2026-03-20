@@ -629,12 +629,12 @@ function handleGesture() {
 let touchstartY = 0;
 let touchendY = 0;
 
-document.addEventListener('touchstart', e => {
+window.addEventListener('touchstart', e => {
 	touchstartX = e.changedTouches[0].screenX;
 	touchstartY = e.changedTouches[0].screenY;
 }, { passive: true }); // Passive ensures the scroll starts immediately
 
-document.addEventListener('touchend', e => {
+window.addEventListener('touchend', e => {
 	touchendX = e.changedTouches[0].screenX;
 	touchendY = e.changedTouches[0].screenY;
 

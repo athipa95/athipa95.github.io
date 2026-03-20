@@ -1405,14 +1405,11 @@ a {
 		overflow-x: hidden !important;
 		height: auto !important;
 		-webkit-overflow-scrolling: touch;
-		touch-action: pan-y;
-		/* Tells browser to only expect vertical scrolls */
 	}
 
 	main {
 		overflow: visible !important;
 		height: auto !important;
-		touch-action: pan-y;
 	}
 
 	.content-wrapper {
