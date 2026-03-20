@@ -609,6 +609,10 @@ a {
 	/* Hidden by default for the Home page */
 	pointer-events: none;
 	transition: left 0.8s, opacity 0.5s;
+	color: white !important;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+	/* Adds contrast */
+
 }
 
 .legendTitle {
@@ -625,6 +629,12 @@ a {
 	gap: 12px;
 }
 
+/* Interaction instruction text */
+.legendInstruction {
+	color: #ffcc00 !important;
+	font-weight: bold;
+}
+
 .legendIcon {
 	display: flex;
 	align-items: center;
@@ -639,10 +649,12 @@ a {
 
 .mobileOnly {
 	display: none;
+	color: #e0e0e0 !important;
 }
 
 .pcOnly {
 	display: inline;
+	color: #e0e0e0 !important;
 }
 
 /* -------------------- -------------------- -------------------- */
@@ -1499,6 +1511,9 @@ a {
 		pointer-events: auto !important;
 		border-radius: 15px !important;
 		border-left: 1px solid rgba(255, 204, 0, 0.2) !important;
+		color: white !important;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+		/* Adds contrast */
 	}
 
 	.iconsGrid {
