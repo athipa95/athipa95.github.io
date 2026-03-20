@@ -660,25 +660,22 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
 	if ($(window).width() <= 800) {
 		entries.forEach(entry => {
-			// Only trigger when a section enters the center line
+			// Trigger as soon as the section enters the center detection zone
 			if (entry.isIntersecting) {
 				const index = $(".page").index(entry.target);
+				const previousIndex = pageIndex;
 
-				// CRITICAL: Ignore Home (index 0) if we are deep in the scroll flow
-				if (index !== 0 || $(window).scrollTop() < 150) {
-					const previousIndex = pageIndex;
+				updateLegendVisibility(index, $(window).width());
 
-					if (pageIndex !== index) {
-						pageIndex = index;
+				if (pageIndex !== index) {
+					pageIndex = index;
 
-						// Sync Background, Buttons, and Legend
-						toggleActivePage(previousIndex, pageIndex);
-						displayPageName(pageIndex);
-						updateLegendVisibility(index, $(window).width());
+					// Sync UI and Background
+					toggleActivePage(previousIndex, pageIndex);
+					displayPageName(pageIndex);
 
-						$(".bg-layer").removeClass("active");
-						$(".bg-layer").eq(pageIndex).addClass("active");
-					}
+					$(".bg-layer").removeClass("active");
+					$(".bg-layer").eq(pageIndex).addClass("active");
 				}
 			}
 		});
