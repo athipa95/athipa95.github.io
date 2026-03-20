@@ -409,6 +409,7 @@ a {
 	height: 42px;
 	width: 100%;
 	text-align: center;
+	z-index: 10001;
 }
 
 #topButtons {
