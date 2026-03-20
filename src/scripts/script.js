@@ -233,7 +233,7 @@ function toggleCVButtonDisplay() {
 function togglePortfolioButtonDisplay() {
 	if (portfolioButtonDisplayFlag == 0) {
 		$("#portfolioButton").css({
-			"right": "-157px"
+			"right": "-180px"
 		});
 	} else if (portfolioButtonDisplayFlag == 1) {
 		$("#portfolioButton").css({
