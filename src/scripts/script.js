@@ -603,11 +603,11 @@ function handleGesture() {
 	const windowWidth = $(window).width();
 	const previousIndex = pageIndex;
 
-	if (touchendX < touchstartX - 50) {
+	if (touchendX < touchstartX - 200) {
 		// Swiped Left -> Go to Next Page
 		if (pageIndex < totalPages - 1) pageIndex++;
 	}
-	if (touchendX > touchstartX + 50) {
+	if (touchendX > touchstartX + 200) {
 		// Swiped Right -> Go to Previous Page
 		if (pageIndex > 0) pageIndex--;
 	}
@@ -625,6 +625,15 @@ function handleGesture() {
 		$("#introText").css("opacity", pageIndex === 0 ? "1" : "0");
 	}
 }
+
+document.addEventListener('touchstart', e => {
+	touchstartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+	touchendX = e.changedTouches[0].screenX;
+	handleGesture();
+});
 
 // Tap-to-Expand Logic for Mobile
 $(".platform, .job, .project, .invention, .award").on("click", function (e) {
