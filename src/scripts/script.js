@@ -225,6 +225,19 @@ function displayPageName(index) {
 	$("#footerText").text(pageName);
 }
 
+// Function to handle legend visibility based on page
+function updateLegendVisibility(index, windowWidth) {
+	if (windowWidth > 800) {
+		if (index === 0) {
+			// Hide on Home Page
+			$("#siteLegend").css({ "opacity": "0", "pointer-events": "none", "left": "-160px" });
+		} else {
+			// Show on all other pages
+			$("#siteLegend").css({ "opacity": "1", "pointer-events": "auto", "left": "10px" });
+		}
+	}
+}
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Click Functions -------------------- */
 /* -------------------- --------------- -------------------- */
@@ -254,6 +267,7 @@ $(".footerButton").click(function () {
 
 			// Intro Text Opacity logic
 			$("#introText").css("opacity", pageIndex === 0 ? "1" : "0");
+			updateLegendVisibility(index, windowWidth);
 		}
 	}
 
@@ -584,6 +598,8 @@ const observer = new IntersectionObserver((entries) => {
 			if (entry.isIntersecting) {
 				const index = $(".page").index(entry.target);
 				const previousIndex = pageIndex;
+
+				updateLegendVisibility(index, $(window).width());
 
 				if (pageIndex !== index) {
 					pageIndex = index;

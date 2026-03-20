@@ -593,6 +593,58 @@ a {
 	background-color: rgb(24, 24, 24);
 }
 
+/* --- Desktop: Fixed Left Sidebar --- */
+#siteLegend {
+	position: fixed;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 140px;
+	padding: 15px;
+	z-index: 100;
+	border-radius: 0 10px 10px 0;
+	border: 1px solid rgba(255, 204, 0, 0.4);
+	border-left: none;
+	opacity: 0;
+	/* Hidden by default for the Home page */
+	pointer-events: none;
+	transition: left 0.8s, opacity 0.5s;
+}
+
+.legendTitle {
+	font-family: HelveticaNeue-CondensedBold;
+	color: #ffcc00;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.legendItems,
+.iconsGrid {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.legendIcon {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: white;
+}
+
+.legendIcon p {
+	font-size: 13px;
+	margin: 0;
+}
+
+.mobileOnly {
+	display: none;
+}
+
+.pcOnly {
+	display: inline;
+}
+
 /* -------------------- -------------------- -------------------- */
 /* -------------------- Platform Development -------------------- */
 /* -------------------- -------------------- -------------------- */
@@ -1433,6 +1485,35 @@ a {
 		gap: 2px !important;
 		padding: 0 4px;
 		justify-content: center !important;
+	}
+
+	#siteLegend {
+		position: relative !important;
+		left: 0 !important;
+		top: 0 !important;
+		transform: none !important;
+		width: 92vw !important;
+		margin: 20px auto !important;
+		opacity: 1 !important;
+		/* Always visible in the scroll flow */
+		pointer-events: auto !important;
+		border-radius: 15px !important;
+		border-left: 1px solid rgba(255, 204, 0, 0.2) !important;
+	}
+
+	.iconsGrid {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	.mobileOnly {
+		display: inline;
+	}
+
+	.pcOnly {
+		display: none;
 	}
 
 	.footerButton {
