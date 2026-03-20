@@ -1494,7 +1494,7 @@ a {
 
 	/* Expanded State (Mirroring PC Hover) */
 	.expanded {
-		height: 380px !important;
+		height: 420px !important;
 		background: black !important;
 	}
 
@@ -1546,14 +1546,13 @@ a {
 		display: flex !important;
 		flex-direction: column !important;
 		justify-content: flex-start !important;
-		/* Forces text to the TOP */
 		align-items: center !important;
 		text-align: center;
 		height: calc(100% - 50px) !important;
 		padding: 30px 15px 15px 15px !important;
-		/* Added extra top padding for professional spacing */
 		box-sizing: border-box;
-		overflow-y: auto;
+		overflow-y: hidden !important;
+		pointer-events: none !important;
 		transition: opacity 0.3s;
 	}
 
@@ -1563,6 +1562,8 @@ a {
 		position: absolute !important;
 		top: 0 !important;
 		z-index: 5;
+		overflow-y: auto !important;
+		pointer-events: auto !important;
 	}
 
 	/* LinksBar (Pinned to bottom like PC) */
