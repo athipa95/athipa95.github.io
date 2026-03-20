@@ -662,25 +662,25 @@ document.addEventListener('touchend', e => {
 // Intersection Observer to update UI on scroll
 const observerOptions = {
 	root: null,
-	rootMargin: '-25% 0px -25% 0px', // Triggers when the section is in the center 50% of screen
+	rootMargin: '-49% 0px -49% 0px', // Triggers when the section is in the center 50% of screen
 	threshold: 0
 };
 
 const observer = new IntersectionObserver((entries) => {
 	if ($(window).width() <= 800) {
 		entries.forEach(entry => {
+			// Only trigger when a section enters the center line
 			if (entry.isIntersecting) {
 				const index = $(".page").index(entry.target);
 
-				// CRITICAL: Only reset to Home (index 0) if the user is 
-				// actually at the very top of the screen
+				// CRITICAL: Ignore Home (index 0) if we are deep in the scroll flow
 				if (index !== 0 || $(window).scrollTop() < 150) {
 					const previousIndex = pageIndex;
 
 					if (pageIndex !== index) {
 						pageIndex = index;
 
-						// Sync UI, Legend, and Background
+						// Sync Background, Buttons, and Legend
 						toggleActivePage(previousIndex, pageIndex);
 						displayPageName(pageIndex);
 						updateLegendVisibility(index, $(window).width());
