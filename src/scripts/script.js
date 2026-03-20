@@ -635,29 +635,27 @@ document.addEventListener('touchend', e => {
 	handleGesture();
 });
 
-/* --- Mobile Tap-to-Expand Logic (Scroll-Safe) --- */
-$(".platform, .job, .project, .invention, .award").on("touchend", function (e) {
+/* --- Clean Tap Logic (Scroll-Friendly) --- */
+$(".platform, .job, .project, .invention, .award").off("click touchend").on("click", function (e) {
 	if ($(window).width() <= 800) {
-		const deltaX = Math.abs(touchendX - touchstartX);
+		const card = $(this);
+		const isExpanded = card.hasClass("expanded");
 
-		// ONLY expand if the finger moved less than 10px (A deliberate tap)
-		if (deltaX < 10) {
-			const card = $(this);
-			const isExpanded = card.hasClass("expanded");
+		// Close other cards first
+		$(".expanded").not(card).removeClass("expanded").find(".background").css("opacity", "1");
+		$(".expanded").not(card).find("[class*='Description'], .linksBar").css("opacity", "0");
 
-			$(".expanded").removeClass("expanded"); // Close others
-
-			if (!isExpanded) {
-				card.addClass("expanded");
-				// Trigger your thematic effects
-				card.find(".background").css("opacity", "0.5");
-				card.find("[class*='Description']").css("opacity", "1");
-				card.find(".linksBar").css("opacity", "1");
-			} else {
-				card.find(".background").css("opacity", "1");
-				card.find("[class*='Description']").css("opacity", "0");
-				card.find(".linksBar").css("opacity", "0");
-			}
+		if (!isExpanded) {
+			card.addClass("expanded");
+			// Apply thematic expanded styles
+			card.find(".background").css("opacity", "0.5");
+			card.find("[class*='Description']").css("opacity", "1");
+			card.find(".linksBar").css("opacity", "1");
+		} else {
+			card.removeClass("expanded");
+			card.find(".background").css("opacity", "1");
+			card.find("[class*='Description']").css("opacity", "0");
+			card.find(".linksBar").css("opacity", "0");
 		}
 	}
 });

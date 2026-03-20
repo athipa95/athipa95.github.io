@@ -1352,6 +1352,45 @@ a {
 	z-index: 10001 !important;
 }
 
+/* PC ONLY: Apply hover effects only when a mouse is used */
+@media (hover: hover) {
+
+	.platform:hover,
+	.job:hover,
+	.project:hover,
+	.invention:hover,
+	.award:hover {
+		transform: translateY(-10px);
+		border-color: #ffcc00;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+		background: black;
+	}
+
+	.platform:hover .platformImage,
+	.job:hover .jobImage,
+	.project:hover .projectImage,
+	.invention:hover .inventionImage,
+	.award:hover .awardImage {
+		filter: brightness(0);
+	}
+
+	.platform:hover .blockTitle,
+	.job:hover .blockTitle,
+	.project:hover .blockTitle,
+	.invention:hover .blockTitle,
+	.award:hover .blockTitle {
+		color: rgba(232, 232, 232, 0);
+	}
+
+	.platform:hover .linksBar,
+	.job:hover .linksBar,
+	.project:hover .linksBar,
+	.invention:hover .linksBar,
+	.award:hover .linksBar {
+		opacity: 1;
+	}
+}
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Mobile Friendly -------------------- */
 /* -------------------- --------------- -------------------- */
