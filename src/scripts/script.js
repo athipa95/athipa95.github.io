@@ -253,7 +253,7 @@ function toggleLegendDisplay() {
 		});
 	} else if (legendDisplayFlag == 1 && pageIndex !== 0) {
 		$("#siteLegend").css({
-			"left": "10px", // Returns to original position
+			"left": "", // Returns to original position
 			"opacity": "1"
 		});
 	}
