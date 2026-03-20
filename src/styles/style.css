@@ -1330,6 +1330,24 @@ a {
 	z-index: 50;
 }
 
+/* PC Stacking Fix: Ensures the Legend stays on top of later pages */
+#page1 {
+	z-index: 1000 !important;
+}
+
+/* Ensure later pages stay below the Legend context */
+#page2,
+#page3,
+#page4,
+#page5 {
+	z-index: 1 !important;
+}
+
+/* Maintain the Legend's own priority */
+#siteLegend {
+	z-index: 10001 !important;
+}
+
 /* -------------------- --------------- -------------------- */
 /* -------------------- Mobile Friendly -------------------- */
 /* -------------------- --------------- -------------------- */
